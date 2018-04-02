@@ -1,0 +1,178 @@
+#LibraryContent
+{
+	overflow: auto;
+	max-height: 380px;
+	padding: 0;
+	position: relative;
+}
+* html #LibraryContent
+{
+	height: 380px;
+}
+#LibraryContent .Info
+{
+	margin: 16px;
+}
+
+#ContentLevelTree
+{
+	margin: -2px 2px 2px 2px;
+}
+#ContentLevelTree .ButtonBox, .ButtonBox
+{
+	margin: 2px;
+}
+
+#LibraryContent h2, h2.PluginLibrary
+{
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	-moz-border-radius: 3px;
+	padding: 4px;
+	margin: 2px;
+}
+
+#UploadTabs .pageActive
+{
+	margin-bottom: 0;
+}
+
+/**
+ * Images
+**/
+
+.LibraryImage
+{
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	-moz-border-radius: 3px;
+	padding: 4px;
+	margin: 2px;
+}
+.LibraryImg
+{
+	float: right;
+	border-top: 1px solid #888;
+	border-left: 1px solid #888;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	-moz-border-radius: 2px;
+	margin: 0px 0px 2px 8px;
+	cursor: pointer;
+	position: relative;
+}
+* html .LibraryImg
+{
+	cursor: hand;
+}
+.LibraryImg:hover
+{
+	border: 1px solid #a00;
+}
+#libraryImage img
+{
+	border-top: 1px solid #888;
+	border-left: 1px solid #888;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	-moz-border-radius: 2px;
+}
+.LibraryImg .plugin
+{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.LibraryImage .ImageDescription
+{
+	display: block;
+	margin-top: 2px;
+}
+
+/**
+ * Files
+**/
+
+.LibraryFile
+{
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	-moz-border-radius: 3px;
+	padding: 4px;
+	margin: 2px;
+}
+.LibraryFl
+{
+	float: right;
+	border-top: 1px solid #888;
+	border-left: 1px solid #888;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	-moz-border-radius: 2px;
+	margin: 0px 0px 2px 8px;
+	cursor: pointer;
+	padding: 16px;
+	background: url('../../../../admin/gfx/background_content.jpg');
+}
+* html .LibraryFl
+{
+	cursor: hand;
+}
+.LibraryFl:hover
+{
+	border: 1px solid #a00;
+}
+.LibraryFile .FileDescription
+{
+	display: block;
+	margin-top: 2px;
+}
+
+/**
+ * Misc
+**/
+
+#UploadTabs .pageActive
+{
+	padding: 8px;
+}
+
+table.SliderTable
+{
+	display: block;
+}
+
+table.SliderTable th, table.SliderTable td
+{
+	font-size: 9px;
+}
+table.SliderTable th
+{
+	width: 35%;
+	font-weight: bold;
+}
+table.SliderTable button
+{
+	height: 16px;
+	padding: 0;
+	font-size: 7px;
+	line-height: 3px;
+	font-weight: bold;
+	margin: 0;
+}
+
+/******************************************************************************/
+/* Image ajustments                                                           */
+
+#ImageAdjustments
+{
+	height: 200px;
+	overflow: auto;
+	overflow-x: hidden;
+	padding: 0px;
+	position: relative;
+}
+

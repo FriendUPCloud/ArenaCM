@@ -1,0 +1,75 @@
+#Structure li.current
+{
+	padding: 6px 6px 6px 0;
+}
+#Structure li li.current
+{
+	padding: 6px 6px 6px 24px;
+}
+#Structure li > ul
+{
+	margin-bottom: -6px;
+}
+#Structure li.current > a
+{
+	font-weight: bold;
+}
+#Structure li.current > span.Iconcurrent
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	background: url(../../../admin/gfx/icons/bullet_green.png) 0px 2px no-repeat;
+}
+#Structure li.current > .Break
+{
+	clear: both;
+	height: 6px;
+	display: block;
+}
+
+.Collapsable
+{
+	overflow-x: visible;
+}
+
+td.Main > h1 > table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	position: relative;
+	top: 1px;
+}
+
+td.Main > h1 > table > tbody > tr > td
+{
+	padding: 0 4px 0 0;
+	vertical-align: top;
+}
+
+td.Main > h1 > table > tbody > tr > td > input
+{
+	margin: 0;
+	position: relative;
+	top: -6px;
+}
+
+.msie td.Main > h1 > table > tbody > tr > td > input
+{
+	
+	top: -5px;
+}
+
+td.Main > .Container > p
+{
+	margin-top: 10px;
+}
+
+td.Main > .Container > p:first-child
+{
+	margin-top: 0px;
+}
+
+
+#TopButtonsEasy { float: right; position: relative; top: -4px; }

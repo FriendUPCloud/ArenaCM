@@ -1,0 +1,153 @@
+#Inside, #Bottom
+{
+	border: 0;
+	color: #333;
+	padding: 4px 4px 1px 4px;
+	background: #ddd;
+	-moz-border-radius: 3px;
+	margin: 0 8px 8px 8px;
+	border-bottom: 1px solid #bbb;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #eee;
+}
+#Bottom
+{
+	padding: 4px;
+	font-size: 9px;
+}
+
+#TopButtons
+{
+	position: absolute;
+	top: 86px;
+	right: 8px;
+}
+#TopButtons button
+{
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	color: #000;
+	font-weight: normal;
+	padding: 2px 4px;
+	opacity: 0.8;
+}
+
+#TopButtons img
+{
+	margin-right: 5px;
+}
+
+/** Modal dialog **************************************************************/
+
+#ModalForeground h1
+{
+	font-size: 12px;
+}
+
+
+/** Text editor ***************************************************************/
+
+.ArenaEditorToolbar, .ArenaEditorContainer iframe
+{
+	background: #f8f8f8;;
+	border: 1px solid #eee;
+	width: 100%;
+	padding: 0;
+}
+.ArenaEditorContainer iframe
+{ 
+	border: 1px solid #ccc;
+	-moz-border-radius: 0 0 4px 4px;
+}
+.ArenaEditorToolbar img, .ArenaEditorToolbar th
+{
+	border: 0;
+}
+.ArenaEditorToolbar td, .ArenaEditorToolbar th { padding: 1px; }
+
+.ArenaEditorToolbar table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.ArenaEditor
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.ArenaEditorContainer
+{
+	border: 1px solid #cccccc;
+	border-top: 0;
+	-moz-border-radius: 0 0 3px 3px;
+	display: block;
+}
+.ArenaEditorContainer textarea
+{
+	width: 100%;
+	height: 400px;
+	border: 0;
+	background: #fff;
+	font-family: monospace, courier, courier new;
+	font-size: 11px;
+	padding: 0;
+}
+.ArenaEditorToolbar hr
+{
+	margin: 0;
+	padding: 0;
+}
+
+.ArenaEditorPopupMenu hr
+{
+	margin: 0;
+}
+.ArenaEditorPopupMenu
+{
+	width: 190px;
+	border-left: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	color: #000000;
+	background: #f8f8f8;
+	font-size: 11px;
+	outline: 1px solid #999999;
+}
+.ArenaEditorPopupMenu li, .ArenaEditorPopupMenu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.ArenaEditorPopupMenu a
+{
+	cursor: pointer;
+	display: block;
+	padding: 4px;
+	border-bottom: 1px solid #dddddd;
+	color: #000000;
+	text-decoration: none;
+}
+.ArenaEditorPopupMenu strong
+{
+	padding: 4px;
+	border-bottom: 1px solid #dddddd;
+	display: block;
+	background: #d8d8d8;
+}
+.ArenaEditorPopupMenu a:hover
+{
+	background: #74ACE5;
+}
+.ArenaEditorPopupMenu a img
+{
+	border: 0;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}

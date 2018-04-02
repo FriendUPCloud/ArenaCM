@@ -1,0 +1,107 @@
+.ModuleContainer label
+{
+	color: #000000;
+}
+
+#GroupList, #UnitList
+{
+	border: 1px solid #ccc;
+	background: #cfcfcf;
+	padding: 1px;
+}
+
+span.Group, span.GroupActive
+{
+	display: block;
+	margin: 0px 0px 1px 0px;
+	border: 1px solid #bbb;
+	border-bottom: 1px solid #aaa;
+	padding: 6px;
+	background: url('../../../../admin/gfx/background_header.jpg');
+	-moz-border-radius: 3px;
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+* html span.Group, span.GroupActive
+{
+	cursor: hand;
+}
+span.GroupActive
+{
+	background: url('../../../../admin/gfx/background_top.jpg');
+	color: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;
+}
+
+span.Group:hover
+{
+	background: url('../../../../admin/gfx/background_tab.jpg');
+	border: 1px solid #bbb;
+	border-bottom: 1px solid #aaa;
+}
+span.GroupActive:hover
+{
+	border: 1px solid #eee;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+
+span.Group span, span.GroupActive span
+{
+	display: block;
+	float: right;
+}
+span.Group img, span.GroupActive img
+{
+	border: 0;
+	vertical-align: top;
+	margin: 0px 4px 0 0;
+	position: relative;
+	z-index: 20;
+}
+span.Group strong, span.GroupActive strong
+{
+	position: relative;
+	top: 1px;
+}
+span.Group span, span.GroupActive span
+{
+	z-index: 10;
+	position: relative;
+	cursor: pointer;
+	background: #fff;
+	padding: 2px;
+	top: -3px;
+	right: -3px;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #aaa;
+	-moz-border-radius: 4px;
+}
+span.Group span, span.GroupActive span
+{
+	cursor: pointer;
+}
+
+#GroupList, #UnitList
+{
+	padding: 2px;
+	background: #fff;
+}
+
+#GroupList ul.Collapsable, #UnitList ul.Collapsable
+{
+	margin: 0;
+}
+
+#groupEditTabs
+{
+	border-top: 1px solid transparent;
+}
+
+
+
+

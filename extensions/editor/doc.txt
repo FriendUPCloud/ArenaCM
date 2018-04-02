@@ -1,0 +1,6 @@
+Editor modul bilder
+-------------------
+Bredde: 100px
+Høyde: 110px
+Avrunding på ramme: 10 (gimp)
+

@@ -1,0 +1,130 @@
+
+Duplicate selected					: Lag kopi av valgte
+Unorganized material					: Uorganisert materiale
+Date modified							: Oppdatert
+Sortorder								: Sortering
+Title									: Tittel
+Filename								: Filnavn
+Size									: Størrelse
+Folders									: Mapper
+Folder									: Mappen
+Advanced								: Avansert
+Empty temporary files					: Tøm midlertidige filer
+Check for missing files					: Skjekk for manglende filer
+Search the library						: Søk i bibliotek
+Search									: Søk
+Reset search							: Nullstill søk
+Thumbnails								: Thumbnails
+Detailed list							: Detaljert liste
+Show									: Vis
+Listed by								: Listet etter
+Date									: Dato
+Filename								: Filnavn
+File title								: Filtittel
+Filesize								: Filstørrelse
+The contents of							: Innhold i
+Optimize images							: Optimaliser bildene i mappen
+Upload image							: Last opp bilde
+Upload file								: Last opp fil
+Create a file							: Ny fil
+Delete selected							: Slett valgte
+contains								: inneholder
+Tags									: Tagger
+keywords...								: søkeord...
+No files or images matched your query.	: Ingen filer matchet ditt søk.
+Files and images matching				: Filer og bilder som matcher
+All done!								: Utført!
+Are you sure you want to clear the image cache? : Er du sikker på at du ønsker å tømme midlertidige filer?
+
+i18n_sure_to_delete_folder : Er du sikker på at du ønsker å slette mappen?
+
+#Text properties
+i18n_file_contents : Innhold av filen
+i18n_folder_not_found : Kunne ikke finne mappen.
+i18n_save_file_contents : Lagre innhold
+i18n_fullscreen : Fullskjerm
+i18n_close : Lukk
+
+#Create file
+i18n_create_new_file : Lag en ny fil
+i18n_filetype : Filetype
+i18n_a_stylesheet : Et stilark (css)
+i18n_a_text_file : En ren tekstfil
+i18n_a_javascript : Et javascript
+i18n_filename : Filnavn
+i18n_file_contents : Filens innhold
+
+#New / Edit image
+i18n_add_image : Legg til bilde
+i18n_edit_image : Rediger bilde
+i18n_batch_images : Last opp flere bilder samtidig
+i18n_dimensions : Dimensjoner
+i18n_show_image : Vis bildet
+i18n_preview_image : Forhåndsvisning
+i18n_showfrom_setting : Kan vises fra
+i18n_showto_setting : Kan vises til
+i18n_save_and_close : Lagre og lukk
+i18n_more_images : Flere bilder
+i18n_fewer_images : Færre bilder
+i18n_imagetitle : Bildetittel
+i18n_imagefile : Bilde
+i18n_tags : Tags
+i18n_confirm_image_delete : Er du sikker på at du vil slette dette bildet?
+i18n_no_valid_image_selected : Du har ikke valgt en gyldig bildefil enna.
+i18n_long_image_upload_error : Vennglist velg en .jpg/jpeg, .gif eller .png fil. \
+	Kun disse filtypene kan brukes som bilde på web. Andre filtyper bør lastes \
+	opp som fil og ikke som bilde.
+i18n_delete_image : Slett bildet
+i18n_delete : Slett
+i18n_cancel : Avbryt
+
+#New / Edit file
+i18n_batch_upload : Batch - last opp flere
+i18n_new_file : Ny fil
+i18n_edit_file : Rediger filen
+i18n_add_file_head : Last opp en ny fil
+i18n_edit_file_head : Rediger filen
+i18n_advanced : Avansert
+i18n_name : Navn
+i18n_file : Fil
+i18n_description : Beskrivelse
+i18n_filename : Filnavn
+i18n_filesize : Filstørrelse
+i18n_download : Last ned fil
+i18n_backup : Eldre versjon
+i18n_save : Lagre
+i18n_delete : Slett
+i18n_more_files : Flere filer
+i18n_fewer_files : Færre filer
+
+#Generic
+i18n_search_results_contents : Søkresultat / Innhold
+i18n_search_results : Søkeresultat
+i18n_contents_of : Innhold i
+i18n_contents_of_main : Innhold i hovedmappen
+i18n_no_files_in_folder : Ingen filer eller bilder finnes i mappen.
+i18n_edit : Endre
+i18n_edit_msg : Klikk for å redigere biblioteksmappen.
+i18n_no_title : Ingen tittel
+i18n_no_folders_pr_permission : Ingen mapper er tilgjengelige på ditt tilgangsnivå.
+i18n_permissions : Rettigheter
+i18n_permissions_desc : Rediger rettighetene.
+i18n_are_you_sure : Er du sikker?
+i18n_searchresult_folders : Søkresultat / Mapper
+i18n_no_searchresult_folders : Ingen mapper funnet.
+i18n_no_searchresult_files : Ingen filer matchet ditt søk.
+i18n_page_still_loading : Siden er ikke helt lastet inn. Vent eller reload siden.
+i18n_delete_msg : Klikk for å slette biblioteksmappen. Du må bekrefte \
+	sletting og velge hva som skal skje med under-mappene & filene i mappen.
+i18n_move : Flytt
+i18n_move_msg : Klikk for å flytte biblioteksmappen.
+i18n_addtoworkbench : Legg til mellomlageret
+i18n_addtoworkbench_msg : Klikk for legge til mappen til arbeidsbenken.
+move_error_msg1 : Du kan kun flytte mapper, bilder eller filer.
+i18n_sure_delete_file_question : Er du sikker på at du vil slette denne filen?
+i18n_delete_file : Slett fil
+i18n_no_valid_file_selection : Du har ikke valgt en gyldig fil.
+i18n_longer_fileselection_error : Du har valgt en bildefil.
+i18n_choose_file : Velg en fil først.
+i18n_addlevel : Legg til mappe
+i18n_addlevel_desc : Legg til en ny mappe.

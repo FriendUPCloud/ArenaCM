@@ -1,0 +1,96 @@
+#####################################################################
+#                                                                   #
+# English locale                                                    #
+#                                                                   #
+#####################################################################
+
+Read more									: Read more
+Back										: Back
+
+
+# Months names ########################################################################
+
+January										: January
+February									: February
+March										: March
+April										: April
+May											: May
+June										: June
+July										: July
+August										: August
+September									: September
+October										: October
+November									: November
+December									: December
+
+Jan											: Jan
+Feb											: Feb
+Mar											: Mar
+Apr											: Apr	
+May											: May
+Jun											: Jun
+Jul											: Jul
+Aug											: Aug
+Sep											: Sep
+Oct											: Oct
+Nov											: Nov
+Dec											: Dec
+
+# Day names ###########################################################################
+
+Monday										: Monday
+Thuesday									: Thuesday
+Wednesday									: Wednesday
+Thursday									: Thursday
+Friday										: Friday
+Saturday									: Saturday
+Sunday										: Sunday
+
+Mon											: Man
+Tue											: Tue
+Wed											: Wed
+Thu											: Thu
+Fri											: Fri
+Sat											: Sat
+Sun											: Sun
+
+# Modules #############################################################################
+
+module_news								: News
+module_users							: Users & groups
+module_contents							: Design studio
+module_library							: Library
+module_extensions						: Extensions
+module_settings							: Settings
+module_core								: Superuser
+
+# Top bar  ############################################################################
+
+Hide workbench							: Hide workbench
+Show workbench							: Show workbench
+metabuttons_Superuser					: Superbruker
+metabuttons_Settings					: Settings
+metabuttons_Help						: Help
+metabuttons_Goto website				: Go to website
+metabuttons_Logout						: Logout
+
+# Main translations ###################################################################
+
+
+Downloads : Nedlastninger
+
+All users						: All users
+with							: with
+elements						: elements
+elements total					: total elements
+Showing							: Showing
+Next page						: Next page
+Previous page					: Previous page
+Showing page					: Showing page
+of								: of
+i								: in
+
+
+
+
+

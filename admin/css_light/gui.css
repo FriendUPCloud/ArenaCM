@@ -1,0 +1,485 @@
+
+.w200 { width: 200px; }
+.w300 { width: 300px; }
+.w400 { width: 400px; }
+
+input[type=text], textarea, select, input[type=password]
+{
+	color: #000;
+	background: #fff;
+	font-size: 11px;
+}
+input[type=text], textarea, input[type=password]
+{
+	color: #000;
+	padding: 4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px solid #cfcfcf;
+	background: #fff url('../gfx/background_input.jpg') repeat-x;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+
+input[type=text], input[type=password]
+{
+	margin: 0 2px 2px 0;
+}
+
+iframe
+{
+	border: 1px solid #f8f8f8;
+	-webkit-transition: height 0.2s;
+}
+.ArenaEditorToolbar
+{
+	-moz-border-radius: 2px 2px 0 0;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+}
+.ArenaEditorContainer
+{
+	-moz-border-radius: 0 0 2px 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+}
+
+input.Disabled, .SubContainer input.Disabled
+{
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #f0f0f0;
+	color: #999;
+	cursor: default;
+}
+
+.SubContainer input[type=text], .SubContainer textarea, .SubContainer input[type=password]
+{
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px solid #cfcfcf;
+	background: #fff;
+}
+
+input[type=text]:focus, textarea:focus, input[type=password]:focus
+.SubContainer input[type=text]:focus, .SubContainer textarea:focus,
+.SubContainer input[type=password]:focus
+{
+	border: 1px solid #5A7A93;
+	color: #223344;
+}
+
+h2.BlockHead
+{
+	display: block;
+	border-top: 1px solid #c3c3c3;
+	border-left: 1px solid #c3c3c3;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #eee;
+	background: #f8f8f8 url('../gfx/background_contentelement.png') repeat-x;
+	padding: 8px;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	margin: 2px 0 0 0;
+	color: #254461;
+}
+h2.BlockHead img
+{
+	margin-bottom: -5px;
+	opacity: 0.5;
+}
+h2.BlockHead div
+{
+	margin: -4px;
+}
+h2.BlockHead button
+{
+	margin: 0;
+	padding: 4px;
+}
+.BlockContainer
+{
+	display: block;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 8px;
+	border-top: 0;
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	margin: 0;
+}
+
+.Dropzone
+{
+	border-top: 2px solid #aaa;
+	border-left: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	border-bottom: 2px solid #fff;
+	background: #383838 url('../gfx/background_dropzone.png') 0 0 repeat-x;
+	font-weight: bold;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #ddd;
+	padding: 16px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+* html .Dropzone
+{
+	cursor: hand;
+}
+
+select
+{
+	padding: 2px;
+	color: #666;
+	line-height: 18px;
+	background: #f3f3f3;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+table.LayoutColumns, table.Layout
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.LayoutColumns td
+{
+	padding: 0 0 8px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+table.Layout td
+{
+	padding: 0 0 8px 0;
+	text-align: left;
+	vertical-align: middle;
+}
+
+table.Layout th, table.LayoutColumns th
+{
+	padding: 0;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+table.List
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+table.List td, table.List th
+{
+	vertical-align: middle;
+	padding: 4px;
+}
+
+table.List th
+{
+	background: #fff;
+	border-bottom: 1px dotted #ddd;
+}
+
+table.Gui
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.Gui td, table.Gui th
+{
+	padding: 5px;
+	vertical-align: middle;
+}
+table.Gui th
+{
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+
+/** Buttons *******************************************************************/
+
+button
+{
+	font-size: 11px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 0 2px 2px 0;
+	vertical-align: middle;
+	border-top: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #c0c0c0;
+	background: #e6e6e6 url('../gfx/background_button_normal.gif') repeat-x;
+	color: #333;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 3px 4px 3px 4px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	-webkit-transition: 0.2s all;
+}
+* html button  { cursor: hand;  }
+
+h1 button 
+{
+	margin-top: -6px;
+	margin-right: -6px;
+	text-transform: none;
+	font-size: 10px;
+}
+
+h1 input[type=text] 
+{
+	margin-top: -3px;
+	vertical-align: bottom;
+}
+
+button:hover
+{
+	border: 1px solid #aaa;
+	border-top: 1px solid #8a8;
+	background: #e6e6e6 url('../gfx/background_button_hover.gif') repeat-x;
+	color: #222;
+	text-align: center;
+	cursor: hand; cursor: pointer;
+}
+
+button.current 
+{
+	background: #efe;
+	color: #464;
+}
+
+button.current:hover 
+{
+	border: 1px solid #aaa;
+}
+
+button img
+{
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 2px;
+}
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+.SpacerSmall
+{
+	height: 2px;
+	display: block;
+	clear: both;
+}
+
+.SpacerSmallColored
+{
+	height: 1px;
+	display: block;
+	clear: both;
+	border: 1px solid #3E719C;
+	background: #5E8EB4;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 2px 0 2px 0;
+}
+
+button.Small
+{
+	height: 22px; 
+	font-size: 10px;
+	padding: 2px 0 2px 1px;
+}
+
+h1 Button
+{
+	height: 25px;
+}
+
+h1 Button.Small
+{
+	margin: -10px -4px 0 0;
+}
+
+h1 span
+{
+	float: right; margin-top: 4px; margin-right: 2px;
+}
+
+.TableDataHider
+{
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: #F6F8E2;
+	cursor: col-resize;
+}
+.TableDataHider:hover
+{
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #ddd;
+}
+
+.error
+{
+	font-weight:bold;
+	color:#F00;
+}
+
+p.error,
+div.error
+{
+	padding:4px;
+	border:2px solid #F00;
+}
+
+button.WebsnippetConfig
+{
+	width: 180px;
+}
+
+h1 span select
+{
+	font-size: 10px;
+	margin-top: -6px;
+	margin-right: -4px;
+}
+
+.Hidden
+{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+	top: 0px;
+	left: 0px;
+}
+
+.mceSingleLine .mceToolbar
+{
+	display: none;
+}
+.mceSingleLine iframe
+{
+	padding: 0;
+	max-height: 23px;
+	overflow: hidden;
+}
+.mceSingleLine .mceEditor
+{
+	height: 23px;
+	border-collapse: separate;
+	border-spacing: 0px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.SmallButtonBox strong,
+.ButtonBox strong
+{
+	display: block;
+	margin: 0 3px 3px 3px;
+	float: left;
+}
+.ButtonBoxButtons
+{
+	display: block;
+	background: #e8e8e8;
+	padding: 1px 1px 2px 1px;
+	margin: 2px 0 0 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.ButtonBoxButtons button
+{
+	padding: 0 1px 0 1px;
+	width: auto;
+	margin: 1px 0 0 1px;
+	border: 1px solid #d8d8d8;
+}
+.ButtonBoxButtons button img
+{
+	margin: 0;
+	display: block;
+}
+.ButtonBox
+{
+	display: block;
+	border: 1px solid #f0f0f0;
+	border-bottom: 1px solid #ececec;	
+	border-top: 1px solid #ececec;	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #ffffff;
+	padding: 3px 3px 3px 3px;
+	position: relative;
+	clear: both;
+	overflow-y: hidden;
+}
+li .ButtonBox
+{
+	background-image: url(../../lib/icons/bullet_black.png);
+	background-repeat: no-repeat;
+	background-position: -1px 2px;
+	padding: 3px 3px 3px 16px;
+}
+
+.DialogueBox
+{
+}
+.ModalContents
+{
+	-webkit-transition: all 0.25s;
+}
+
+input[type=text],input[type=password]
+{
+	-webkit-transition: all 0.2s;
+	outline: 0;
+}
+input[type=text]:focus,input[type=password]:focus
+{
+	outline: 0;
+}
+

@@ -1,0 +1,3 @@
+cat:summervacation
+name:Strandliv
+background:rgb(23,76,109)

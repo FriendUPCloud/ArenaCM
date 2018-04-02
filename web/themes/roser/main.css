@@ -1,0 +1,359 @@
+/* Roser Theme CSS (c) 2009 Ola Jensen ola@blest.no */
+body
+{
+	margin: 0;
+	padding: 0;
+	background: url(../upload/images-master/background_body.png) repeat-x #F17C95; /*-- ARENA Background --*/
+	color: #848484;
+	font-family: verdana;
+	font-size: 13px;
+	list-style: none;
+}
+
+h1,h2,h3
+{
+	color: #E66580;
+	margin: 0 0 8px 0;
+	font-size: 12px;
+}
+
+#PageTitle
+{
+	display: none;
+}
+
+
+
+/** All .Block types **/
+hr
+{
+	background: #FADDE4;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #FADDE4;
+}
+
+.Block p
+{
+	color: black;
+}
+
+.Block a
+{
+	color: #E66580;
+}
+
+.Block a
+{
+	text-decoration: none;
+}
+
+.Block button
+{
+	border: 1px #FADDE4 solid;
+	text-align: center;
+	font-size: 12px;
+	-moz-border-radius: 4px 2px;
+	padding-left: 1px;
+	margin: 1px;
+	width: 120px;
+}
+
+/** Form and types **/
+
+form input
+{
+	border: 1px #FADDE4 solid;
+	-moz-border-radius: 4px;
+	padding-left: 1px;
+	margin-top: 8px;
+	margin: left: 5px;
+	width: 180px;
+}
+
+form textarea
+{
+	border: 1px #FADDE4 solid;
+	-moz-border-radius: 4px;
+	width: 306px;
+	
+}
+
+.TableColumns p
+{
+	text-align: left;
+	padding-top: 1px;
+	width: 250px;
+}
+
+/** Top menu ******************************************************************/
+
+#TopMenu__
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 898px;
+	height: 120px;
+	background: url(../upload/images-master/logo.png) no-repeat 20px 35px;
+	font-size: 11px;
+	z-index: 100;
+	font-weight: bold;
+}
+
+#TopMenu__ #menuroot
+{
+	position: absolute;
+	top: 75px;
+	margin-left: 310px;
+	font-size: 14px;
+	color: #330000;
+}
+
+#TopMenu__ ul
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#TopMenu__ li
+{
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#TopMenu__ li a
+{
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+	font-weight: bold;
+	color: #330000;	
+	text-decoration: none;
+}
+#TopMenu__ li a:hover
+{
+	color: #660000;
+}
+#TopMenu__ li li ul
+{
+	position: absolute;
+	visibility: hidden;
+	width: 180px;
+	border: 1px solid #FBDDE3;
+	background: #FBDDE3;
+	top: 20px; 
+	left: 0px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 0.9;
+}
+#TopMenu__ li li ul ul
+{
+	position: static;
+	width: auto; top: auto; left: auto; background: none;
+	opacity: 1;
+}
+#TopMenu__ li li.hovering ul
+{
+	visibility: visible;
+}
+#TopMenu__ li li ul ul, li li ul ul li
+{
+	position: static;
+	top: auto;
+	left: auto;
+	margin: 0 0 0 10px;
+	padding: 0;
+	display: block;
+	float: left;
+	border: 0;
+}
+
+#TopMenu__ li li ul ul li
+{
+	float: none;
+}
+
+#TopMenu__ li  li ul li a
+{
+	display: block;
+	padding: 4px 4px 4px 8px;
+	clear: both;
+}
+#TopMenu__ li li ul li
+{
+	float: none;
+}
+
+/** END Top menu **************************************************************/
+
+#CenterBox__
+{
+	display: block;
+	width: 898px;
+	margin: auto;
+	position: relative;
+}
+
+#Content__
+{
+	padding-top: 1px;
+	position: relative;
+	display: block;
+}
+
+#InnerContainer__
+{
+	display: block;	
+	padding: 10px 20px; 
+	margin-top: 123px;
+	background: url(../upload/images-master/background_repeat.png) repeat-y;
+	clear: both;
+}
+
+#Center__
+{
+	position: relative;
+	background: url(../upload/images-master/background_top.png) no-repeat;
+	padding: 0;
+	margin: 0;
+}
+
+#Center__ #TopMenu__ div
+{
+	display: none;
+	visibility: hidden;
+}
+
+/* #Felt 1 /Hovedfeltet ***************************************************************************/
+
+#Felt1
+{
+	display: block;
+	width: 590px;
+	padding: 10px 20px 0 10px;
+	float: left;
+	margin-right: -20px;
+	min-height: 400px;
+	border-right: 1px solid #FBE7EB;
+}
+
+
+#Felt1 p
+{
+	color: #434343;
+}
+
+/* #Felt2 / Ekstrafelt ****************************************************************************/
+
+#Felt2
+{
+	border-left: 1px solid #FBE7EB;
+	display: block;
+	width: 207px;
+	padding-top: 10px;
+	padding-left: 20px;
+	float: right;
+	margin-right: 10px;
+	min-height: 400px;
+	font-size: 11px;
+}
+
+#Felt2 h1,h2,h3
+{
+	font-size: 11px;
+}
+
+#Felt2 a
+
+{
+	text-decoration: none;
+	color: #E76883;
+}
+
+#Felt2 p
+{
+	color: #4D4D4D;
+}
+
+/* Footeren ***************************************************************************************/
+
+
+#Bunn
+{
+	position: relative;
+	clear: both;
+	width: 500px;
+	height: 35px;
+	font-size: 11px;
+	margin-left: 10px;
+	top: 70px;
+	margin-top: 4px;
+	color: #E97990;
+	z-index: 10;
+	font-weight: bold;
+}
+
+#Footer__
+{
+	position: relative;
+	width: 898px;
+	margin: auto;
+	height: 76px;
+	background: url(../upload/images-master/background_bottom.png);
+}
+
+#InnerFooter__
+{
+	display: block;
+	margin: auto;
+}
+
+/** Standard Reserved Classes *************************************************/
+
+.Block { display: block; margin: 0 0 8px 0; }
+.ListElement 
+{ 
+	display: block; border-bottom: 1px solid #444; margin: 0; padding: 4px; 
+}
+.Small { font-size: 10px; }
+.Leadin { letter-spacing: 0.6px; }
+.Bold { font-weight: bold; }
+.Italic { font-weight: bold; }
+.Underlined { font-weight: bold; }
+.IndicateHover:hover { color: #fff; opacity: 0.95; }
+.IndicateFocus:focus { border: 2px solid #444; }
+
+.FloatRight { display: block; float: right; }
+.FloatLeft { display: block; float: left; }
+.ClearBoth { display: block; clear: both; }
+.ClearRight { display: block; clear: right; }
+.ClearLeft { display: block; clear: left; }
+
+.Container
+{
+	display: block;
+	border: 1px solid #333;
+	-moz-border-radius: 3px;
+	padding: 8px;
+}
+table.TableColumns
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+table.TableColumns td
+{
+	padding: 0 4px 4px 0;
+	vertical-align: top;
+}
+.RowEven { background: #666; } 
+.RowOdd { background: #777; }
+

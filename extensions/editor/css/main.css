@@ -1,0 +1,329 @@
+table.LayoutColumns
+{
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+table.LayoutColumns td.Column
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+table.LayoutColumns td.Column p
+{
+	margin: 0 0 8px 0;
+	display: block;
+}
+
+table.LayoutColumns td.Column td input
+{
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-border-box: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+#StructureButtonsTop
+{
+	position: relative;
+}
+
+#StructureButtonsTop > div
+{
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	z-index: 5;
+}
+#StructureButtonsTop > div a
+{
+	margin: 0 5px 0 0;
+}
+
+#Structure, #Structure li, #Structure ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+#Structure li ul li
+{
+	padding: 0 0 0 12px;
+}
+#Structure a
+{
+	-webkit-transition: background 0.2s;
+}
+#Structure a, #Structure span.inactive
+{
+	display: block;
+	border: 0;
+	background: none;
+	border-bottom: 1px solid #ddd;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 5px;
+}
+#Structure li.hidden > a, #Structure li.hidden > span
+{
+	color: #555555;
+}
+
+#Structure span img, #Structure a img
+{
+	display: block;
+	float: left;
+	position: relative;
+	top: 5px;
+}
+
+#Structure a.current, #Structure span.current
+{
+	font-weight: bold;
+	background: #444444;
+	border: 1px solid #333333;
+	color: #fff;
+}
+#Structure li.hidden > a.current, #Structure li.hidden > span.current
+{
+	color: #666666;
+}
+#Structure a small
+{
+	font-weight: normal;
+	font-size: 11px;
+}
+
+#Structure li.system
+{
+	background: #aaa;
+	color: #f8f8f8;
+}
+#Structure ul ul li.system
+{
+	background: none;
+}
+#Structure li.system a
+{
+	color: #000000;
+	background: #eee;
+	border-color: #aaa;
+	border-style: solid;
+}
+
+#Structure li a:hover
+{
+	background: #eee;
+	color: #aa0000;
+}
+
+#Structure li.current a:hover
+{
+	background: #777777;
+	color: #fff;
+}
+#Structure li.hidden.system.current a.current, #Structure li.hidden.system.current span.current
+{
+	color: #777;
+}
+#Structure li.system a:hover
+{
+	background: #ddd;
+	color: #777777;
+}
+
+#Structure li.Header img
+{
+	display: none;
+}
+#Structure li.Header
+{
+	font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 18px;
+	border-bottom: 1px solid #aaa;
+	color: #6C090C;
+}
+
+#StructureContainer, #StructureButtons { padding: 2px; }
+#StructureButtons button { margin-bottom: 0; }
+#StructureButtons { margin-bottom: 2px; }
+#EditHeadline
+{
+	position: relative;
+}
+
+#BottomButtonContainer
+{
+	position: relative;
+	height: 20px;
+}
+#BottomButtons
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+}
+
+p.BodyText
+{
+	margin: 0;
+}
+
+#EditorInfoTabs .pageActive, #EditorModuleTabs .pageActive { margin-bottom: 0; }
+
+#ReorderSelect option
+{
+	display: block;
+	padding: 4px;
+	height: 14px;
+	margin: 0;
+}
+#ReorderSelect 
+{
+	display: block;
+	padding: 0;
+}
+
+.Bottom
+{
+	position: relative;
+	top: -6px;
+	margin-bottom: -4px;
+}
+
+.BuyModule table, .AddedModule table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.BuyModule table td, .AddedModule table td
+{
+	vertical-align: top;
+	padding: 0;
+}
+
+.BuyModule, .AddedModule
+{
+	display: block;
+	border: 1px solid #ccc;
+	background: #f0f0f0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 4px;
+	margin: 0 0 2px 0;
+}
+.BuyModule .Image, .AddedModule .Image
+{
+	display: block;
+	border-top: 1px solid #468;
+	border-left: 1px solid #357;
+	border-right: 1px solid #357;
+	border-bottom: 1px solid #135;
+	background: #121212;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	padding: 2px;
+	margin: 0 8px 0 0;
+	width: 100px;
+	height: 110px;
+}
+#pageModulesAvailable, #pageModulesPro
+{
+	max-height: 380px;
+	min-height: 380px;
+	height: 380px;
+	overflow: auto;
+}
+#pageModulesPro .Image
+{
+	background-color: #e3ab17;
+}
+#pageModulesConnected { 
+	max-height: 380px;
+	min-height: 0px;
+	overflow: auto;
+}
+
+h4 a, h4 a:hover
+{
+	color: #444444;
+	cursor: pointer;
+}
+
+h4 .Buttons
+{
+	display: block;
+	font-size: 10px;
+	float: right;
+}
+h4 .Buttons button
+{
+	height: 14px;
+	font-size: 10px;
+	padding: 0 0 0 2px;
+	position: relative;
+	top: 2px;
+}
+
+h4 .Buttons button img
+{
+	position: relative;
+	top: -3px;
+}
+
+div.Faded
+{
+	opacity: 0.5;
+	border-left: 8px solid #ccc;
+	padding-left: 8px;
+}
+div.Faded *
+{
+	color: #aaa;
+}
+
+div.Orphan
+{
+	opacity: 0.5;
+	border-left: 8px solid #9ac;
+	padding-left: 8px;
+}
+div.Orphan *
+{
+	color: #69c;
+}
+
+
+#PageNotes
+{
+	width: 100%; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+	height: 170px;
+}
+
+#ContentFields
+{
+	min-height: 300px;
+}
+
+.ExtraFieldDiv:hover
+{
+	background: #eee;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.ExtraFieldDiv
+{
+	background: #f8f8f8;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}

@@ -1,0 +1,11 @@
+
+user_Image							: Image
+user_Username						: Username
+user_ingroup						: I gruppe
+user_datecreated					: Date created
+user_datelogin						: Date logged in
+user_SortOrder						: Sort order
+
+i18n_nolanguagesetting			: Don't force a language
+i18n_languagesetting				: Use language
+

@@ -1,0 +1,345 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background: url(../upload/images-master/background_body.png) repeat-x #174C6D; /*-- ARENA Background --*/
+	font-family: verdana;	
+	font-size: 11px;
+	color: #273134;
+}
+
+body h1
+{
+	font-size: 16px;
+	color: #457E8D;
+}
+
+/** All .Block types **/
+.Block p
+{
+	color: black;
+}
+
+.Block a
+{
+	color: #5B93A8;
+}
+
+.Block a
+{
+	text-decoration: none;
+}
+
+.Block button
+{
+	border: 1px solid;
+	text-align: center;
+	font-size: 11px;
+	-moz-border-radius: 4px 2px;
+	padding-left: 1px;
+	margin: 1px;
+	width: 120px;
+}
+
+/** Form and types **/
+
+hr
+{
+	background: #FBE7EB;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #FBE7EB;
+}
+
+
+form input
+{
+	border: 1px solid;
+	-moz-border-radius: 4px;
+	padding-left: 1px;
+	margin-top: 8px;
+	margin: left: 5px;
+	width: 180px;
+}
+
+form textarea
+{
+	border: 1px solid;
+	-moz-border-radius: 4px;
+	width: 306px;
+}
+
+.TableColumns p
+{
+	text-align: left;
+	padding-top: 1px;
+	width: 250px;
+}
+
+/* The rest of the best */
+
+#InnerContent__
+{
+	position: relative;
+	z-index: 11;
+	display: block;
+	margin: -35px 0 -61px 0;
+}
+
+#Felt1
+{
+	display: block;
+	width: 557px;
+	padding: 0 20px 0 10px;
+	float: left;
+	margin-right: -20px;
+	min-height: 400px;
+	border-right: 1px solid #FBE7EB;
+}
+
+#Felt1 h3
+{
+	color: #317282;
+}
+
+#Felt2
+{
+	border-left: 1px solid #FBE7EB;
+	display: block;
+	width: 200px;
+	padding-left: 20px;
+	float: right;
+	margin-right: 10px;
+	min-height: 400px;
+	color: #317282;
+}
+
+#PageTitle
+{
+	display: none;
+}
+
+#TopMenu__
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 859px;
+	height: 237px;
+	background: url(../upload/images-master/logo.png) no-repeat 20px 50px;
+	font-size: 11px;
+	z-index: 100;
+}
+
+#TopMenu__ #menuroot
+{
+	position: absolute;
+	top: 125px;
+	font-size: 14px;
+	left: 9px;
+}
+
+/* Her begynner hoggi sin optimaliserte TopMenu code <insert grin> :)******************************/
+
+#TopMenu__ a
+{
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #2a3249; 
+	padding: 0 21px 0 21px;
+	border-right: 1px solid;
+	font-size: 12px;
+}
+
+#TopMenu__ ul li li li a
+{
+	border: 0;
+	left: -7px;
+	position: relative;
+}
+
+#TopMenu__ ul
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#TopMenu__ li
+{
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#TopMenu__ li a
+{
+	display: block;
+	float: left;
+	margin: 0;
+	color: #330000;	
+	text-decoration: none;
+}
+
+#TopMenu__ li li ul
+{
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	width: 187px;
+	border: 1px solid #FBDDE3;
+	background: #F2E6D6;
+	top: 15px; 
+	left: 21px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 0.9;
+	padding: 4px 0 4px 0;
+}
+#TopMenu__ li li ul ul
+{
+	position: static;
+	width: auto; height: auto;
+	top: auto; left: auto; background: none;
+	overflow: visible;
+	opacity: 1;
+	border: 0;
+	clear: both;
+	display: block;
+	padding: 0;
+}
+#TopMenu__ li li.hovering ul
+{
+	visibility: visible;
+}
+
+#TopMenu__ li li.hovering ul, #TopMenu__ li li.hovering li 
+{
+	display: block;
+	clear: both;
+	float: none;
+}
+#TopMenu__ li li.hovering li li { margin: 0 0 0 4px; }
+
+/* End topmenu */
+
+#CenterBox__
+{
+	display: block;
+	width: 858px;
+	margin: auto;
+	position: relative;
+}
+
+#Center__
+{
+	position: relative;
+	background: url(../upload/images-master/background_top.png) no-repeat;
+	padding: 0;
+	margin: 0;
+}
+
+#Content__
+{
+	padding-top: 1px;
+	position: relative;
+	display: block;
+}
+
+#InnerContainer__
+{
+	display: block;	
+	padding: 10px 20px; 
+	margin-top: 182px;
+	background: url(../upload/images-master/background_vcontent.png) repeat-y;
+	clear: both;		
+}
+
+#Center__ #TopMenu__ div
+{
+	display: none;
+	visibility: hidden;
+}
+
+/* Footeren ********************************/
+
+
+#Bunn
+{
+	clear: both;
+}
+#Bunntekst
+{
+	position: relative;
+	clear: both;
+	width: 400px;
+	height: 35px;
+	font-size: 10px;
+	top: 16px;
+	margin-left: 10px;
+}
+
+
+#Footer__
+{
+	position: relative;
+	height: 65px;
+	background: url(../upload/images-master/background_bottom.png);
+}
+
+#InnerFooter__
+{
+	display: block;
+	width: 751px;
+	margin: auto;
+}
+
+/** Standard Reserved Classes *************************************************/
+
+.Block { display: block; margin: 0 0 8px 0; }
+.ListElement 
+{ 
+	display: block; border-bottom: 1px solid #444; margin: 0; padding: 4px; 
+}
+.Small { font-size: 10px; }
+.Leadin { letter-spacing: 0.6px; }
+.Bold { font-weight: bold; }
+.Italic { font-weight: bold; }
+.Underlined { font-weight: bold; }
+.IndicateHover:hover { color: #fff; opacity: 0.95; }
+.IndicateFocus:focus { border: 2px solid #444; }
+
+.FloatRight { display: block; float: right; }
+.FloatLeft { display: block; float: left; }
+.ClearBoth { display: block; clear: both; }
+.ClearRight { display: block; clear: right; }
+.ClearLeft { display: block; clear: left; }
+
+.Container
+{
+	display: block;
+	border: 1px solid #333;
+	-moz-border-radius: 3px;
+	padding: 8px;
+}
+table.TableColumns
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+table.TableColumns td
+{
+	padding: 0 4px 4px 0;
+	vertical-align: top;
+}
+.RowEven { background: #666; } 
+.RowOdd { background: #777; }
+
+
+

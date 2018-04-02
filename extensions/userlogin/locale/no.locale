@@ -1,0 +1,24 @@
+
+# Norwegian locale for login module
+
+Register new account : Registrer en ny konto
+Real name : Ditt fulle navn
+Username : Brukernavn
+Password : Passord
+Verify password : Verifiser passord
+E-mail address : E-post adresse
+All fields need to be filled out. Du må fylle inn alle feltene.
+Click to register : Klikk for å registrere 
+
+You need to fill in your name : Du må skrive inn navnet ditt
+You need to fill in a username : Du må skrive inn et brukernavn
+You need to fill in a password : Du må skrive inn et passord
+The password could not be confirmed : Passordet og verifiseringen må stemme
+You need to fill in an e-mail address : Du må skrive inn en e-post adresse
+You need to fill in your address : Du må skrive inn adressen din
+You need to fill in your zip code : Du må skrive inn postnummeret ditt
+You need to fill in your city : Du må skrive inn poststedet ditt
+Please choose your country : Du må velge land
+
+Alter your password : For å endre passordet, fyll inn et nytt passord under
+

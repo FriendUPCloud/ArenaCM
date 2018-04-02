@@ -1,0 +1,37 @@
+#Structure li
+{
+	zoom: 1;
+}
+
+
+#Content #PageNotes
+{
+	width: 96%;
+}
+
+.BuyModule, .AddedModule
+{
+	width: 291px;
+}
+
+.BuyModule .Description, .AddedModule .Description
+{
+	width: 177px;
+}
+
+#pageModulesConnected.pageActive, #pageModulesAvailable.pageActive, 
+#pageModulesPro.pageActive
+{
+	overflow-x: hidden;
+}
+
+#EditorAdvancedPages
+{
+	border-top: 1px solid transparent;
+}
+
+.ExtraFieldDiv > h4
+{
+	position: relative;
+}
+

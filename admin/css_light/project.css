@@ -1,0 +1,8 @@
+.NewButton{
+	float: right;
+	height: 22px;
+	width: 100px; 
+	font-size: 10px;
+	padding: 2px 0 2px 1px;
+	margin: -17px 1px 0 0;
+}

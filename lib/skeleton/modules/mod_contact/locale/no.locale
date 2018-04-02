@@ -1,0 +1,39 @@
+Name	: Navn
+Telephone : Telefon
+Fax : Faks
+Message : Beskjed
+Zipcode : Postnr
+City : Poststed
+Country : Land
+Address : Adresse
+E-mail : E-post
+Send form : Send skjemaet
+Already posted : Allerede sendt
+Your message was already posted : Din melding var allerede sendt
+Your message was identified as spam : Din melding var identifisert som spam
+Spam	: Spam
+Back : Tilbake
+Properties : Egenskaper
+Remove : Fjern
+
+#Spam control
+
+Spam control 					: Spam kontroll
+
+What is sum of one plus three? : Hva er summen av 1 + 3?
+Does an average human have two eyes? : Har et vanlig menneske to øyer?
+Does a zebra have stripes? : Har en zebra striper?
+
+answer_yes : ja
+
+i18n_properties_heading : Feltegenskaper for
+i18n_input_type : Felttype
+i18n_type_text : Tekstfelt
+i18n_type_varchar : Setning / ord
+i18n_type_select : Rullegardin
+i18n_input_data : Feltverdi(er)
+i18n_close_properties : Lukk
+i18n_save_close_props : Lagre og lukk
+i18n_input_required : Obligatorisk
+i18n_forgot_to_fill_in_field : Du har glemt å fylle ut feltet
+

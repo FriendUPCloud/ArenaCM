@@ -1,0 +1,2 @@
+Tips en venn|200|extramodule
+Gir deg en knapp som besøkende kan klikke på for å tipse en venn om aktiv side.

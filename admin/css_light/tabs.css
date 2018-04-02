@@ -1,0 +1,163 @@
+.tabs .tabPage, .tabs .tabPage, .pageActive
+{
+	clear: both;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 8px;
+	-moz-border-radius: 4px;
+	-moz-border-radius-topleft: 0;
+	-webkit-border-radius: 4px;
+	-webkit-border-top-left-radius: 0;
+	position: relative; 
+	width: auto;
+	height: auto;
+	visibility: visible;
+}
+.tabs ul.tabswitcher, .tabs ul.tabswitcher
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.subTabs
+{
+	position: relative;
+}
+
+.subTabs .pageActive
+{
+	border: 1px solid #ccc;
+	margin-bottom: -1px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.Container .Container .pageActive, .Container .SubContainer .pageActivem, .tabPage .pageActive, .pageActive .pageActive
+{
+	padding: 2px;
+}
+
+.tabs ul.tabswitcher li, .tabs .tab, .tabs ul.tabswitcher li, .tabs .tab, .tab
+{
+	background: #f4f4f4 url('../gfx/background_tab_inactive.jpg') repeat-x;
+	display: block;
+	float: left;
+	padding: 8px 8px 5px 8px;
+	margin-right: 2px;
+	border: 1px solid #ccc;
+	color: #444;
+	font-weight: normal;
+	font-size: 11px;
+	margin-bottom: -1px;
+	cursor: pointer;
+	margin-top: 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+}
+* html .tabs ul.tabswitcher li, .tabs .tab, .tabs ul.tabswitcher li, .tabs .tab, .tab
+{
+	cursor: hand;
+}
+
+.tabs ul.tabswitcher li.current, .tabs .tabCurrent, .tabs ul.tabswitcher li.current, .tabs .tabCurrent, .tabActive
+{
+	display: block;
+	position: relative;
+	float: left;
+	padding: 8px 8px 5px 8px;
+	margin-right: 2px;
+	border: 1px solid #ccc;
+	font-size: 11px;
+	margin-bottom: -1px;
+	color: #000;
+	background: #fff url('../gfx/background_contentTab.jpg') repeat-x;
+	border-bottom: 1px solid #fff;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	font-weight: bold;
+	color: #254461;
+	z-index: 11;
+}
+
+.tabActive img, .current img, .tab img
+{
+	vertical-align: bottom;
+}
+
+
+/* Subtabs */
+
+.subTabs
+{
+	float: left;
+	margin: -1px 0 0 0;
+	padding: 0;
+}
+div.subTab
+{
+	background: #f4f4f4 url('../gfx/background_button_normal.gif');
+	display: block;
+	float: left;
+	padding: 5px 12px 5px 12px;
+	margin: 0px 2px 0 0;
+	border: 1px solid #ccc;
+	color: #443;
+	font-weight: normal;
+	font-size: 11px;
+	border-top: 0;
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	
+	cursor: pointer;
+}
+* html div.subTab
+{
+	cursor: hand;
+}
+div.subTab:hover
+{
+	background: #f4f4f4 url('../gfx/background_button_hover.gif');
+}
+div.subTabActive
+{
+	background: #e3e3e3 url('../gfx/background_button_normal.gif') 0 -6px repeat-x;
+	display: block;
+	float: left;
+	padding: 5px 12px 5px 12px;
+	margin: 0px 2px 0 0;
+	margin-right: 2px;
+	border: 1px solid #ccc;
+	color: #443;
+	font-weight: normal;
+	font-size: 11px;
+	border-top: 0;
+	position: relative;
+	z-index: 100;
+	-moz-border-radius: 4px;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+}
+.subTab img, .subTabActive hover
+{
+	vertical-align: bottom;
+}
+
+/* mostly for internet explorer 6-7 */
+.page
+{
+	position: absolute;
+	visibility: hidden;
+	top: -2000px;
+	left: -2000px;
+}

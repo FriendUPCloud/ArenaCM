@@ -1,0 +1,738 @@
+@media screen and (min-width: 1280px)
+{
+	html body, html div, html select, html textarea, 
+	html input, html button, html td, html th
+	{
+		font-size: 16px;
+	}
+	html .tabs ul.tabswitcher li, html .tabs .tab, 
+	html .tabs ul.tabswitcher li, html .tabs .tab, 
+	html .tab, html .tabActive, html .ModuleTab, html .ModuleTabActive,
+	html button, 
+	html #MetaButtons a, html #MetaButtons > div
+    {
+    	font-size: 16px;
+    	font-family: "SourceSans";
+    	font-weight: normal;
+    }
+   html .tabs .tab, 
+	html .tab
+	{
+		background: #e0e0e0;
+		color: black;
+    	border-right: 1px solid #c0c0c0;
+    	border-left: 1px solid #c0c0c0;
+    	border-top: 1px solid #c0c0c0;
+	}
+	html .tabActive
+	{
+		text-shadow: 1px 1px 1px white;
+	}
+	html #MetaButtons a, html #MetaButtons > div,
+    html .ModuleTab a, html .ModuleTabActive a,
+    html .ModuleTabActive a:active, html .ModuleTabActive a:visited,
+    html .ModuleTab a:active, html .ModuleTab a:visited
+    {
+    	text-transform: none;
+    }
+    html h1, html td h1
+    {
+    	font-size: 16px;
+    	background: #e0e0e0;
+    	color: black;
+    	border: 0;
+    	line-height: 20px;
+    	padding: 10px 13px 10px 8px;
+    	font-weight: bold;
+    	vertical-align: middle;
+    	font-family: "SourceSans";
+    	box-shadow: none;
+    }
+    html h1 td
+    {
+    	font-size: 16px;
+    	vertical-align: middle;
+    	font-family: "SourceSans";
+    }
+    html button, html button:hover
+    {
+    	color: black;
+    	border-bottom: 1px solid #b0b0b0;
+    	border-right: 1px solid #c0c0c0;
+    	border-left: 1px solid #c0c0c0;
+    	border-top: 1px solid #c0c0c0;
+    	border-radius: 3px;
+    	-moz-border-radius: 3px;
+    	-webkit-border-radius: 3px;
+    	background: #eeeeee;
+    	padding: 4px 6px;
+    	font-size: 16px;
+    }
+    html button:hover
+    {
+    	background: #e0e0e0;
+    }
+}
+
+.w200 { width: 200px; }
+.w300 { width: 300px; }
+.w400 { width: 400px; }
+
+input[type=text], textarea, select, input[type=password]
+{
+	color: #000;
+	background: #fff;
+	font-size: 14px;
+}
+input[type=text], textarea, input[type=password]
+{
+	color: #000;
+	padding: 4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px solid #cfcfcf;
+	background: #fff url('../gfx/background_input.jpg') repeat-x;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+
+input[type=text], input[type=password]
+{
+	margin: 0 2px 2px 0;
+}
+
+iframe
+{
+	border: 1px solid #f8f8f8;
+	-webkit-transition: height 0.2s;
+}
+input.Disabled, .SubContainer input.Disabled
+{
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #f0f0f0;
+	color: #999;
+	cursor: default;
+}
+
+.SubContainer input[type=text], .SubContainer textarea, .SubContainer input[type=password]
+{
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px solid #cfcfcf;
+	background: #fff;
+}
+
+input[type=text]:focus, textarea:focus, input[type=password]:focus
+.SubContainer input[type=text]:focus, .SubContainer textarea:focus,
+.SubContainer input[type=password]:focus
+{
+	border: 1px solid #937A5a;
+	color: #443322;
+}
+
+h2.BlockHead
+{
+	display: block;
+	border-top: 1px solid #c3c3c3;
+	border-left: 1px solid #c3c3c3;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #eee;
+	background: #f8f8f8 url('../gfx/background_contentelement.png') repeat-x;
+	padding: 8px;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	margin: 2px 0 0 0;
+	color: #000000;
+}
+h2.BlockHead img
+{
+	margin-bottom: -5px;
+	opacity: 0.5;
+}
+h2.BlockHead .HeaderBox img
+{
+	position: relative;
+	top: -4px;
+	margin: 0;
+}
+h2.BlockHead div
+{
+	margin: -4px;
+}
+h2.BlockHead button, h2.BlockHead div.Button
+{
+	margin: 0;
+	padding: 4px;
+}
+.BlockContainer
+{
+	display: block;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 8px;
+	border-top: 0;
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	margin: 0;
+}
+
+.Dropzone
+{
+	border-top: 2px solid #aaa;
+	border-left: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	border-bottom: 2px solid #fff;
+	background: #383838 url('../gfx/background_dropzone.png') 0 0 repeat-x;
+	font-weight: bold;
+	text-transform: lowercase;
+	font-size: 13px;
+	color: #ddd;
+	padding: 16px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+* html .Dropzone
+{
+	cursor: hand;
+}
+
+select
+{
+	padding: 2px;
+	color: #666;
+	line-height: 18px;
+	background: #f3f3f3;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+table.LayoutColumns, table.Layout
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.LayoutColumns td
+{
+	padding: 0 0 8px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+table.Layout td
+{
+	padding: 0 0 8px 0;
+	text-align: left;
+	vertical-align: middle;
+}
+
+table.Layout th, table.LayoutColumns th
+{
+	padding: 0;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+table.List
+{
+	border-collapse: separate;
+	border-radius: 3px;
+	border-spacing: 0;
+	width:100%;
+}
+
+table.List > tbody > tr > th,
+table.List > tr > th
+{
+	background: #7D7D7D;
+	color: #ffffff;
+	border-left: 1px dotted #dddddd;
+	border-bottom: 1px dotted #dddddd;
+	padding: 4px;
+	font-weight: bold;
+}
+
+table.List > tr:first-child > th:first-child,
+table.List > tbody > tr:first-child > th:first-child
+{
+	border-radius: 3px 0 0 0;
+	border-left: 0;
+}
+
+table.List > tr:first-child > th:last-child,
+table.List > tbody > tr:first-child > th:last-child
+{
+	border-radius: 0 3px 0 0;
+}
+
+table.List > tr:last-child > td:first-child,
+table.List > tbody > tr:last-child > td:first-child
+{
+	border-radius: 0 0 0 3px;
+	border-left: 0;
+}
+
+table.List > tr > td, table.List > tbody > tr > td
+{ 
+	border-left: 1px solid #c0c0c0; 
+}
+
+table.List > tr > th, table.List > tbody > tr > th
+{ 
+	border-left: 1px solid #505050; border-bottom: 1px solid #505050; 
+}
+
+table.List > tr > td:first-child, 
+table.List > tbody > tr > td:first-child
+{ 
+	border-left: 0; 
+}
+
+table.List > tr:last-child > td:last-child, 
+table.List > tbody > tr:last-child > td:last-child
+{
+	border-radius: 0 0 3px 0;
+}
+
+table.List .sw1 > td
+{
+	background: #f0f0f0;
+	color: #333333;
+	padding: 4px;
+}
+
+table.List .sw2 > td
+{
+	background: #e0e0e0;
+	color: #222222;
+	padding: 4px;
+}
+
+table.List .sw1 > td a, table.List .sw2 > td a
+{
+	color: #aa0000;
+}
+
+table.List .sw1 > td a:hover, table.List .sw2 > td a:hover
+{
+	color: #ff0030;
+}
+
+table.List > tr > th.Active a, table.List > tbody > tr > th.Active a, 
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+table.List > tr > th a, table.List > tbody > tr > th a
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+}
+
+table .HeaderBox > label
+{
+	color: black;
+}
+
+table.List > tr.Selected > td, table.List > tbody > tr.Selected > td
+{
+	background: #aa0000;
+	color: #ffffff
+}
+
+table.Gui
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.Gui td, table.Gui th
+{
+	padding: 5px;
+	vertical-align: middle;
+}
+table.Gui th
+{
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+
+/** Buttons *******************************************************************/
+
+button, div.Button
+{
+	font-size: 13px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 0 2px 2px 0;
+	vertical-align: middle;
+	border: 1px solid #c0c0c0;
+	box-shadow: inset 0px -1px 6px rgba(0,0,0,0.1);
+	background: #efefef;
+	color: #000000;
+	font-weight: normal;
+	padding: 3px 4px 3px 4px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	line-height: 16px;
+}
+div.Button { display: block; float: left; }
+* html button, * html div.Button  { cursor: hand;  }
+
+button.Red:hover
+{
+	background: #f00030;
+	color: #ffffff;
+	font-weight: bold;
+	border-top-color: #ff33cc;
+	border-left-color: #ff33cc;
+	border-right-color: #aa0000;
+	border-bottom-color: #aa0000;
+}
+
+h1
+{
+	position: relative;
+}
+
+h1 input[type=text] 
+{
+	margin-top: -3px;
+	vertical-align: bottom;
+}
+
+h1 div select
+{
+	position: relative;
+	top: -4px;
+	padding: 2px 0px;
+}
+
+h1 button, h1 div.Button
+{
+	margin: 0 -4px 0 0;
+}
+
+button:hover, div.Button:hover
+{
+	border: 1px solid #868686;
+	background-color: #9f9f9f;
+	cursor: hand; cursor: pointer;
+}
+
+button.current, div.ButtonCurrent
+{
+	background: #eeffee;
+	color: #446644;
+}
+
+button.current:hover , div.ButtonCurrent:hover
+{
+	border: 1px solid #aaa;
+}
+
+button img, div.Button img
+{
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 2px;
+}
+
+h2 button img, h1 button img,
+h2 div.Button img, h1 div.Button img
+{
+	position: relative;
+	margin-top: 0;
+}
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+.SpacerSmall
+{
+	height: 2px;
+	display: block;
+	clear: both;
+}
+
+.SpacerSmallColored
+{
+	height: 1px;
+	display: block;
+	clear: both;
+	border: 1px solid #AB1218;
+	background: #CD151D;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 2px 0 2px 0;
+}
+
+button.Small, div.ButtonSmall
+{
+	height: 22px; 
+	font-size: 12px;
+	padding: 2px 0 2px 1px;
+}
+
+h1 Button, h1 div.Button
+{
+	height: 25px;
+}
+
+h1 Button.Small, h1 div.ButtonSmall
+{
+	margin: -10px -4px 0 0;
+}
+
+button.Small:hover
+{
+	padding: 2px 0 2px 1px;
+}
+
+.ButtonBoxButtons button:hover
+{ 
+	padding: 0 1px 0 1px; 
+}
+
+.TableDataHider
+{
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: #F6F8E2;
+	cursor: col-resize;
+}
+.TableDataHider:hover
+{
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #ddd;
+}
+
+.error
+{
+	font-weight:bold;
+	color:#F00;
+}
+
+p.error,
+div.error
+{
+	padding:4px;
+	border:2px solid #F00;
+}
+
+button.WebsnippetConfig, div.ButtonWebsnippetConfig
+{
+	width: 180px;
+}
+
+h1 span select
+{
+	font-size: 12px;
+	margin-top: -6px;
+	margin-right: -4px;
+}
+
+.Hidden
+{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+	top: 0px;
+	left: 0px;
+}
+
+.mceSingleLine .mceToolbar
+{
+	display: none;
+}
+.mceSingleLine iframe
+{
+	padding: 0;
+	max-height: 23px;
+	overflow: hidden;
+}
+.mceSingleLine .mceEditor
+{
+	height: 23px;
+	border-collapse: separate;
+	border-spacing: 0px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+/* Header box for h1s etc ----------------------------------------------------*/
+.HeaderBox
+{
+	float: right;
+	display: block;
+	width: auto;
+	white-space: nowrap;
+	margin: -5px -1px 0 0;
+}
+.HeaderBox label
+{
+	float: left; 
+	display: block;
+	color: white;
+}
+.HeaderBox select
+{
+	display: block;
+	float: left;
+	position: relative;
+	top: 1px;
+	height: 22px;
+	padding: 0;
+	margin: 0 4px 0 4px;
+}
+.HeaderBox button, .HeaderBox div.Button
+{
+	margin: 0 -2px 0 0;
+	position: relative;
+	top: 0px;
+	padding: 0px 1px 0px 3px;
+	height: 23px;
+	width: 26px;
+}
+/* End Header box for h1s etc ------------------------------------------------*/
+.SmallButtonBox strong,
+.ButtonBox strong
+{
+	display: block;
+	margin: 0 3px 3px 3px;
+	float: left;
+}
+.ButtonBoxButtons
+{
+	display: block;
+	background: #e8e8e8;
+	padding: 1px 1px 2px 1px;
+	margin: 2px 0 0 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.ButtonBoxButtons button, .ButtonBoxButtons div.Button
+{
+	padding: 0 1px 0 1px;
+	width: auto;
+	margin: 1px 0 0 1px;
+	border: 1px solid #d8d8d8;
+}
+.ButtonBoxButtons button img, .ButtonBoxButtons div.Button img
+{
+	margin: 0;
+	display: block;
+}
+.ButtonBox
+{
+	display: block;
+	border: 1px solid #f0f0f0;
+	border-bottom: 1px solid #ececec;	
+	border-top: 1px solid #ececec;	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #ffffff;
+	padding: 3px 3px 3px 3px;
+	position: relative;
+	clear: both;
+	overflow-y: hidden;
+}
+li .ButtonBox
+{
+	background-image: url(../../lib/icons/bullet_black.png);
+	background-repeat: no-repeat;
+	background-position: -1px 2px;
+	padding: 3px 3px 3px 16px;
+}
+
+.DialogueBox
+{
+	-moz-box-shadow: rgba(0,0,0,0.6) 0px 2px 5px;
+	-webkit-box-shadow: rgba(0,0,0,0.6) 0px 2px 5px;
+	box-shadow: rgba(0,0,0,0.6) 0px 2px 5px;
+	-webkit-transition: all 0.25s;
+}
+.ModalContents
+{
+	-webkit-transition: all 0.25s;
+}
+
+input[type=text],input[type=password]
+{
+	-webkit-transition: all 0.2s;
+	outline: 0;
+}
+input[type=text]:focus,input[type=password]:focus
+{
+	outline: 0;
+}
+
+.ClickHeader, .ClickHeaderActive
+{
+	border: 1px solid #56748C;
+	background: #5187B0;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: hand;
+	cursor: pointer;
+	padding: 3px;
+}
+.ClickHeaderActive { background: #aa8866; }
+.ClickHeader:hover, .ClickHeaderActive
+{
+	background: #777777;
+	border-color: #555555;
+}
+.ClickHeader p, .ClickHeaderActive p { margin: 0; }
+.ClickContent { border: 1px solid rgba(0,0,0,0); padding: 0 4px; margin: 0; }
+.ClickContentActive
+{
+	border: 1px solid #cccccc;
+	background: #f8f8f8;
+	padding: 4px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 1px 0 1px 0;
+}
+.ClickContent p { margin: 0 0 4px 0; }
+

@@ -1,0 +1,37 @@
+Pagination pr. page		: Show page numbers
+
+i18n_Edit						: Edit
+i18n_New_article				: New article
+i18n_Title						: Title
+i18n_Showing_from				: Showing from
+i18n_Date						: Date
+i18n_Saved_date				: Saved date
+i18n_tags_categories			: Tags / Category words
+i18n_Author						: Author
+i18n_Published					: Published
+i18n_Leadin_image				: Leadin image
+i18n_Leadin_image_scalemode		: Leadin image scalemode
+i18n_Image_folders			: Choose folders
+i18n_Detail_image				: Detail image
+i18n_Detail_image_scalemode		: Detail image scalemode
+i18n_Leadin						: Leadin
+i18n_Article					: Full article
+i18n_Save_article				: Save article
+i18n_Preview					: Preview
+i18n_Close						: Close
+i18n_Cancel						: Cancel
+i18n_Go_to_source				: Go to source
+i18n_Short_Title				: Short title
+i18n_No_blogs					: No blogs published.
+i18n_tags_link					: External link
+
+i18n_default					: Use default settings
+i18n_proximity					: Keep aspect
+i18n_framed						: Cut to size
+i18n_centered					: Centered in size
+i18n_original					: Keep original size
+i18n_Sticky						: Sticky
+i18n_Comments					: Comments
+
+blogscalemode_imgtag    : Keep aspect, img tag
+Facebook comments				: Facebook comments

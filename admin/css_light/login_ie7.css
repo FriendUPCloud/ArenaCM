@@ -1,0 +1,21 @@
+input
+{
+	padding: 4px;
+	height: 14px;
+}
+
+p
+{
+	margin: 8px 0 10px 0;
+}
+
+button
+{
+	width: auto;
+	overflow: visible;
+}
+
+h2
+{
+	margin-top: -20px;
+}

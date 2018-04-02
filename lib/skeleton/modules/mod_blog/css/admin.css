@@ -1,0 +1,42 @@
+
+
+#mod_blog_content table.Overview td img
+{
+	cursor: pointer;
+}
+
+#mod_blog_content table.Overview td , #mod_blog_content table.Overview th
+{
+	padding: 5px;
+	border-top: 1px solid #ccc;
+}
+#mod_blog_content table.Overview th
+{
+	background: #fff; font-weight: bold; text-align: left;
+}
+
+#mod_blog_content table.Overview
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+td a img { border: 0; }
+
+
+#BlogImagePreview, #BlogDetailPreview
+{
+	border: 2px solid #000;
+	background: #777;
+	width: 64px;
+	height: 64px;
+	margin: 0 4px 4px 0;
+	position: relative;
+}
+
+#BlogImagePreview button, #BlogDetailPreview button
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}

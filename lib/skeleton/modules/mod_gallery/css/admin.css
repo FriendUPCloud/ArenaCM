@@ -1,0 +1,26 @@
+#gal_preview .Container
+{
+	height: 200px;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: auto 100% !important;
+	background-color: black !important;
+}
+#gal_preview br
+{
+	clear: both;
+}
+
+#gallerytabs input[type=text]
+{
+	width: 37px;
+}
+#gallerytabs input[type=checkbox]
+{
+	width: 14px;
+}
+
+#gallerytabs
+{
+	width: 360px;
+}

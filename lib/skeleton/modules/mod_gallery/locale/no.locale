@@ -1,0 +1,35 @@
+
+listmode_date : På dato
+listmode_sortorder : Etter sorteringsorden
+listmode_fromto : I bestemte tidsrom
+showstyle_fade : Gjennomsiktighet
+showstyle_scrollx : Rull horisontalt
+showstyle_scrolly : Rull vertikalt
+showstyle_showroom : Showroom modus
+
+archivemode_thumbs : Thumbnails
+archivemode_list : Liste
+gal_Preview		: Forhåndsvisning
+
+Title : Tittel
+Filesize : Filestørrelse
+Date : Dato
+Image : Bilde
+Filename : Filnavn
+
+no : nei
+yes : ja
+Parent folder : Forrige nivå
+
+Settings : Innstillinger
+
+i18n_folder_image : admin/gfx/icons/folder.png
+i18n_folder_count_images : bilder totalt
+i18n_use_subfolders : Bruke undermapper
+i18n_yes : ja
+i18n_no : nei
+
+scalemode_proximity : Behold aspekt
+scalemode_centered : Sentrer i størrelse
+scalemode_framed : Kutt til størrelse
+

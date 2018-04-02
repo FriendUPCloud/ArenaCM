@@ -1,0 +1,142 @@
+/* Container */
+.Collapsable ul, .Collapsable li
+{
+	 list-style: none;
+	 margin: 0px;
+}
+.Collapsable
+{
+	margin: -13px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #eee;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.Collapsable li img
+{
+	display: inline;
+	vertical-align: middle;
+}
+
+.Collapsable .header
+{
+	padding: 4px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.Collapsable .system.header
+{
+	color: #fff;
+}
+
+.Collapsable li
+{
+	padding: 4px 0 0 4px;
+	margin-left: -4px;
+}
+
+.Collapsable ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.Collapsable .separator img, .Collapsable .header img, .Collapsable .current .header img, .Collapsable .current .separator img
+{
+	display: none;
+}
+.Collapsable li.separator
+{
+	height: 1px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	padding: 0;
+}
+.Collapsable li.separator.system
+{
+	background: #aaa;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #777;
+}
+
+.Collapsable li a
+{
+	color: #000;
+}
+
+.Collapsable li a.System
+{
+	color: #eee;
+}
+
+.Collapsable li a.Archived
+{
+	color: #999;
+}
+
+.Collapsable li li
+{
+	padding: 4px 0 4px 24px;
+	border-top: 1px solid #ddd;
+}
+
+.Collapsable li.system.sw1
+{
+	background: #909090;
+	border-top: 1px solid #999;
+}
+.Collapsable li.system.sw2
+{
+	background: #A2A2A2;
+	border-top: 1px solid #888;
+}
+
+.Collapsable li div.Break
+{
+	display: none;
+}
+
+#Structure li.hidden.current a.current, #Structure li.hidden.current span.current 
+{
+	color:#eee;
+}
+
+
+/*
+	Button box
+*/
+
+.Collapsable li.current
+{
+	margin-left: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.Collapsable li li.current
+{
+	margin-left: -4px;
+	padding: 0 1px 0.1px 24px;
+}
+
+.Collapsable li.current img
+{
+	display: none;
+}
+.Collapsable li.current button img
+{
+	display: inline;
+}
+.Collapsable li.current li img
+{
+	display: inline;
+}
+
+

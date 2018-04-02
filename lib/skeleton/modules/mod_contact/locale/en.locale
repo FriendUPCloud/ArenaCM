@@ -1,0 +1,15 @@
+
+
+
+answer_yes : yes
+i18n_properties_heading : Fieldproperties for
+i18n_input_type : Fieldtype
+i18n_type_text : Textfield
+i18n_type_varchar : Sentence
+i18n_type_select : Pulldown
+i18n_input_data : Field value(s)
+i18n_close_properties : Close
+i18n_save_close_props : Save and close
+i18n_input_required : Required
+i18n_forgot_to_fill_in_field : You forgot to fill in
+

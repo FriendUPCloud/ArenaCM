@@ -1,0 +1,2 @@
+Blog tips|200|extramodule
+Lar bruker generert innhold settes til vurdering på en blog

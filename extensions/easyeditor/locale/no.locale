@@ -1,0 +1,40 @@
+
+New subpage				: Ny underside
+Save page				: Lagre siden
+Cancel					: Avbryt
+Delete page				: Slett siden
+File upload				: Last opp en fil
+Create subpage			: Ny underside
+Attachment				: Fil Vedlegg
+Content 				: Innhold
+Page title 				: Sidetittel
+Edit 					: Rediger
+Update 					: Oppgradere
+Modules 				: Moduler
+Help text				: Hjelpetekst
+Unnamed					: Uten navn
+Choose the module you wish to activate from the list. The module will be enabled immediately and the main content will be deactivated : Velg den modulen du ønsker ved å huke av i listen. Modulen vil aktiveres umiddelbart og vil deaktivere innholdsfeltet.
+Pages					: Sider
+Could not save the page. : Kunne ikke lagre siden.
+Page title				: Sidetittel
+File upload 			: Last opp fil
+Start uploading 		: Lagre filen
+See advanced options    : Se avanserte innstillinger
+Only edit these options if you know what you're doing. \
+Contact support for more info. : Kun endre disse innstillingene\
+ hvis du vet hva du gjør. Kontakt support for mer info.
+Advanced				: Avansert
+Advanced options		: Avanserte innstillinger
+Show extra fields		: Vis ekstra felter
+Close					: Lukk
+Save and close			: Lagre og lukk
+Save					: Lagre
+
+#Javascript translations
+
+Are you sure?				: Er du sikker?
+You forgot the page title. 	: Du glemte sidetittel
+
+#Advanced info
+i18n_EasyEdAdvancedInfo : Vennligst velg de ekstrafeltene du ønsker å vise.
+i18n_FieldName			: Feltnavnet

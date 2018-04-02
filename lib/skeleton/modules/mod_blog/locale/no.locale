@@ -1,0 +1,107 @@
+#Blog articles
+
+Read more						: Les mer
+written by						: skrevet av
+posted date						: publisert
+Back to							: Tilbake til
+Newer blogs						: Nyere blogger
+Older blogs						: Eldre blogger
+
+#Comments
+
+comment							: kommentar
+no comments						: ingen kommentarer
+comments						: kommentarer
+Add comment						: Legg til kommentar
+Add your comment				: Legg til din kommentar
+Save comment					: Lagre kommentar
+Your name						: Ditt navn
+Your comment					: Din kommentar
+Spam control image				: Spam beskyttelse
+What is written in the image?	: Hva står i spam beskyttelses bildet?
+Try another image				: Last nytt bilde
+You have to enter your name.	: Du må skrive inn navnet ditt.
+You have to write your comment.	: Du må skrive en kommentar.
+Wrong spam control text, please try again. : Feil spam beskyttelses tekst. Prøv igjen.
+Anonymous						: Anonym
+comment by						: kommentar skrevet av
+Comments						: Kommentarer
+Listmethod					: Visningstype
+Imageaspect					: Bildeutsnitt
+i18n_gallery_mode			: Galleri modus
+bloggallerymode_default : Default
+bloggallerymode_slideshow : Slideshow
+bloggallerymode_gallery : Bildegalleri
+blogscalemode_proximity : Behold aspekt
+blogscalemode_imgtag    : Behold aspekt, img tag
+blogscalemode_framed		: Kutt til størrelse
+blogscalemode_centered	: Kutt og sentrer
+i18n_tags_link				: Ekstern lenke
+
+#Admin translations
+
+Pagination pr. page		: Vis sidetall
+Save							: Lagre
+Save and close					: Lagre og lukk
+Close							: Lukk
+Settings for blog field			: Innstillinger for bloggfeltet
+saved							: lagret
+
+Articlecount pr. page 			: Antall artikler pr. side
+Use comments 					: Bruker kommentarer
+Show author 					: Viser forfatter
+Show tagbox 					: Viser tagboks
+Tagbox placement 				: Tagboks plassering
+Show searchbox 					: Viser søkeboks
+Hide details 					: Skjuler detaljer
+Use this page for "Read more" 	: Bruker denne siden for "Les mer"
+Fetch blogs from this page 		: Hent blogger fra denne siden
+Max amount of letters in leadin : Maks bokstaver i ingress
+Max amount of letters in title 	: Maks bokstaver i tittel
+Leadin imagesize 				: Ingressbilde størrelse
+Headertext 						: Header tekst
+Edit settings 					: Endre innstillingene
+Authenticate incoming articles  : Godkjenn innkommende artikler
+Add article 					: Legg til en artikkel
+Use facebook "Like"				: Bruk facebook "Like"
+Facebook "Like" url				: Facebook "Like" lenke
+Filter on tags						: Filtrer på tags
+
+Tagbox_Tags : Tags
+
+bloglistmode_normal : Normal utlisting på dato
+bloglistmode_random : Tilfeldig utlisting
+
+Facebook comments				: Facebook kommentarer
+
+i18n_Edit						: Endre
+i18n_New_article				: Ny artikkel
+i18n_Title						: Tittel
+i18n_Showing_from				: Viser fra
+i18n_Date						: Dato
+i18n_Saved_date				: Ført dato
+i18n_tags_categories			: Tags / Kategori-ord
+i18n_Author						: Forfattet av
+i18n_Published					: Publisert
+i18n_Leadin_image				: Ingressbilde
+i18n_Leadin_image_scalemode		: Ingressbilde skalering
+i18n_Image_folders			: Velg bildemapper
+i18n_Detail_image				: Detaljbilde
+i18n_Detail_image_scalemode		: Detaljbilde skalering
+i18n_Leadin						: Ingress
+i18n_Article					: Artikkel
+i18n_Save_article				: Lagre artikkel
+i18n_Preview					: Forhåndsvis
+i18n_Close						: Lukk
+i18n_Cancel						: Avbryt
+i18n_Go_to_source				: Rediger nyheter
+i18n_Short_Title				: Kort tittel
+i18n_No_blogs					: Ingen blogger finnes.
+
+i18n_default					: Bruk standardinnstillinger
+i18n_proximity					: Behold aspekt
+i18n_framed						: Klippet til størrelse
+i18n_centered					: Sentrert i størrelse
+i18n_original					: Vis orginalbilde
+i18n_Sticky						: Sticky
+i18n_Comments					: Kommentarer

@@ -1,0 +1,2 @@
+Tilgang||adminmodule
+En modul som styrer tilgangskontroll på sidene. Denne modulen krever en bruker med full tilgang.

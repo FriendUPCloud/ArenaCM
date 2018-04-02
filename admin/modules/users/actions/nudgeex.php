@@ -1,0 +1,76 @@
+<?php
+
+
+/*******************************************************************************
+The contents of this file are subject to the Mozilla Public License
+Version 1.1 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS"
+basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+License for the specific language governing rights and limitations
+under the License.
+
+The Original Code is (C) 2004-2010 Blest AS.
+
+The Initial Developer of the Original Code is Blest AS.
+Portions created by Blest AS are Copyright (C) 2004-2010
+Blest AS. All Rights Reserved.
+
+Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen, 
+Rune Nilssen
+*******************************************************************************/
+
+
+
+$db =& dbObject::globalValue ( 'database' );
+
+switch ( $_REQUEST[ 'type' ] )
+{
+	case 'text':
+		$table = 'ContentDataBig';
+		break;
+	case 'varchar':
+		$table = 'ContentDataSmall';
+		break;
+}
+
+if ( $rows = $db->fetchObjectRows ( '
+	SELECT * FROM (
+		SELECT ID, "ContentDataSmall" as `Table`, SortOrder FROM ContentDataSmall WHERE ContentID=' . $_REQUEST[ 'uid' ] . ' AND ContentTable="Users"
+		UNION
+		SELECT ID, "ContentDataBig" as `Table`, SortOrder FROM ContentDataBig WHERE ContentID=' . $_REQUEST[ 'uid' ] . ' AND ContentTable="Users"
+	) AS K ORDER BY SortOrder ASC, ID DESC
+', MYSQL_ASSOC ) )
+{
+	$len = count ( $rows );
+	$b = 0;
+	for ( $a = 0; $a < $len; $a++ )
+	{
+		$rows[ $a ]->Order = $a;
+		
+		if ( $rows[ $a ]->Table == $table && $rows[ $a ]->ID == $_REQUEST[ 'id' ] )
+		{
+			if ( $a < $len - 1 && $_REQUEST[ "dir" ] > 0 )
+			{
+				$db->query ( "UPDATE " . $rows[ $a ]->Table . " SET SortOrder='" . ( $b + 1 ) . "' WHERE ID='" . $rows[ $a ]->ID . "'" );
+				$db->query ( "UPDATE " . $rows[ $a + 1 ]->Table . " SET SortOrder='" . ( $b ) . "' WHERE ID='" . $rows[ $a + 1 ]->ID . "'" );
+				$a++; $b++;
+			}
+			else if ( $a > 0 && $_REQUEST[ "dir" ] < 0 )
+			{
+				$db->query ( "UPDATE " . $rows[ $a ]->Table . " SET SortOrder='" . ( $b - 1 ) . "' WHERE ID='" . $rows[ $a ]->ID . "'" );
+				$db->query ( "UPDATE " . $rows[ $a - 1 ]->Table . " SET SortOrder='" . ( $b ) . "' WHERE ID='" . $rows[ $a - 1 ]->ID . "'" );
+			}
+			else
+			{
+				$db->query ( "UPDATE " . $rows[ $a ]->Table . " SET SortOrder='$b' WHERE ID='" . $rows[ $a ]->ID . "'" );
+			}
+		}
+		$b++;
+	}
+	die ( 'completed' );
+}
+die ( 'failed' );
+?>

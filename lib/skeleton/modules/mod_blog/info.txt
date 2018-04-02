@@ -1,0 +1,3 @@
+ARENA Blog|200|extramodule
+En full blogmodul som støtter kommentarer og tags.
+|simple

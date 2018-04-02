@@ -1,0 +1,125 @@
+@import url('gui.css');
+
+html { margin: 0; padding: 0;}
+
+
+body
+{
+	background: #DEDEDE url('../gfx/background_login.jpg') repeat-x top center;
+	font-family: lucida sans, tahoma, arial, tahoma, bitstream vera sans;
+	margin: 0;
+	padding: 0;
+}
+
+#CenterBox
+{
+	position: relative;
+	display: block;
+	width: 770px;
+	margin: 280px auto 0 auto;
+}
+
+#UnderContent
+{
+	position: absolute;
+	top: 280px;
+	left: 0;
+	width: 100%;
+	height: 320px;
+	background: url('../gfx/background_login_content_grey.jpg') top center repeat-x;
+}
+
+#Content
+{
+	position: relative;
+	display: block;
+	width: 770px;
+	height: 320px;
+	background: url('../gfx/background_login_container_grey.jpg') top left no-repeat;
+	color: #000;
+	font-size: 11px;
+	margin: 280px auto 0 auto;
+}
+
+
+h2
+{
+	font-size: 16px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+	top: 10px;
+	margin: 10px 0 25px 0;
+	padding: 8px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 0;
+	text-transform: normal;
+	background: #00435D;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+hr
+{
+	border: 0;
+	border-top: 1px solid #aaa;
+	height: 1px;
+	background: #aaa;
+}
+
+a
+{
+	color: #017AA9;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #BE6A00;
+}
+
+strong
+{
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.Box
+{
+	width: 49%;
+	float: left;
+	display: block;
+}
+
+.Content
+{
+	width: 360px;
+	margin: auto;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.Footer
+{
+	position: absolute;
+	top: 300px;
+	text-align: center;
+	left: 0px;
+	width: 770px;
+}
+
+#LoginForm
+{
+	position: relative;
+	overflow: hidden;
+}
+#ForgotEmail
+{
+	position: relative;
+	overflow: hidden;
+	height: 0px;
+}
+

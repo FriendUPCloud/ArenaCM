@@ -1,0 +1,93 @@
+body
+{
+	background: #eee url('../gfx/background_top.jpg') repeat-x top left;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+body, div, select, textarea, input, button, td, th
+{
+	font-size: 11px;
+	font-family: tahoma, arial, tahoma, bitstream vera sans;
+}
+
+h1, h2, h3, h4
+{
+	margin: 0 0 2px 0;
+	font-weight: bold;
+	color: #2A6DA5;
+}
+
+h1, td h1
+{
+	font-size: 13px;
+	background: #DCDCDC url('../gfx/background_header.jpg') repeat-x 0px -1px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-color: rgba(20,20,20,0.15);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: block;
+	font-weight: bold;
+	color: #254461;
+	text-transform: uppercase;
+	font-family: arial;
+	height: 15px;
+}
+
+h2, td h2
+{
+	font-size: 11px;
+}
+
+h3, td h3
+{
+	font-size: 12px;
+}
+
+h4, td h4
+{
+	font-size: 11px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 4px;
+}
+
+p
+{
+	margin: 0 0 8px 0;
+}
+
+label
+{
+	font-weight: bold;
+	color: #000;
+	margin: 4px 0 4px 0;
+	padding: 0;
+	display: block;
+}
+
+a
+{
+	color: #2A6DA5;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #AD6A4F;
+}
+
+hr
+{
+	border: 0;
+	border-top: 1px solid #DCDCDC;
+}
+
+input[type=text],input[type=password]
+{
+	background: #f8f8f8;
+	color: #222;
+}
+
+

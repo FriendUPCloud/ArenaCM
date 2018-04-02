@@ -1,0 +1,92 @@
+#######################################################################################
+#                                                                                     #
+# Norsk locale                                                                        #
+#                                                                                     #
+#######################################################################################
+
+Read more																: Les mer
+Back																		: Tilbake
+
+
+# Months names ########################################################################
+
+January																	: Januar
+February																: Februar
+March																		: Mars
+April																		: April
+May																			: Mai
+June																		: Juni
+July																		: Juli
+August																	: Aug
+September																: September
+October																	: Oktober
+November																: November
+December																: Desember
+
+Jan																			: Jan
+Feb																			: Feb
+Mar																			: Mar
+Apr																			: Apr	
+May																			: Mai
+Jun																			: Jun
+Jul																			    : Jul
+Aug																			: Aug
+Sep																			: Sep
+Oct																			: Okt
+Nov																			: Nov
+Dec																			: Des
+
+# Day names ###########################################################################
+
+Monday																	: Mandag
+Thuesday																: Tirsdag
+Wednesday																: Onsdag
+Thursday																: Torsdag
+Friday																	: Fredag
+Saturday																: Lørdag
+Sunday																	: Søndag
+
+Mon																			: Man
+Tue																			: Tir
+Wed																			: Ons
+Thu																			: Tor
+Fri																			: Fre
+Sat																			: Lør
+Sun																			: Søn
+
+# Modules #############################################################################
+
+module_news								: Nyheter
+module_users							: Brukere og grupper
+module_contents							: Design studio
+module_library							: Bibliotek
+module_extensions						: Utvidelser
+module_settings							: Innstillinger
+
+# Top bar  ############################################################################
+
+Hide workbench							: Gjem mellomlager
+Show workbench							: Vis mellomlager
+metabuttons_Superuser					: Superbruker
+metabuttons_Settings					: Din side
+metabuttons_Help						: Hjelp
+metabuttons_Goto website				: Til nettsiden
+metabuttons_Logout						: Logg ut
+
+# Main translations ###################################################################
+
+
+Downloads : Nedlastninger
+
+All users						: Alle brukere
+with							: med
+elements						: elementer
+elements total					: elementer totalt
+Showing							: Viser
+Next page						: Neste side
+Previous page					: Forrige side
+Showing page					: Viser side
+of								: av
+
+
+

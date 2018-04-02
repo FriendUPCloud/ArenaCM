@@ -1,0 +1,359 @@
+/* Abstractus Theme css for arenaen (C) 2009 Ola Jensen ola@blest.no */
+
+body, html
+{
+	margin: 0;
+	padding: 0;
+	background: url(../upload/images-master/background_body.png) repeat-x #CD9E67; /*-- ARENA Background --*/
+	font-size: 12px;
+	font-family: verdana;
+}
+
+
+/** All .Block types **/
+hr
+{
+	background: #ccc;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+.Block p
+{
+	color: black;
+}
+
+.Block a
+{
+	color: #636363;
+}
+
+.Block a
+{
+	text-decoration: none;
+}
+
+.Block button
+{
+	border: 1px #C9C1C0 solid;
+	text-align: center;
+	font-size: 12px;
+	-moz-border-radius: 4px 2px;
+	padding-left: 1px;
+	margin: 1px;
+	width: 120px;
+}
+
+/** Form and types **/
+
+
+form input
+{
+	border: 1px #C9C1C0 solid;
+	-moz-border-radius: 4px;
+	padding-left: 1px;
+	margin-top: 8px;
+	margin: left: 5px;
+	width: 180px;
+}
+
+form textarea
+{
+	border: 1px #C9C1C0 solid;
+	-moz-border-radius: 4px;
+	width: 308px;
+}
+
+.TableColumns p
+{
+	text-align: left;
+	padding-top: 1px;
+	width: 250px;
+}
+
+
+
+
+#CenterBox__
+{
+	display: block;
+	width: 950px;
+	margin: auto;
+	position: relative;
+	margin-top: 10px;	
+}
+
+#Center__
+{
+	left: 0px;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+#Content__
+{
+	position: relative;
+	background: url(../upload/images-master/background_top.png) no-repeat;
+	z-index: 202;
+	padding-top: 1px;
+}
+
+#InnerContainer__
+{
+	margin-top: 194px;
+	display: block;
+	padding-left: 24px;
+	background: url(../upload/images-master/background_repeat.png) repeat-y;
+	clear: both;
+	margin-left: -1px;
+}
+
+#Center__ #TopMenu__ div
+{
+	display: none;
+	visibility: hidden;
+}
+
+/** Top menu ******************************************************************/
+
+#TopMenu__
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1000px;
+	height: 237px;
+	background: url(../upload/images-master/logo.png) no-repeat 42px 45px;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: lowercase;
+	z-index: 100;
+}
+
+#TopMenu__ #menuroot
+{
+	position: absolute;
+	top: 145px;
+	left: 25px;
+	z-index: 101;
+	letter-spacing: 1px;
+	width: 450px;
+}
+
+
+#TopMenu__ ul
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#TopMenu__ li
+{
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#TopMenu__ li a
+{
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+	font-weight: bold;
+	color: #666;	
+	text-decoration: none;
+}
+#TopMenu__ li a:hover
+{
+	color: #999;
+}
+#TopMenu__ li li ul
+{
+	position: absolute;
+	visibility: hidden;
+	width: 160px;
+	border: 1px solid #aaa;
+	background: #ccc;
+	top: 15px; 
+	left: 0px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 1;
+}
+#TopMenu__ li li ul ul
+{
+	position: static;
+	width: auto; top: auto; left: auto; background: none;
+	opacity: 1;
+}
+#TopMenu__ li li.hovering ul
+{
+	visibility: visible;
+}
+#TopMenu__ li li ul ul, li li ul ul li
+{
+	position: static;
+	top: auto;
+	left: auto;
+	margin: 0 0 0 10px;
+	padding: 0;
+	display: block;
+	float: left;
+	border: 0;
+}
+
+#TopMenu__ li li ul ul li
+{
+	float: none;
+}
+
+#TopMenu__ li  li ul li a
+{
+	display: block;
+	padding: 4px 4px 4px 8px;
+	clear: both;
+}
+#TopMenu__ li li ul li
+{
+	float: none;
+}
+
+/** Hoved og Ekstrafelt *******************************************************/
+
+#Hovedfelt, #Ekstrafelt
+{
+	margin-top: 15px;
+	min-height: 500px;
+	margin-left: 5px;
+}
+
+#Hovedfelt h1, h2, h3
+{
+	margin-left: -1px;
+}
+
+#Felt1
+{
+	display: block;
+	float: left;
+	width: 600px;
+	border-right: 1px solid #ccc;
+}
+#Felt2
+{
+	display: block;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+	margin-left: -1px;
+	width: 230px;
+}
+
+/** END Top menu **************************************************************/
+
+
+p, h1, h2, h3
+{
+	padding: 0;
+	margin: 0 0 4px 0;
+}
+
+p { padding-left: 2px;}
+
+h1 { font-size: 20px; }
+h2 { font-size: 17px; }
+h3 { font-size: 14px; }
+
+#InnerContent__
+{
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+#Footer__
+{
+	position: absolute;
+	bottom: -34px;
+	left: 0px;
+	width: 944px;
+	height: 35px;
+	background: url(../upload/images-master/background_bottom.png);
+}
+
+#InnerFooter__
+{
+	display: block;
+	border-top: 1px solid #cccccc;
+	width: 751px;
+	margin: auto;
+}
+
+#PageTitle
+{
+	display: none;
+}
+
+
+#Bunn
+{
+	display: block;
+	clear: both;
+	width: 900px;
+	border-top: 1px solid #BFB6B4;
+}
+#Bunntekst
+{
+	position: absolute;
+	bottom: -20px;
+	left: 32px;
+	font-size: 11px;
+}
+
+/** Standard Reserved Classes *************************************************/
+
+.Block { display: block; margin: 0 0 8px 0; }
+.ListElement 
+{ 
+	display: block; border-bottom: 1px solid #444; margin: 0; padding: 4px; 
+}
+.Small { font-size: 10px; }
+.Leadin { letter-spacing: 0.6px; }
+.Bold { font-weight: bold; }
+.Italic { font-weight: bold; }
+.Underlined { font-weight: bold; }
+.IndicateHover:hover { color: #fff; opacity: 0.95; }
+.IndicateFocus:focus { border: 2px solid #444; }
+
+.FloatRight { display: block; float: right; }
+.FloatLeft { display: block; float: left; }
+.ClearBoth { display: block; clear: both; }
+.ClearRight { display: block; clear: right; }
+.ClearLeft { display: block; clear: left; }
+
+.Container
+{
+	display: block;
+	border: 1px solid #333;
+	-moz-border-radius: 3px;
+	padding: 8px;
+}
+table.TableColumns
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+table.TableColumns td
+{
+	padding: 0 4px 4px 0;
+	vertical-align: top;
+}
+.RowEven { background: #666; } 
+.RowOdd { background: #777; }
+

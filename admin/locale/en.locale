@@ -1,0 +1,23 @@
+
+About ARENA CM : About ARENA CM
+ARENA CM is available under the : ARENA CM is available under 
+MPL License : the MPL license
+
+i18n_login : Login
+i18n_administration : Administration
+i18n_admin_login : Login
+i18n_login_text : Login to ARENASource by typing in your username \
+						and password below.
+i18n_login_text_2 : For support, please contact Idéverket
+i18n_username : Username
+i18n_password : Password
+i18n_forgot_email_text : If you forgot your password, you can have a new one \
+									sent to you by the e-mail address you've registered here.
+i18n_type_in_email : E-mail address
+i18n_receive_email : Receive e-email
+i18n_do_login : Login
+
+i18n_notify_sent_password : We have now sent you a new password.
+i18n_notify_failed_email : We could not find your e-mail in our database. \n
+									Please contact support.
+

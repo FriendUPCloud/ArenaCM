@@ -1,0 +1,98 @@
+/**
+ * Related to tabs
+**/
+
+.ModuleTabActive
+{
+	top: 1px;
+}
+.ModuleTab
+{
+	top: -1px;
+}
+#ModuleList
+{
+	z-index: 100;
+}
+
+.tab, .tabActive
+{
+	position: relative;
+	z-index: 11;
+	margin: 0;
+}
+.tab, .tabActive
+{
+	margin-bottom: -1px;
+	margin-right: 2px;
+}
+
+.pageActive
+{
+	position: relative;
+}
+
+.subTab
+{
+	position: relative;
+	top: 1px;
+}
+
+/**
+ * Related to collapse lists
+**/
+.Collapsable
+{
+	list-style: none;
+	margin: -13px;
+	padding: 0;
+	position: relative;
+}
+.Collapsable li.current
+{
+	padding-top: 1px;
+	margin-top: -1px;
+}
+
+
+.ButtonBox
+{
+	position: relative;
+}
+.ButtonBoxButtons
+{
+	position: relative;
+	display: block;
+}
+
+#MetaButtons div
+{
+	cursor: hand;
+}
+
+button
+{
+	overflow: visible;
+	width: auto;
+	padding: 1px 4px 1px 4px;
+	margin: 0 4px 0 0;
+	vertical-align: top;
+}
+
+input[type=text]
+{
+	margin: 0 4px 0 0;
+}
+
+button.Small
+{
+	padding: 3px 2px 1px 4px;
+
+}
+button img
+{
+	margin-top: 1px;
+	margin-bottom: -1px;
+	vertical-align: middle;
+}
+

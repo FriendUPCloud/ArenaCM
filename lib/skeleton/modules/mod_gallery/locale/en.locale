@@ -1,0 +1,33 @@
+
+listmode_date : On date
+listmode_sortorder : On sort order
+listmode_fromto : At specific timeintervals
+showstyle_fade : Transparancy
+showstyle_scrollx : Horizontal motion
+showstyle_scrolly : Vertical motion
+showstyle_showroom : Showroom mode
+
+archivemode_thumbs : Thumbnails
+archivemode_list : List
+gal_Preview		: Preview
+
+Title : Title
+Filesize : Filesize
+Date : Date
+Image : Image
+Filename : Filename
+
+no : no
+yes : yes
+Parent folder : Parent folder
+
+i18n_folder_image : admin/gfx/icons/folder.png
+i18n_folder_count_images : images in total
+i18n_use_subfolders : Use subfolders
+i18n_yes : yes
+i18n_no : no
+
+scalemode_proximity : Keep aspect
+scalemode_centered : Cut and center in size
+scalemode_framed : Cut and scale to size
+

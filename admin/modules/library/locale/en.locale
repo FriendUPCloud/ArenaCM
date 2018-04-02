@@ -1,0 +1,94 @@
+
+
+i18n_sure_to_delete_folder : Are you sure you want to delete this folder?
+
+#Text properties
+i18n_file_contents : Contents of the file
+i18n_folder_not_found : Folder not found.
+i18n_save_file_contents : Save contents
+i18n_fullscreen : Fullscreen
+i18n_close : Close
+
+#Create file
+i18n_create_new_file : Create a new file
+i18n_filetype : Filetype
+i18n_a_stylesheet : A stylesheet (css)
+i18n_a_text_file : A pure text file
+i18n_a_javascript : A javascript file
+i18n_filename : Filename
+i18n_file_contents : File contents
+
+#New / Edit image
+i18n_add_image : New image
+i18n_edit_image : Edit image
+i18n_batch_images : Batch - upload multiple images
+i18n_dimensions : Dimensions
+i18n_show_image : Show image
+i18n_preview_image : Preview
+i18n_showfrom_setting : Shown from
+i18n_showto_setting : Shown until
+i18n_save_and_close : Save and close
+i18n_more_images : More images
+i18n_fewer_images : Fewer images
+i18n_imagetitle : Imagetitle
+i18n_imagefile : Image
+i18n_tags : Tags
+i18n_confirm_image_delete : Are you sure you want to delete this image?
+i18n_no_valid_image_selected : You have not selected a valid image file.
+i18n_long_image_upload_error : Please use a .jpg/jpeg, .gif or .png file. \
+	Only these filetypes can be used as an image on the web. Other filetypes \
+	should be uploaded as a file, not as an image.
+i18n_delete_image : Delete image
+i18n_delete : Delete
+i18n_cancel : Cancel
+
+#New / Edit file
+i18n_batch_upload : Batch - upload multiple files
+i18n_new_file : New file
+i18n_edit_file : Edit file
+i18n_add_file_head : Upload a new file
+i18n_edit_file_head : Edit file
+i18n_advanced : Advanced
+i18n_name : Name
+i18n_file : File
+i18n_description : Description
+i18n_filename : Filename
+i18n_filesize : Filesize
+i18n_download : Download
+i18n_backup : Older version
+i18n_save : Save
+i18n_delete : Delete
+i18n_more_files : More files
+i18n_fewer_files : Fewer files
+
+#Generic
+i18n_search_results_contents : Searchresults / Contents
+i18n_search_results : Search results
+i18n_contents_of : The contents of
+i18n_contents_of_main : The contents of main folder
+i18n_no_files_in_folder : This folder is empty.
+i18n_edit : Edit
+i18n_edit_msg : Click to edit the folder.
+i18n_no_title : No title
+i18n_no_folders_pr_permission : No folders available with your permissions.
+i18n_permissions : Permissions
+i18n_permissions_desc : Edit permission settings.
+i18n_are_you_sure : Are you sure?
+i18n_searchresult_folders : Searchresults / Folders
+i18n_no_searchresult_folders : No folders were found.
+i18n_no_searchresult_files : No files found.
+i18n_page_still_loading : The page is still loading. Please wait.
+i18n_delete_msg : Click to delete folder. You need to confirm deletion \
+	then select what to do with the files and subfolders.
+i18n_move : Move
+i18n_move_msg : Click to move folder.
+i18n_addtoworkbench : Add to workbench
+i18n_addtoworkbench_msg : Click to add folder to workbench.
+move_error_msg1 : You can only move folder, images and files.
+i18n_sure_delete_file_question : Are you sure you want to delete this file?
+i18n_delete_file : Delete file
+i18n_no_valid_file_selection : You haven't selected a valid file.
+i18n_longer_fileselection_error : You have selected an image file.
+i18n_choose_file : Please choose a file.
+i18n_addlevel : Add folder
+i18n_addlevel_desc : Add a new subfolder.

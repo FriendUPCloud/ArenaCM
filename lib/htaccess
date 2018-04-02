@@ -1,0 +1,27 @@
+AddCharset UTF-8 .html
+AddType 'text/html; charset=UTF-8' html
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^arena-images/([0-9]+)x([0-9]+)_([^_]+)_([^_]+)_([^\/]+)/([0-9]+)/?(.*)$ index.php?mode=image&iid=$6&width=$1&height=$2&scalemode=$3&effects=$4&bgcolor=$5&filename=$7
+	RewriteRule ^arena-files/([0-9]+)/?(.*)$ index.php?mode=file&fid=$1
+	RewriteRule ^template-css/(.+)$                  index.php?mode=templatecss&filename=$1
+	RewriteRule ^secure/(.*)$						index.php?mode=securefile&filename=$1
+	RewriteRule ^xml-request/(.+)$                   index.php?mode=xml&route=$1     [QSA]
+	RewriteCond %{REQUEST_FILENAME} !-s 
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^index.html$                         index.php                       [QSA]
+	RewriteCond %{REQUEST_FILENAME} !-s 
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.+)$                               index.php?route=$1              [QSA]
+	RewriteRule ^admin/(.*)\.(php|pl)$					lib/templates/404.html			 [QSA]
+	RewriteRule ^admin/([a-z|A-Z|0-9\/]*?)$				lib/templates/404.html			 [QSA]
+	RewriteRule ^lib/([a-z|A-Z|0-9\/]*?)$					lib/templates/404.html			 [QSA]
+	RewriteRule ^upload/(.*)\.(php|pl)$						lib/templates/404.html			 [QSA]
+</IfModule>
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 /index.php
+</IfModule>
+php_value memory_limit 50M
+php_value post_max_size 100M
+php_value upload_max_filesize 50M
+

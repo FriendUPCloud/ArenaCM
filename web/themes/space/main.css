@@ -1,0 +1,329 @@
+body, html
+{
+	margin: 0;
+	padding: 0;
+	background: #2a3249; /*-- ARENA Background --*/
+	font-size: 12px;
+	font-family: verdana;
+}
+
+a { color: #552; text-decoration: none; }
+a:hover { color: #2A3249; }
+
+button, input, textarea, select
+{
+	overflow: visible;
+	width: auto;
+	border: 1px solid #000;
+	-moz-border-radius: 3px;
+	background: #ccc;
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 2px 4px;
+}
+input
+{
+	background: #fff;
+	color: #000;
+	padding: 2px;
+	width: 180px;
+}
+textarea
+{
+	background: #fff;
+	color: #000;
+	padding: 2px;
+	width: 287px;
+}
+button
+{
+	white-space: nowrap;
+}
+
+hr
+{
+	display: block;
+	height: 1px;
+	background: #CCCCCC;
+	border: 0;
+	border-top: 1px solid #CCCCCC;
+}
+
+#CenterBox__
+{
+	display: block;
+	width: 904px;
+	margin: auto;
+	position: relative;
+}
+
+#Center__
+{
+	left: 0px;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+#Content__
+{
+	position: relative;
+	background: url(../upload/images-master/background_top.png) no-repeat;
+	z-index: 202;
+	padding-top: 1px;
+}
+
+#InnerContainer__
+{
+	margin-top: 236px;
+	display: block;
+	padding: 10px 75px;
+	background: url(../upload/images-master/background_repeat.png) repeat-y;
+	clear: both;
+}
+
+#Center__ #TopMenu__ div
+{
+	display: none;
+	visibility: hidden;
+}
+
+/** Top menu ******************************************************************/
+
+#TopMenu__
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 904px;
+	height: 237px;
+	background: url(../upload/images-master/logo.png) no-repeat 62px 90px;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: lowercase;
+	z-index: 100;
+}
+
+#TopMenu__ #menuroot
+{
+	position: absolute;
+	top: 177px;
+	left: 400px;
+	z-index: 101;
+	letter-spacing: 1px;
+	width: 450px;
+}
+
+
+#TopMenu__ ul
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#TopMenu__ li
+{
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#TopMenu__ li a
+{
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+	font-weight: bold;
+	color: #666;	
+	text-decoration: none;
+}
+#TopMenu__ li a:hover
+{
+	color: #999;
+}
+#TopMenu__ li li ul
+{
+	position: absolute;
+	visibility: hidden;
+	width: 160px;
+	border: 1px solid #aaa;
+	background: #ccc;
+	top: 15px; 
+	left: 0px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 0.9;
+}
+#TopMenu__ li li ul ul
+{
+	position: static;
+	width: auto; top: auto; left: auto; background: none;
+	opacity: 1;
+}
+#TopMenu__ li li.hovering ul
+{
+	visibility: visible;
+}
+#TopMenu__ li li ul ul, li li ul ul li
+{
+	position: static;
+	top: auto;
+	left: auto;
+	margin: 0 0 0 10px;
+	padding: 0;
+	display: block;
+	float: left;
+	border: 0;
+}
+
+#TopMenu__ li li ul ul li
+{
+	float: none;
+}
+
+#TopMenu__ li  li ul li a
+{
+	display: block;
+	padding: 4px 4px 4px 8px;
+	clear: both;
+}
+#TopMenu__ li li ul li
+{
+	float: none;
+}
+
+/** END Top menu **************************************************************/
+
+
+p, h1, h2, h3, h4
+{
+	padding: 0;
+	margin: 0 0 4px 0;
+}
+
+h1 { font-size: 20px; }
+h2 { font-size: 17px; }
+h3 { font-size: 14px; }
+h4 { font-size: 12px; }
+
+#InnerContent__
+{
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+#Intro
+{
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 520px;
+	width: 200px;
+	padding-left: 14px;
+	border-left: 1px solid #ccc;
+}
+
+#Footer__
+{
+	position: absolute;
+	bottom: -49px;
+	left: 0px;
+	width: 890px;
+	height: 49px;
+	background: url(../upload/images-master/background_bottom.png);
+}
+
+#InnerFooter__
+{
+	display: block;
+	border-top: 1px solid #cccccc;
+	width: 751px;
+	margin: auto;
+}
+
+#PageTitle
+{
+	display: none;
+}
+
+
+#Bunn
+{
+	display: block;
+	clear: both;
+}
+#Bunntekst
+{
+	position: absolute;
+	bottom: -20px;
+	left: 76px;
+	font-size: 11px;
+}
+#Felt1
+{
+	display: block;
+	float: left;
+	width: 500px;
+	border-right: 1px solid #ccc;
+}
+#Felt2
+{
+	display: block;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+	margin-left: -1px;
+	width: 230px;
+}
+
+/** Standard Reserved Classes *************************************************/
+
+.Block { display: block; margin: 0 0 8px 0; }
+.ListElement 
+{ 
+	display: block; border-bottom: 1px solid #444; margin: 0; padding: 4px; 
+}
+.Small { font-size: 10px; }
+.Leadin { letter-spacing: 0.6px; }
+.Bold { font-weight: bold; }
+.Italic { font-weight: bold; }
+.Underlined { font-weight: bold; }
+.IndicateHover:hover { color: #fff; opacity: 0.95; }
+.IndicateFocus:focus { border: 2px solid #444; }
+
+.FloatRight { display: block; float: right; }
+.FloatLeft { display: block; float: left; }
+.ClearBoth { display: block; clear: both; }
+.ClearRight { display: block; clear: right; }
+.ClearLeft { display: block; clear: left; }
+
+.Container
+{
+	display: block;
+	border: 1px solid #333;
+	-moz-border-radius: 3px;
+	padding: 8px;
+}
+table.TableColumns
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+table.TableColumns td, table.TableColumns th
+{
+	padding: 0 4px 4px 0;
+	vertical-align: top;
+	text-align: left;
+}
+table.TableColumns th
+{
+	padding-top: 4px;
+}
+.RowEven { background: #666; } 
+.RowOdd { background: #777; }
+

@@ -1,0 +1,325 @@
+.Container
+{
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;
+	background: #f8f8f8;
+	color: #333;
+	padding: 8px;
+	margin: 0 0 4px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-image: url(gfx/container.jpg);
+	background-repeat: repeat-x;
+}
+
+.SubContainer
+{
+	border: 1px solid #ccc;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #eee;
+	background: #f6f6f6;
+	color: #333;
+	padding: 8px;
+	margin: 0 0 4px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-image: url(gfx/subcontainer.jpg);
+	background-repeat: repeat-x;
+}
+
+.BlockHead, .BlockContainer
+{
+	border: 1px solid #ccc;
+	-moz-border-radius: 3px 3px 0 0;
+	display: block;
+	padding: 4px;
+	border-bottom: 0px;
+	margin: 0;
+	font-size: 12px;
+}
+.BlockHead
+{
+	padding: 8px;
+}
+
+.BlockContainer
+{
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	-moz-border-radius: 0 0 3px 3px;
+}
+
+.Spacer
+{
+	height: 4px;
+	display: block;
+	clear: both;
+}
+
+.SpacerSmall
+{
+	height: 2px;
+	display: block;
+	clear: both;
+}
+
+.SpacerSmallColored
+{
+	height: 1px;
+	display: block;
+	clear: both;
+	border: 1px solid #ccc;
+	background: #fff;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 4px 0 4px 0;
+}
+
+/** Tab system **/
+.page, .pageActive
+{
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;
+	background: #f8f8f8;
+	color: #333;
+	padding: 8px;
+	margin: 0 0 4px 0;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 4px;
+	clear: both;
+	position: relative;
+	z-index: 1;
+}
+.page { visibility: hidden; position: absolute; top: -1000px; left: -1000px; }
+.tab, .tabActive
+{
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;
+	background-color: #ddd;
+	background-image: url(gfx/tab_inactive.jpg);
+	background-repeat: repeat-x;
+	color: #333;
+	padding: 4px 6px 4px 6px;
+	margin: 0 2px -1px 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px;
+	float: left;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+.tab:hover
+{
+	border-color: #9ab;
+	border-bottom: 0;
+	background-image: url(gfx/tab_inactive_on.jpg);
+}
+.tab img, .tabActive img
+{
+	margin-bottom: -4px;
+}
+.tabActive
+{
+	border-bottom: 1px solid #f8f8f8;
+	background-color: #f8f8f8;
+	background-image: url(gfx/tab_active.jpg);
+	background-repeat: repeat-x;
+}
+
+/** Collapsable lists *********************************************************/
+
+/* Container */
+.Collapsable
+{
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 3px;
+	background: #f0f0f0;
+	padding: 0;
+	margin: 0;
+	background-image: url(gfx/collapsable.jpg);
+	background-repeat: repeat-x;
+}
+.Collapsable ul, .Collapsable li
+{
+	 list-style: none;
+	 margin: 0px;
+}
+.Collapsable li img
+{
+	display: inline;
+	vertical-align: middle;
+}
+
+.Collapsable .header
+{
+	padding: 4px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.Collapsable .system.header
+{
+	color: #fff;
+}
+
+.Collapsable li
+{
+	padding: 4px 0 0 4px;
+	margin-left: -4px;
+}
+
+.Collapsable ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.Collapsable .separator img, .Collapsable .header img, .Collapsable .current .header img, .Collapsable .current .separator img
+{
+	display: none;
+}
+.Collapsable li.separator
+{
+	height: 1px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	padding: 0;
+}
+.Collapsable li.separator.system
+{
+	background: #aaa;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #777;
+}
+
+.Collapsable li a
+{
+	color: #000;
+	position: relative;
+}
+
+.Collapsable li a.System
+{
+	color: #eee;
+}
+
+.Collapsable li a.Archived
+{
+	color: #999;
+}
+
+.Collapsable li li
+{
+	padding: 4px 0 4px 24px;
+	border-top: 1px solid #ddd;
+}
+
+.Collapsable li.system.sw1
+{
+	background: #909090;
+	border-top: 1px solid #999;
+}
+.Collapsable li.system.sw2
+{
+	background: #A2A2A2;
+	border-top: 1px solid #888;
+}
+
+.Collapsable li div.Break
+{
+	display: none;
+}
+
+.Collapsable li.current
+{
+	margin-left: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.Collapsable li li.current
+{
+	margin-left: -4px;
+	padding: 0 1px 0.1px 24px;
+}
+
+.Collapsable li.current img
+{
+	display: none;
+}
+.Collapsable li.current button img
+{
+	display: inline;
+}
+.Collapsable li.current li img
+{
+	display: inline;
+}
+
+.SmallButtonBox button,
+.ButtonBox button
+{
+	padding: 1px;
+	font-size: 9px;
+	height: 18px;
+}
+.SmallButtonBox strong,
+.ButtonBox strong
+{
+	display: block;
+	margin: 0 3px 3px 10px;
+	float: left;
+}
+.SmallButtonBox img,
+.ButtonBox img
+{
+	position: relative;
+	top: -3px;
+	margin: 0 2px 0 0;
+}
+.ButtonBoxButtons
+{
+	display: block;
+	float: right;
+}
+.ButtonBox
+{
+	display: block;
+	border: 1px solid #ccc;	
+	-moz-border-radius: 3px;
+	background: #fff;
+	padding: 4px 3px 2px 4px;
+	clear: both;
+	margin: 1px 1px 1px 1px;
+	position: relative;
+}
+
+.Hidden
+{	
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	visibility: hidden;
+}
+
+.LibraryImg img
+{
+	display: block;
+}
+
+#UserSelector .Container .UserRow, #UserSelector .Container .GroupRow
+{
+	display: block;
+	padding: 2px;
+	height: 16px;
+	font-size: 10px;
+	line-height: 15px;
+	margin: 0;
+}
+#UserSelector .Container .SpacerSmall
+{
+	display: none;
+}

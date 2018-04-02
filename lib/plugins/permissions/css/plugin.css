@@ -1,0 +1,135 @@
+
+#pmTable!ID!
+{
+	padding: 8px;
+}
+
+#pmGroups!ID!, #pmUsers!ID!, #pmUserRights!ID!, #pmGroupRights!ID!
+{
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background-color: #dddddd;
+	height: 210px;
+	overflow: auto;
+	position: relative;
+}
+#pmUsers!ID!
+{
+	overflow: hidden;
+}
+
+/******************************************************************************/
+/* pmGroups                                                                   */
+
+.pmGroupRow
+{
+	display: block;
+	cursor: pointer;
+	color: #000;
+}
+* html .pmGroupRow { cursor: hand; }
+.pmGroupRow .sw1 { background: #d8d8d8; padding: 2px 2px 2px 6px; }
+.pmGroupRow .sw2 { background: #e8e8e8; padding: 2px 2px 2px 6px; }
+.pmGroupRow:hover
+{
+	background: #ffffff;
+}
+.pmGroupRowActive
+{
+	display: block;
+	cursor: pointer;
+	color: #fff;
+}
+* html .pmGroupRowActive { cursor: hand; }
+.pmGroupRowActive .sw1 { background: #2D5287; padding: 2px 2px 2px 6px; }
+.pmGroupRowActive .sw2 { background: #345D93; padding: 2px 2px 2px 6px; }
+.pmGroupRowActive:hover
+{
+	background: #ABC2EA;
+}
+
+/******************************************************************************/
+/* pmUsers                                                                    */
+
+.pmUserRow
+{
+	display: block;
+	cursor: pointer;
+	color: #000;
+}
+* html .pmUserRow { cursor: hand; }
+.pmUserRow .sw1 { background: #d8d8d8; padding: 2px; }
+.pmUserRow .sw2 { background: #e8e8e8; padding: 2px; }
+.pmUserRow:hover
+{
+	background: #ffffff;
+}
+
+.pmUserRowActive
+{
+	display: block;
+	cursor: pointer;
+	color: #fff;
+}
+* html .pmUserRowActive { cursor: hand; }
+.pmUserRowActive .sw1 { background: #2D5287; padding: 2px; }
+.pmUserRowActive .sw2 { background: #345D93; padding: 2px;}
+.pmUserRowActive:hover
+{
+	background: #ABC2EA;
+}
+
+/******************************************************************************/
+/* pmPermissionRow                                                            */
+.pmPermissionRow
+{
+	display: block;
+	cursor: pointer;
+	color: #000;
+}
+* html .pmUserRow { cursor: hand; }
+.pmPermissionRow .sw1 { background: #d8d8d8; padding: 2px; }
+.pmPermissionRow .sw2 { background: #e8e8e8; padding: 2px; }
+.pmPermissionRow:hover
+{
+	background: #ffffff;
+}
+
+.pmPermissionRowActive
+{
+	display: block;
+	cursor: pointer;
+	color: #fff;
+}
+* html .pmPermissionRowActive { cursor: hand; }
+.pmPermissionRowActive .sw1 { background: #2D5287; padding: 2px; }
+.pmPermissionRowActive .sw2 { background: #345D93; padding: 2px; }
+.pmPermissionRowActive:hover
+{
+	background: #ABC2EA;
+}
+.pmPermissionTypes
+{
+	float: right;
+}
+.pmPermissionName
+{
+	float: left;
+}
+.pmBreak
+{
+	display: block;
+	clear: both;
+}
+
+/* For all lists in permission table ---------------------------------------- */
+
+#pmTable .sw1, #pmTable .sw2
+{
+	height: 22px !important;
+	overflow: hidden;
+}
+
+

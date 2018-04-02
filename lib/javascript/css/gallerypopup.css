@@ -1,0 +1,68 @@
+
+.GalleryPopupImage
+{
+	border: 2px solid #c0c0c0;
+	display: block;
+	-webkit-transition: all 0.25s;
+}
+.GalleryPopupImageOver
+{
+	border: 2px solid #ffffff;
+	display: block;
+}
+.GalleryPopupBox
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 10000;
+}
+#GalleryPopupImage
+{
+	border: 5px solid #ffffff;
+}
+#GalleryImageWhitener
+{
+	position: absolute;
+	margin: 5px 0 0 5px;
+}
+.GalleryPopupBackground
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 9999;
+	cursor: hand;
+	cursor: pointer;
+}
+.GalleryPopupNext, .GalleryPopupPrev, .GalleryPopupClose
+{
+	border: 2px solid white;
+	padding: 5px;
+	position: absolute;
+	background: #222222;
+	background: rgba(0,0,0,0.6);
+	z-index: 10001;
+	margin-top: 3px;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+.GalleryPopupNext a, .GalleryPopupPrev a, .GalleryPopupClose a
+{
+	color: #eeeeee;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: trebuchet ms, sans;
+}
+.GalleryPopupNext a:hover, .GalleryPopupPrev a:hover, .GalleryPopupClose a:hover
+{
+	color: #ffffff;
+}
+.GalleryPopupNext span, .GalleryPopupPrev span, .GalleryPopupClose span
+{ 
+	color: #a00; 
+}

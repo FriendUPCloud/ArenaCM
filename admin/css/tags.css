@@ -1,0 +1,108 @@
+body
+{
+	background: #eee url('../gfx/background_top.jpg') repeat-x top left;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	min-width: 1024px;
+	font-size: 65%;
+}
+
+body, div, select, textarea, input, button, td, th
+{
+	font-size: 13px;
+	font-family: "SourceSans";
+}
+
+h1, h2, h3, h4
+{
+	margin: 0 0 2px 0;
+	font-weight: bold;
+	color: #444444;
+}
+
+h1, td h1
+{
+	font-size: 13px;
+	margin: 0 1px 3px 1px;
+	background: #e8e8e8 repeat-x 0px -1px;
+	padding: 8px;
+	border: 3px solid white;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.9);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.9);
+	display: block;
+	font-weight: bold;
+	color: #000000;
+	text-transform: none;
+	font-family: ubuntu, lucida sans unicode, tahoma;
+	height: 16px;
+	line-height: 14px;
+}
+
+h2, td h2
+{
+	font-size: 13px;
+	text-transform: none;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	color: #000000;
+}
+
+h3, td h3
+{
+	font-size: 16px;
+}
+
+h4, td h4
+{
+	font-size: 13px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 4px;
+}
+
+p
+{
+	margin: 0 0 8px 0;
+}
+
+label
+{
+	font-weight: bold;
+	color: #000000;
+	margin: 4px 0 4px 0;
+	padding: 0;
+	display: block;
+}
+
+a
+{
+	color: #a00;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #c00;
+}
+
+hr
+{
+	border: 0;
+	border-top: 1px solid #DCDCDC;
+}
+
+input[type=text],input[type=password]
+{
+	background: #f8f8f8;
+	color: #222;
+}
+
+input[type=checkbox]
+{
+	min-width: 12px;
+	min-height: 12px;
+}
+

@@ -1,0 +1,15 @@
+
+Tools					: Verktøy
+
+Search and replace		: Søk og erstatt
+Start					: Start
+Search for				: Søk etter
+Replace with			: Erstatt med
+
+Search_replace_desc		: \
+	Søk og erstatt tekst i ContentElement og tilknyttede felter. Vil kun \
+	søke etter forekomsten av søkeord i strenger.
+
+
+
+

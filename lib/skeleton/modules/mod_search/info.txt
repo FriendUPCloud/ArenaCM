@@ -1,0 +1,2 @@
+Søkeboks||extramodule
+En liten søkeboks som kan søke i tekstsider. Støtter også søk i blogger, om du har "ARENA Blog" modulen aktivert.

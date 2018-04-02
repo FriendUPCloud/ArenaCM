@@ -1,0 +1,3 @@
+Kontaktskjema|140|extramodule
+Et enkelt kontakt skjema som sender data til en e-post adresse.
+|simple

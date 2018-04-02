@@ -1,0 +1,71 @@
+
+
+
+Name								: Navn
+Description							: Beskrivelse
+Edit group info						: Endre gruppeinformasjon
+Edit group permissions				: Endre gruppetilgang
+Edit module access					: Tilgang til adminmoduler
+Extrafields for users				: Ekstrafelter for brukere
+Superuser privileges				: Har full tilgang
+Extrafields for users in this group : Ekstrafelter for brukere i denne gruppen
+Save								: Lagre
+Close								: Lukk
+Add users to collections 			: Legg brukere til en eller flere kolleksjoner
+Add users to groups 				: Legg brukere til en eller flere grupper
+New collection						: Ny enhet
+Edit								: Endre
+Add extra field						: Legg til et ekstra felt
+Fieldtype							: Felttype
+Fieldname							: Feltnavn
+Big textfield						: Stort tekstfelt
+Small textfield						: Lite tekstfelt
+Ok									: Ok
+Cancel								: Avbryt
+Import users						: Importer brukere
+Fields to import, including sort index : Felter som skal importeres, med sorteringsindeks
+Index								: Indeks
+File to import from 				: Fil for import
+Add users to this group				: Legg til brukerne i denne gruppen
+No group							: Ingen gruppe
+Generate passwords automatically? 	: Generere passord?
+Generate a logfile? 				: Generere loggfil?
+E-mail address to send logfile		: E-post å sende loggen til
+Column separation symbol			: Separer kolonner med symbol
+Start import						: Start importeringen
+Group overview						: Gruppeoversikt
+Usercollections						: Brukerenheter
+Add a group 						: Legg til en gruppe
+Add a usercollection				: Legg til en brukerenhet
+Hide usercollections				: Ikke vis enheter
+Search users						: Søk etter brukere
+Keywords							: Søkeord
+Search								: Søk
+Reset search						: Nullstill søk
+Users pr. page						: Brukere pr. side
+Users								: Brukere
+user_Image							: Bilde
+user_Username						: Brukernavn
+user_ingroup						: I gruppe
+user_datecreated					: Dato opprettet
+user_datelogin						: Dato logget inn
+user_SortOrder						: Sortering
+
+
+
+Add to group 						: Legg til i gruppe
+Delete user 						: Slett bruker
+Add to collection 					: Koble til enhet
+Remove from collection 				: Fjern fra enheten
+Tools								: Verktøy
+Add user 							: Ny bruker
+Import users 						: Importer brukere
+Export users 						: Eksporter brukere
+Toggle selection on listed users : Omgjør avhuking på listede brukere
+Unnamed 							: Uten navn
+
+Never logged in.					: Logget aldri inn.
+
+i18n_nolanguagesetting			: Ikke tving språkvalg
+i18n_languagesetting				: Bruk språkvalg
+

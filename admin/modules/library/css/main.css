@@ -1,0 +1,227 @@
+#libaryPagination
+{
+	text-align: left;
+}
+
+#libaryPagination .Container
+{
+	padding:4px;
+}
+
+#levels
+{
+	padding: 16px;
+}
+#libContentButtons
+{
+	float:right;
+	text-align:right;
+	width:200px;
+}
+
+#ImageEditContainer .MsieFix
+{
+	width: 100px;
+}
+
+.Imagecontainer
+{
+	width:120px;
+	height:120px;
+	overflow:hidden;
+	float:left;
+	margin:0px 8px 8px 0px;
+	padding:4px;
+	background: #eeeeee url('../../../gfx/icons/plugin.png') no-repeat 108px 108px;
+	cursor: pointer;
+}
+* html .Imagecontainer
+{
+	cursor: hand;
+}
+
+.Imagecontainer img
+{
+	padding:0px; margin:0px;
+}
+
+.Imagecontainer h4
+{
+	font-weight:normal;
+	font-size:12px;
+	margin:4px 0px 0px 0px;
+	color:#000;
+}
+.Selected, .Selected h4
+{
+	background-color: #5E8EB4;	
+	color: #ffffff;
+}
+
+#LibraryContentDiv .List td
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.Imagecontainer h5
+{
+	margin:4px 0px 0px 0px;
+}
+
+tr.Selected td
+{
+	background: #007DAA;
+}
+
+td
+{
+	vertical-align:top;
+}
+
+.filelisticon
+{
+	float:right;
+	margin:0px 0px 8px 8px;
+}
+
+.iconcontainer
+{
+	width:20px;
+	height:20px;
+	float:left;
+}
+
+#searchResults a
+{
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+}
+
+.ButtonBox
+{
+	margin: 2px;
+}
+
+/** Detailed list *************************************************************/
+
+#LibraryContentDiv > table.List
+{
+	table-layout: fixed;
+}
+#LibraryContentDiv > table.List > tbody > tr > td,
+#LibraryContentDiv > table.List > tbody > tr > th
+{
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+table.List td.Icon
+{
+	width: 12px;
+}
+
+table.List tr:hover
+{
+	background: #95CF8E;
+}
+
+/** Library content ***********************************************************/
+#LibraryContent 
+{
+	min-height: 400px;
+	position: relative;
+	padding-bottom: 48px;
+}
+#LibraryContent table
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0 0 -10px 0;
+}
+#LibraryContent table.DetailList
+{
+	position: relative;
+	top: auto; left: auto; right: auto: bottom: auto;
+	margin: 0;
+}
+
+/** File edit container *******************************************************/
+#FileEditContainer form, #FileEditContainer tbody, #FileEditContainer tr
+{
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#FileEditContainer, #ImageEditContainer
+{
+	max-height: 600px;
+	overflow: auto;
+}
+
+/** Slice editor **/
+
+#SliceTop, #SliceLeft, #SliceRight, #SliceBottom, #SliceRect
+{
+	position: absolute;
+	opacity: 0.7;
+	background: #000000;
+	z-index: 29;
+}
+#SliceRect
+{
+	position: absolute;
+	border: 1px solid #ffffff;
+	background: none;
+	z-index: 29;
+}
+
+input.SmallNum
+{
+	width: 25px;
+	padding: 1px;
+	text-align: right;
+	margin: 0;
+}
+
+.Icon:hover .Container
+{
+	background: #6795BC;
+	border-color: #223344;
+}
+
+#pageProperties textarea.codepress
+{
+	background: #15191c url(../gfx/codearea.png) top left;
+	color: #eef2ff;
+	font-family: bitstream vera mono, monospace, courier new;
+	font-size: 12px;
+}
+
+#uploadForm table.Layout table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#uploadForm table.Layout table td
+{
+	vertical-align: top;
+	padding: 0 0 0 4px;
+}
+#uploadForm table.Layout table td strong
+{
+	display: none;
+}
+
+#FileEditContainer textarea
+{
+	-moz-tab-size: 3;
+	-webkit-tab-size: 3;
+	-o-tab-size: 3;
+	tab-size: 3;
+}
+

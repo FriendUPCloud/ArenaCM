@@ -1,0 +1,18 @@
+#Passphoto
+{
+	border: 1px solid #ccc;
+	-moz-border-radius: 3px;
+	width: <?= $this->PassphotoWidth ?>px;
+	height: <?= $this->PassphotoHeight ?>px;
+	margin: 5px 0 5px 0;
+}
+
+#pageUserExtrafieldSetup table.List
+{
+	border: 1px solid #c0c0c0;
+}
+
+#pageUserExtrafieldSetup table.List td
+{
+	padding: 4px;
+}

@@ -1,0 +1,154 @@
+/* Gallery Javascript ***************************************************/
+
+.ArenaGallery
+{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.ArenaGallery { background: #fff url(loading.gif) center center no-repeat; }
+.ArenaGallery img { display: none; }
+.ArenaGallery .GalleryContainer img { display: block; }
+.ArenaGallery .GalleryContainer
+{
+	position: relative;
+	background: #000;
+	overflow: hidden;
+}
+.GalleryContainer .Image1 { position: absolute; top: 0px; left: 0px; z-index: 3; }
+.GalleryContainer .Image2 { position: absolute; top: 0px; left: 0px; z-index: 4; }
+.GalleryContainer .Description 
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background: #222;
+	color: #fff;
+	font-size: 11px;
+	padding: 8px;
+	opacity: 0.8;
+}
+.GalleryContainer .Close 
+{
+	position: absolute;
+	top: -16px;
+	right: 5px;
+	background: #222;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	width: 20px;
+	height: 16px;
+	overflow: hidden;
+	padding-top: 1px;
+	cursor: hand; cursor: pointer;
+}
+.GalleryContainer .Pages a 
+{
+	position: absolute;
+	bottom: 1px;
+	display: block;
+	width: 30px;
+	height: 22px;
+	overflow: hidden;
+	color: #fff;
+	background: #333333;
+	padding-top: 3px;
+	text-decoration: none;
+	margin: 0 0 0 1px;
+	text-align: center;
+	-moz-transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+	z-index: 5;
+}
+.GalleryContainer .Pages a.Active
+{
+	background: #111111;
+	text-decoration: underline;
+}
+.GalleryContainer .Pages a:hover
+{
+	background: #555;
+	color: #fff;
+}
+.GalleryContainer .Pages a.Active:hover
+{
+	background: #666;
+	color: #fff;
+}
+
+.GalleryContainer .Pages
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	height: 25px;
+	width: 100%;
+	background: #000000;
+	z-index: 4;
+}
+.GalleryContainer .ArrowPrev 
+{
+	position: absolute;
+	bottom: 1px; left: 1px;
+	width: 30px;
+	height: 25px;
+	background: #000 url(arrow.png) no-repeat center center;
+	z-index: 5;
+	cursor: hand; cursor: pointer;
+}
+.GalleryContainer .ArrowNext
+{
+	position: absolute;
+	bottom: 1px; right: 0px;
+	width: 30px;
+	height: 25px;
+	background: #000 url(arrow_flip.png) no-repeat center center;
+	z-index: 5;
+	cursor: hand; cursor: pointer;
+}
+.GalleryContainer .ArrowNext:hover, .GalleryContainer .ArrowPrev:hover
+{
+	-moz-box-shadow: inset 0px 0px 20px rgba(255,240,240,0.2);
+	-webkit-box-shadow: inset 0px 0px 20px rgba(255,240,240,0.2);
+}
+
+/* For gallery */
+
+.ImageGallery img { display: block; -webkit-transition: all 0.3s; }
+.ImageGallery a
+{
+	display: block;
+	float: left;
+	margin: 0 4px 4px 0;
+	border: 2px solid white;
+	background: #ffff00;
+}
+.ImageGallery a:hover img
+{
+	opacity: 0.7;
+}
+.ImageGallery br
+{
+	clear: both;
+}
+.Imagecenter
+{
+	z-index: 10001;
+}
+.Imagebackground
+{
+	background: black;
+	z-index: 10000;
+	-webkit-transition: 0.5s all;
+}
+.Imagecontainer
+{
+	-webkit-transition: all 0.5s;
+}
+.Imageviewbase
+{
+	position: relative;
+	z-index: 20000;
+}
+

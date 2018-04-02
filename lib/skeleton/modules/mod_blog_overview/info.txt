@@ -1,0 +1,2 @@
+ARENA Blogoversikt|200|extramodule
+En modul for å lage oversikt over blogger fra flere sider.

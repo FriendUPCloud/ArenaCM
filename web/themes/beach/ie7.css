@@ -1,0 +1,48 @@
+/* i KiLL U Ie 7 */
+
+#TopMenu__ li, #TopMenu__ ul
+{
+	list-style: none;
+}
+/*
+#TopMenu__ li li ul a
+{
+	background: #F2E6D6;
+	max-width: 70px;
+	list-style: none;
+	margin-left: 6px;
+}
+*/
+#TopMenu__ li li ul 
+{
+	display: inline;
+	clear: both;
+}
+#TopMenu__ li li ul *
+{
+	white-space: nowrap; 
+}
+
+#Felt1, #Felt2
+{
+	margin-top: 10px;
+}
+
+#Footer__
+{
+	position: static;
+}
+
+/* From hovering dingsen */
+
+#TopMenu__ .hovering *
+{
+	width: 100%;
+}
+
+#InnerContent__, #InnerContent__ *
+{
+	background: none;
+}
+#InnerContent__ { border-left: 1px solid #e7e7e7; }
+

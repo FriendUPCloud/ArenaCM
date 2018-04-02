@@ -1,0 +1,3 @@
+Bildegalleri|140|extramodule
+En bildegalleri-modul som du kan bruke på sider i tillegg til eller i stedet for tekstinnhold.
+|simple

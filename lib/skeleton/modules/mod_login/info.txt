@@ -1,0 +1,3 @@
+Innlogging|200|extramodule
+En modul som lager et innloggingsfelt. Har støtte for brukerregistrering og en personlog side for innloggede.
+|

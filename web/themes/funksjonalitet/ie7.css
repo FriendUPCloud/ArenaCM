@@ -1,0 +1,28 @@
+
+#TopMenu__ li, #TopMenu__ ul
+{
+	list-style: none;
+}
+
+#TopMenu__ li li ul 
+{
+	display: inline;
+	clear: both;
+}
+#TopMenu__ li li ul *
+{
+	white-space: nowrap;
+}
+
+
+#Footer__
+{
+	bottom: -10px;
+}
+
+#Bunntekst
+{
+	margin-top: -10px;
+	position: relative;
+	margin-left: -10px;
+}

@@ -1,0 +1,181 @@
+Link url							: Lenkeadresse
+Link target 						: Lenkemål
+Leadin								: Introduksjonstekst
+Bodytext							: Artikkel
+Add a new field in : Legg til felt i : Legg til et nytt felt i
+Name the field 						: Gi feltet et navn
+In which contentgroup do you wish to add the field? : \
+	I hvilken innholdsgruppe ønsker du å legge til feltet?
+Choose type of field. : \
+	Velg hvilken type felt du ønsker å legge til.
+A full article field : \
+	Et fullt tekst felt med alle redigerings-muligheter
+A simple text field : Et enkelt tekst felt for ren tekst
+A small article field : Et lite tekst felt med alle redigerings-muligheter
+A simple space for styling : Et stilbart mellomrom
+A stylesheet : Et stilark felt
+An object connection field : Et objekttilkoblingsfelt
+Extension : Utvidelse
+Show field globally? : Skal feltet vise på alle sidene?
+No, only on this page : Nei, bare vis feltet på denne siden
+Yes, on all pages : Ja, vis feltet på alle sidene
+Yes, on all subpages : Ja, men kun på undersidene
+Cancel : Avbryt
+Add the field : Legg til feltet
+Edit the field : Endre feltet
+Advanced settings for : Avanserte innstillinger for
+Page showing? : Viser siden?
+Hidden in the menu : Skjult i menyen
+Yes : Ja
+No : Nei
+Using an extension : Kjører en innholdsmodul
+Pure textpage : Ren tekstside
+Extrafields : Ekstrafelter
+Links to another page : Lenke til en annen side
+System name : Systemnavn
+Page title : Søkbar tittel
+Content groups : Innholdsgrupper
+Subpages use template : Undersider har mal
+No template is set up : Ingen mal er satt opp
+Programmed template : Programmert mal
+Do not use programmed template : Ikke bruk programmert mal
+Save : Lagre
+Cancel : Avbryt
+Save as template : Lagre som mal
+Do not use template : Ikke bruk mal
+Choose content group : Velg innholdsmodul
+Put in : Plasser i
+Select extension : Velg utvidelse
+Content type : Innholdstype
+Edit field in : Endre felt i
+Edit field name : Endre feltnavn
+Admin visibility : Vis for admin
+Sort order : Sortering
+Which content group do you want to place the field in? : Hvilken innholdsgruppe ønsker du å legge feltet i?
+A Javascript field : Javascript felt
+Extension : Utvidelse
+You are editing a content module. You can not edit the content type. : Du endrer nå på en innholds modul. Du kan ikke endre modul typen.
+This field is of a specified type. You can not edit this field type. : Dette feltet er av en spesifisert type. På grunn av dette kan du ikke endre felt type.
+unknown type : ukjent type
+Visibility : Visibilitet
+This field is showing : Dette feltet viser
+use on all pages : på alle sidene
+only on this page : kun på denne siden
+Edit field : Endre feltet
+Website overview : Nettstedsoversikt
+Notes : Notater
+Tools : Verktøy
+Close : Lukk
+Table layout : Tabell layout
+New table layout : Ny tabell layout
+No table layouts set up. : Ingen tabeller definert.
+Layout : Layout
+Group_From : Fra
+Group_To : Til
+Settings : Innstillinger
+Move to page : Flytt til under valgte side
+Field modules : Moduler
+Your notes on this page : Dine notater
+Your : Dine
+Your modules : Dine moduler
+Get modules : Flere moduler
+Modules : Moduler
+modules : moduler
+Archive : Arkiv
+Module shop : Modulbutikk
+Edit : Endre
+Menu title : Menytittel
+Searchable page title : Søkbar sidetittel
+In use : I bruk
+Templates : Maler
+No templates defined : Ingen sidemaler er definert
+Delete templates : Slett maler
+
+Top field : Toppfeltet
+Main field : Hovedfeltet
+Extra field : Det supplerende feltet
+Bottom field : Bunnfeltet
+
+Edit field : Endre felt
+Remove field : Fjern felt
+Move up : Flytt opp
+Move down : Flytt ned
+
+in : i
+Remove image : Fjern bilde
+the top field : toppfeltet
+the main field : hovedfeltet
+the extra field : supplerende felt
+the bottom field : bunnfeltet
+
+Save content : Lagre innholdet til databasen
+Save : Lagre
+Delete the active page : Slett den aktive siden
+Delete : Slett
+Publish the active page : Publiser den aktive siden
+Publish : Publiser
+Roll back the published version as a work copy : Hent publisert versjon til arbeidskopi
+Roll back : Gjenopprett
+Add a new content field : Legg til et innholdsfelt
+Add field : Nytt felt
+View advanced settings : Se avanserte innstillinger
+Advanced : Avansert
+Show page preview : Forhåndsvis siden uten å publisere
+Preview : Forhåndsvis
+Name : Navn
+Remove : Fjern
+Deactivate : Deaktiver
+Activate : Aktiver
+Error loading content : Problemer med å laste inn innhold
+You have no existing modules. To add a module, : Du har ingen tilgjengelige moduler. For å skaffe deg moduler
+please add some modules from the "Free modules" tab : må du først bla gjennom modulbutikken. Klikk på fanen "Modulbutikk"
+and take a look. : for å se hvilke moduler vi har å tilby.
+
+wrong content group : feil med innholdsgruppe
+
+Menu title : Menytittel
+Contents of trash : Innhold i søppel
+Date created : Dato opprettet
+
+Do you really want to erase the selected items? : Vil du virkelig slette valgte sider for godt?
+You need to select some items. : Du må velge noen elementer.
+
+# Javascript
+You need to fill in page title. : Du må fylle inn søkbar sidetittel.
+You need to fill in a menu title. : Du må fylle inn meny tittel.
+You need to fill in a searchable page title. : Du må fylle inn søkbar sidetittel.
+Are you sure you want to roll back the\npublished version? The current work copy\nwill be erased. : Er du sikker på at du ønsker å gjenopprette den\npubliserte versjonen? Du vil miste nåværende\narbeidskopi for godt.
+Are you sure you want to delete this page? : Er du sikker på at du ønsker å slette denne siden?
+Are you sure you want to add this module?\nYou will be charged on your next invoice\nwith the amount shown. : Er du sikker på at du ønsker å legge til denne modulen?\nDu vil følgelig bli fakturert med beløpet vist i modul feltet.
+You need to choose a content group. : Du må velge innholdsgruppe.
+Are you sure you want to move the field? : Er du sikker på at du ønsker å flytte feltet?
+Are you sure you want to remove the field? : Er du sikker på at du ønsker å fjerne feltet?
+Failed. : Feilet.
+Templatename : Malens navn
+You can not move a page onto itself. : Du kan ikke flytte en side til seg selv.
+Unexpected error. :  Det skjedde en feil.
+
+New subpage : Lag ny underside
+Sort pages : Sortering
+Move page : Flytt
+Trash : Søppel
+
+Restore selected : Gjenopprett valgte
+Erase selected : Destruer valgte
+
+The trashcan is empty. : Søppelbøtten er tom.
+
+Hide controls? : Gjemme knapper?
+
+Module decides : Modulen bestemmer 
+
+Your info : Info
+You have been logged in for : Du har vært innlogget i
+hours : timer
+hour : time
+minutes : minutter
+minute : minutt
+Logout : Logg ut
+seconds : sekunder
+
+i18n_super_user : Superbruker

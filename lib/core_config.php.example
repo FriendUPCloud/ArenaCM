@@ -1,0 +1,12 @@
+<?php
+	// Definitions of core information
+	define ( 'ARENA_COMPANY_NAME', 'My Company Inc.' );
+	define ( 'ARENA_COMPANY_WEB', 'http://www.company.foo' );
+	define ( 'ARENA_COMPANY_SUPPORT', 'foo@company.foo' );
+	
+	// Setup link to the core database
+	$corebase->setUsername ( "foouser" );
+	$corebase->setPassword ( "foobar" );
+	$corebase->setHostname ( "localhost" );
+	$corebase->setDb ( "ArenaCoreDatabase" ); 
+?>
