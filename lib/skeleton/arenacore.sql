@@ -21,13 +21,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `AvailableExtension` (
   `ID` int(11) NOT NULL auto_increment,
-  `Name` varchar(255) default NULL,
+  `Name` text default NULL,
   `Intro` text,
   `Body` text,
   `ImageID` int(11) default '0',
   `Pris` double default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -39,16 +39,16 @@ CREATE TABLE IF NOT EXISTS `Case` (
   `ID` bigint(20) NOT NULL auto_increment,
   `CaseID` bigint(20) NOT NULL default '0',
   `ProjectID` int(11) NOT NULL,
-  `Title` varchar(255) NOT NULL,
+  `Title` text NOT NULL,
   `Description` text,
   `AuthorID` int(11) NOT NULL,
   `AssignedToID` int(11) NOT NULL,
   `DateCreated` datetime default NULL,
   `DateUpdated` datetime default NULL,
-  `Status` varchar(255) default 'new',
+  `Status` text default 'new',
   `Hours` double default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=174 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=174 ;
 
 -- --------------------------------------------------------
 
@@ -58,10 +58,10 @@ CREATE TABLE IF NOT EXISTS `Case` (
 
 CREATE TABLE IF NOT EXISTS `Client` (
   `ID` bigint(20) NOT NULL auto_increment,
-  `Name` varchar(255) default NULL,
+  `Name` text default NULL,
   `Description` text,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `Comment` (
   `DateCreated` datetime default NULL,
   `DateModified` datetime default NULL,
   `ParentID` int(11) default NULL,
-  `Nickname` varchar(64) default NULL,
+  `Nickname` text default NULL,
   `UserID` int(11) default NULL,
-  `Subject` varchar(128) default NULL,
+  `Subject` text default NULL,
   `Message` text,
   `IsDeleted` tinyint(4) default NULL,
   `IsSticky` tinyint(4) default NULL,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `Comment` (
   `ElementID` bigint(11) default NULL,
   `SortOrder` bigint(11) default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=50 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=50 ;
 
 -- --------------------------------------------------------
 
@@ -96,18 +96,18 @@ CREATE TABLE IF NOT EXISTS `Comment` (
 
 CREATE TABLE IF NOT EXISTS `File` (
   `ID` bigint(20) NOT NULL auto_increment,
-  `Title` varchar(128) default NULL,
-  `Filename` varchar(255) default NULL,
+  `Title` text default NULL,
+  `Filename` text default NULL,
   `Description` text,
   `FileFolder` int(11) default '0',
   `Filesize` int(11) default NULL,
   `DateCreated` datetime default NULL,
   `DateModified` datetime default NULL,
   `SortOrder` int(11) default NULL,
-  `Filetype` varchar(16) default NULL,
-  `FilenameOriginal` varchar(255) default NULL,
+  `Filetype` text default NULL,
+  `FilenameOriginal` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -117,14 +117,14 @@ CREATE TABLE IF NOT EXISTS `File` (
 
 CREATE TABLE IF NOT EXISTS `Folder` (
   `ID` int(11) NOT NULL auto_increment,
-  `Name` varchar(128) default NULL,
+  `Name` text default NULL,
   `Parent` int(11) default NULL,
-  `Description` varchar(255) default NULL,
+  `Description` text default NULL,
   `DateCreated` datetime default NULL,
   `DateModified` datetime default NULL,
-  `DiskPath` varchar(255) default NULL,
+  `DiskPath` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=33 ;
 
 -- --------------------------------------------------------
 
@@ -139,9 +139,9 @@ CREATE TABLE IF NOT EXISTS `ForumMessage` (
   `ParentID` int(11) default NULL,
   `ForumID` int(11) default NULL,
   `ThreadID` int(11) default NULL,
-  `Nickname` varchar(64) default NULL,
+  `Nickname` text default NULL,
   `UserID` int(11) default NULL,
-  `Subject` varchar(128) default NULL,
+  `Subject` text default NULL,
   `Message` text,
   `IsForum` tinyint(4) default '0',
   `IsTopic` tinyint(4) default '0',
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `ForumMessage` (
   `ContentElementID` bigint(11) default NULL,
   `SortOrder` int(11) default '0',
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -163,12 +163,12 @@ CREATE TABLE IF NOT EXISTS `ForumMessage` (
 CREATE TABLE IF NOT EXISTS `Groups` (
   `ID` int(11) NOT NULL auto_increment,
   `GroupID` int(11) NOT NULL default '0',
-  `Name` varchar(56) default NULL,
+  `Name` text default NULL,
   `Description` text,
   `SortOrder` int(11) default NULL,
   `TemplateID` int(11) default '0',
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -179,12 +179,12 @@ CREATE TABLE IF NOT EXISTS `Groups` (
 CREATE TABLE IF NOT EXISTS `Guestbook` (
   `ID` int(11) NOT NULL auto_increment,
   `Date` datetime default NULL,
-  `Nickname` varchar(64) default NULL,
+  `Nickname` text default NULL,
   `Message` text,
   `IsDeleted` tinyint(4) default NULL,
   `ContentElementID` int(11) default '0',
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -194,8 +194,8 @@ CREATE TABLE IF NOT EXISTS `Guestbook` (
 
 CREATE TABLE IF NOT EXISTS `Image` (
   `ID` bigint(20) NOT NULL auto_increment,
-  `Title` varchar(128) default NULL,
-  `Filename` varchar(255) default NULL,
+  `Title` text default NULL,
+  `Filename` text default NULL,
   `Description` text,
   `ImageFolder` int(11) default '0',
   `Filesize` int(11) default NULL,
@@ -204,10 +204,10 @@ CREATE TABLE IF NOT EXISTS `Image` (
   `DateCreated` datetime default NULL,
   `DateModified` datetime default NULL,
   `SortOrder` int(11) default '0',
-  `Filetype` varchar(16) default NULL,
-  `FilenameOriginal` varchar(255) default NULL,
+  `Filetype` text default NULL,
+  `FilenameOriginal` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=158 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=158 ;
 
 -- --------------------------------------------------------
 
@@ -217,13 +217,13 @@ CREATE TABLE IF NOT EXISTS `Image` (
 
 CREATE TABLE IF NOT EXISTS `Languages` (
   `ID` int(11) NOT NULL auto_increment,
-  `Name` varchar(64) default NULL,
-  `NativeName` varchar(128) default NULL,
+  `Name` text default NULL,
+  `NativeName` text default NULL,
   `IsDefault` tinyint(4) default '0',
-  `UrlActivator` varchar(255) default NULL,
-  `BaseUrl` varchar(255) default NULL,
+  `UrlActivator` text default NULL,
+  `BaseUrl` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -235,13 +235,13 @@ CREATE TABLE IF NOT EXISTS `ModulePermissions` (
   `ID` int(11) NOT NULL auto_increment,
   `UserID` int(11) default '0',
   `GroupID` int(11) default '0',
-  `Module` varchar(64) default NULL,
-  `Name` varchar(64) default NULL,
+  `Module` text default NULL,
+  `Name` text default NULL,
   `Read` tinyint(4) default '0',
   `Write` tinyint(4) default '0',
-  `Data` varchar(255) default NULL,
+  `Data` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -252,12 +252,12 @@ CREATE TABLE IF NOT EXISTS `ModulePermissions` (
 CREATE TABLE IF NOT EXISTS `ModulesEnabled` (
   `ID` int(11) NOT NULL auto_increment,
   `SiteID` int(11) default NULL,
-  `Module` varchar(128) default NULL,
+  `Module` text default NULL,
   `SortOrder` int(11) default '0',
-  `ModuleName` varchar(32) default NULL,
-  `ModuleIcon` varchar(255) default NULL,
+  `ModuleName` text default NULL,
+  `ModuleIcon` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=628 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=628 ;
 
 -- --------------------------------------------------------
 
@@ -268,11 +268,11 @@ CREATE TABLE IF NOT EXISTS `ModulesEnabled` (
 CREATE TABLE IF NOT EXISTS `ModuleSubscribers` (
   `ID` int(11) NOT NULL auto_increment,
   `SiteID` int(11) NOT NULL,
-  `ModuleName` varchar(255) default NULL,
+  `ModuleName` text default NULL,
   `Active` tinyint(4) default '1',
   `Price` double default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -282,7 +282,7 @@ CREATE TABLE IF NOT EXISTS `ModuleSubscribers` (
 
 CREATE TABLE IF NOT EXISTS `News` (
   `ID` int(11) NOT NULL auto_increment,
-  `Title` varchar(128) default NULL,
+  `Title` text default NULL,
   `Intro` text,
   `Article` text,
   `CategoryID` int(11) default NULL,
@@ -296,7 +296,7 @@ CREATE TABLE IF NOT EXISTS `News` (
   `IsDeleted` tinyint(4) default NULL,
   `IsEvent` tinyint(4) default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -306,17 +306,17 @@ CREATE TABLE IF NOT EXISTS `News` (
 
 CREATE TABLE IF NOT EXISTS `NewsCategory` (
   `ID` int(11) NOT NULL auto_increment,
-  `Name` varchar(128) default NULL,
-  `Description` varchar(255) default NULL,
+  `Name` text default NULL,
+  `Description` text default NULL,
   `DateCreated` datetime default NULL,
   `SortOrder` int(11) default '0',
-  `SystemName` varchar(128) default NULL,
+  `SystemName` text default NULL,
   `Parent` int(11) default '0',
   `Language` int(11) default '1',
   `ContentElementID` int(11) default NULL,
-  `DateFormat` varchar(128) default 'Y-m-d H:i',
+  `DateFormat` text default 'Y-m-d H:i',
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -328,15 +328,15 @@ CREATE TABLE IF NOT EXISTS `ObjectConnection` (
   `ID` bigint(20) NOT NULL auto_increment,
   `ConnectionGroupID` int(11) default NULL,
   `ObjectID` bigint(20) default NULL,
-  `ObjectType` varchar(64) default NULL,
+  `ObjectType` text default NULL,
   `ConnectedObjectID` bigint(20) default NULL,
-  `ConnectedObjectType` varchar(64) default NULL,
+  `ConnectedObjectType` text default NULL,
   `ExtensionObjectID` bigint(20) default NULL,
-  `ExtensionObjectType` varchar(64) default NULL,
-  `Label` varchar(64) default NULL,
+  `ExtensionObjectType` text default NULL,
+  `Label` text default NULL,
   `SortOrder` int(11) default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=23 ;
 
 -- --------------------------------------------------------
 
@@ -346,11 +346,11 @@ CREATE TABLE IF NOT EXISTS `ObjectConnection` (
 
 CREATE TABLE IF NOT EXISTS `ObjectConnectionGroup` (
   `ID` int(11) default NULL,
-  `Name` varchar(64) default NULL,
-  `Description` varchar(255) default NULL,
+  `Name` text default NULL,
+  `Description` text default NULL,
   `ObjectID` bigint(20) default NULL,
-  `ObjectType` varchar(128) default NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `ObjectType` text default NULL
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -361,14 +361,14 @@ CREATE TABLE IF NOT EXISTS `ObjectConnectionGroup` (
 CREATE TABLE IF NOT EXISTS `ProductOrder` (
   `ID` int(11) NOT NULL auto_increment,
   `SiteID` int(11) NOT NULL,
-  `ProductName` varchar(255) default NULL,
+  `ProductName` text default NULL,
   `OrderText` text,
   `PriceSum` double default NULL,
-  `Status` varchar(255) default NULL,
+  `Status` text default NULL,
   `DateOrdered` datetime default NULL,
   `DateFinished` datetime default NULL,
   PRIMARY KEY  (`ID`,`SiteID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -379,9 +379,9 @@ CREATE TABLE IF NOT EXISTS `ProductOrder` (
 CREATE TABLE IF NOT EXISTS `Project` (
   `ID` int(11) NOT NULL auto_increment,
   `ProjectID` int(11) NOT NULL,
-  `Name` varchar(255) NOT NULL,
+  `Name` text NOT NULL,
   `Description` text NOT NULL,
-  `Status` varchar(255) default NULL,
+  `Status` text default NULL,
   `DateCreated` datetime NOT NULL,
   `DateModified` datetime NOT NULL,
   `IsActive` tinyint(4) NOT NULL,
@@ -390,7 +390,7 @@ CREATE TABLE IF NOT EXISTS `Project` (
   `Hours` double default NULL,
   `HourPrice` double default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=38 ;
 
 -- --------------------------------------------------------
 
@@ -400,15 +400,15 @@ CREATE TABLE IF NOT EXISTS `Project` (
 
 CREATE TABLE IF NOT EXISTS `Sites` (
   `ID` int(11) NOT NULL auto_increment,
-  `SiteName` varchar(255) default NULL,
-  `SqlUser` varchar(128) default NULL,
-  `SqlPass` varchar(128) default NULL,
-  `SqlHost` varchar(255) default NULL,
-  `SqlDatabase` varchar(128) default NULL,
-  `BaseUrl` varchar(255) default NULL,
-  `BaseDir` varchar(255) default NULL,
+  `SiteName` text default NULL,
+  `SqlUser` text default NULL,
+  `SqlPass` text default NULL,
+  `SqlHost` text default NULL,
+  `SqlDatabase` text default NULL,
+  `BaseUrl` text default NULL,
+  `BaseDir` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=124 ;
 
 -- --------------------------------------------------------
 
@@ -418,11 +418,11 @@ CREATE TABLE IF NOT EXISTS `Sites` (
 
 CREATE TABLE IF NOT EXISTS `UserLogin` (
   `ID` int(11) NOT NULL auto_increment,
-  `Token` varchar(256) default NULL,
+  `Token` text default NULL,
   `UserID` int(11) default NULL,
-  `DataSource` varchar(11) default NULL,
+  `DataSource` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -432,12 +432,12 @@ CREATE TABLE IF NOT EXISTS `UserLogin` (
 
 CREATE TABLE IF NOT EXISTS `Users` (
   `ID` int(11) NOT NULL auto_increment,
-  `Username` varchar(32) default NULL,
-  `Password` varchar(255) default NULL,
-  `Name` varchar(100) default NULL,
-  `Email` varchar(100) default NULL,
+  `Username` text default NULL,
+  `Password` text default NULL,
+  `Name` text default NULL,
+  `Email` text default NULL,
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -449,5 +449,5 @@ CREATE TABLE IF NOT EXISTS `UsersGroups` (
   `UserID` bigint(20) NOT NULL,
   `GroupID` bigint(20) NOT NULL,
   PRIMARY KEY  (`UserID`,`GroupID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
