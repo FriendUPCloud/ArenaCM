@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `Case` (
   `AssignedToID` int(11) NOT NULL,
   `DateCreated` datetime default NULL,
   `DateUpdated` datetime default NULL,
-  `Status` text default 'new',
+  `Status` varchar(255) default 'new',
   `Hours` double default NULL,
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=174 ;
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS `NewsCategory` (
   `Parent` int(11) default '0',
   `Language` int(11) default '1',
   `ContentElementID` int(11) default NULL,
-  `DateFormat` text default 'Y-m-d H:i',
+  `DateFormat` varchar(255) default 'Y-m-d H:i',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 

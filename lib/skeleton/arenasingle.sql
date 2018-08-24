@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `ContentDataBig` (
   `Type` text default NULL,
   `IsVisible` tinyint(4) default '1',
   `AdminVisibility` tinyint(4) NOT NULL default '1',
-  `ContentGroup` text default 'Default',
+  `ContentGroup` varchar(255) default 'Default',
   `IsGlobal` tinyint(4) default '0',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=123 ;
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `ContentDataSmall` (
   `Type` text default NULL,
   `IsVisible` tinyint(4) default '1',
   `AdminVisibility` tinyint(4) NOT NULL default '1',
-  `ContentGroup` text default 'Default',
+  `ContentGroup` varchar(255) default 'Default',
   `IsGlobal` tinyint(4) default '0',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=26858 ;
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `ContentElement` (
   `Author` int(11) default NULL,
   `Version` double default NULL,
   `VersionPublished` double default NULL,
-  `Language` text default '1',
+  `Language` varchar(255) default '1',
   `ContentType` text default NULL,
   `RouteName` text default NULL,
   `IsTemplate` tinyint(4) default '0',
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `ContentElement` (
   `IsDefault` tinyint(4) default '0',
   `SeenTimesUnique` bigint(20) NOT NULL default '0',
   `SeenTimes` bigint(20) NOT NULL default '0',
-  `ContentGroups` text default 'Default',
+  `ContentGroups` varchar(255) default 'Default',
   `ContentTemplateID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=13 ;
@@ -323,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
   `Filename` text default NULL,
   `Description` text,
   `Tags` text NOT NULL,
-  `ColorSpace` text NOT NULL default 'rgb',
+  `ColorSpace` varchar(255) NOT NULL default 'rgb',
   `ImageFolder` int(11) default '0',
   `Filesize` int(11) default NULL,
   `Width` int(11) default NULL,
@@ -443,7 +443,7 @@ CREATE TABLE IF NOT EXISTS `NewsCategory` (
   `Parent` int(11) default '0',
   `Language` int(11) default '1',
   `ContentElementID` int(11) default NULL,
-  `DateFormat` text default 'Y-m-d H:i',
+  `DateFormat` varchar(255) default 'Y-m-d H:i',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -502,15 +502,15 @@ CREATE TABLE IF NOT EXISTS `ObjectConnectionGroup` (
 
 CREATE TABLE IF NOT EXISTS `ObjectPermission` (
   `ID` int(10) unsigned NOT NULL auto_increment,
-  `AuthType` text NOT NULL default '',
+  `AuthType` varchar(255) NOT NULL default '',
   `AuthID` int(11) NOT NULL default '0',
-  `ObjectType` text NOT NULL default '',
+  `ObjectType` varchar(255) NOT NULL default '',
   `ObjectID` int(11) NOT NULL default '0',
   `Read` tinyint(4) NOT NULL default '0',
   `Write` tinyint(4) NOT NULL default '0',
   `Publish` tinyint(4) NOT NULL default '0',
   `Structure` tinyint(4) NOT NULL default '0',
-  `PermissionType` text default 'web',
+  `PermissionType` varchar(255) default 'web',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -523,12 +523,12 @@ CREATE TABLE IF NOT EXISTS `ObjectPermission` (
 CREATE TABLE IF NOT EXISTS `PublishQueue` (
   `ID` bigint(20) NOT NULL auto_increment,
   `ContentElementID` bigint(20) NOT NULL,
-  `ContentTable` text default '',
+  `ContentTable` varchar(255) default '',
   `ContentID` bigint(20) NOT NULL,
-  `ActionScript` text default '',
-  `FieldName` text default '',
-  `LiteralName` text default '',
-  `Title` text default '',
+  `ActionScript` varchar(255) default '',
+  `FieldName` varchar(255) default '',
+  `LiteralName` varchar(255) default '',
+  `Title` varchar(255) default '',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 

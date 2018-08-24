@@ -323,9 +323,11 @@ class dbUser extends dbObject
 				}
 				$this->save ( );
 				
+				$token = ( isset( $_SESSION[ "{$this->cookie_prefix}UserToken" ] ) ? $_SESSION[ "{$this->cookie_prefix}UserToken" ] : $_COOKIE[ "{$this->cookie_prefix}UserToken" ] );
+				
 				$this->is_authenticated = true;
 				$obj = new dbObject ( 'UserLogin' );
-				$obj->Token = $_COOKIE[ "{$this->cookie_prefix}UserToken" ];
+				$obj->Token = $token;
 				
 				if ( !$obj->load ( ) )
 				{
@@ -339,7 +341,10 @@ class dbUser extends dbObject
 					$obj->Token = $this->make_token ( );
 					$obj->UserID = $this->ID;
 					$obj->DateCreated = date( 'Y-m-d H:i:s' );
+					
 					setcookie ( "{$this->cookie_prefix}UserToken", $obj->Token, time() + 2592000, '/' );
+					
+					$_SESSION[ "{$this->cookie_prefix}UserToken" ] = $obj->Token;
 				}
 				$obj->DataSource = $this->_dataSource;
 				$obj->DateExpired = date( 'Y-m-d H:i:s', mktime( 0, 0, 0, date('m'), date('d')+3, date('Y') ) );
