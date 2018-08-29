@@ -40,7 +40,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 									foreach ( $this->news as $p )
 									{
 										$sw = $sw == "#f8f8f8" ? "#fff" : "#f8f8f8";
-										$oStr .= "<div style=\"display: block; padding: 4px; background: $sw\">";
+										$oStr .= "<div style='display: block; padding: 4px; background: $sw'>";
 										$oStr .= "<strong>{$p->Title}</strong> ";
 										$oStr .= "<small>";
 										$oStr .= $time->fancy ( $p->DateActual );
@@ -94,7 +94,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 					{
 						foreach ( $langs as $lang )
 						{
-							$opts .= "<option value=\"0\">{$lang->NativeName} ({$lang->Name})</option>";
+							$opts .= "<option value='0'>{$lang->NativeName} ({$lang->Name})</option>";
 							$opts .= parseCats ( 0, $lang->ID, $obj->DataInt );
 						}
 					}
@@ -130,19 +130,19 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 		
 					if ( $obj->DataString == '0' ) $n1 = ' selected="selected"'; else $n1 = '';
 					if ( $obj->DataString == '1' ) $n2 = ' selected="selected"'; else $n2 = '';
-					$navs = "<option value=\"0\"$n1>Nei</option><option value=\"1\"$n2>Ja</option>"; 
+					$navs = "<option value='0'$n1>Nei</option><option value='1'$n2>Ja</option>"; 
 		
 					$options  =  'Kategori: &nbsp;';
-					$options .= "<select onchange=\"$onchsele\" style=\"font-size: 9px\">";
-					$options .= "<option value=\"0\"$s>Alle nyhetskategorier</option>$opts";
+					$options .= "<select onchange='$onchsele' style='font-size: 9px'>";
+					$options .= "<option value='0'$s>Alle nyhetskategorier</option>$opts";
 					$options .= "</select>";
-					$options .= "&nbsp; Nyheter pr. side: <input type=\"text\" size=\"3\" onchange=\"$opnchlim\" value=\"{$obj->DataDouble}\" style=\"font-size: 9px; text-align: right\" />";
-					$options .= "&nbsp; Generer navigasjon: <select onchange=\"$opnchnav\" style=\"font-size: 9px; text-align: right\">$navs</select>";
+					$options .= "&nbsp; Nyheter pr. side: <input type='text' size='3' onchange='$opnchlim' value='{$obj->DataDouble}' style='font-size: 9px; text-align: right' />";
+					$options .= "&nbsp; Generer navigasjon: <select onchange='$opnchnav' style='font-size: 9px; text-align: right'>$navs</select>";
 					$options .= "<br/>";
-					$options .= "Gå i detaljmodus: <input onchange=\"$opchaff\" type=\"checkbox\"" . ( $skipDetailMode ? ' checked="checked"' : '' ) . "/>";
-					$options .= 		"<input type=\"hidden\" id=\"$opchaffhidden\" value=\"" . ( $skipDetailMode ? '1' : '0' ) . "\"/>";
-					$options .= "&nbsp; List ut i reversert orden: <input onchange=\"$opchrev\" type=\"checkbox\"" . ( $reverseOrder ? ' checked="checked"' : '' ) . "/>";
-					$options .= 		"<input type=\"hidden\" id=\"$opchrevhidden\" value=\"" . ( $reverseOrder ? '1' : '0' ) . "\"/>";
+					$options .= "Gå i detaljmodus: <input onchange='$opchaff' type='checkbox'" . ( $skipDetailMode ? ' checked="checked"' : '' ) . "/>";
+					$options .= 		"<input type='hidden' id='$opchaffhidden' value='" . ( $skipDetailMode ? '1' : '0' ) . "'/>";
+					$options .= "&nbsp; List ut i reversert orden: <input onchange='$opchrev' type='checkbox'" . ( $reverseOrder ? ' checked="checked"' : '' ) . "/>";
+					$options .= 		"<input type='hidden' id='$opchrevhidden' value='" . ( $reverseOrder ? '1' : '0' ) . "'/>";
 					
 					return $options;
 				?>

@@ -34,7 +34,7 @@ switch ( $_REQUEST[ 'pluginaction' ] )
 			foreach ( $eles as $e )
 			{
 				list ( $id, $type ) = explode ( ':', $e );
-				if ( !$id ) continue;
+				if ( !$id || $id == 'false' ) continue;
 				$obj = new dbObject ( $type );
 				if ( $obj->load ( $id ) )
 				{

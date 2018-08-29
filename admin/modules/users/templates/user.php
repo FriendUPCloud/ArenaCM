@@ -114,7 +114,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 																</td>
 																<td>
 																	<input type="hidden" name="IsAdmin" id="isadmin" value="<?= $this->user->IsAdmin ?>" />
-																	<input type="checkbox" onchange="document.getElementById ( 'isadmin' ).value = this.checked ? '1' : '0'"<?= $this->user->IsAdmin ? " checked=\"checked\"" : "" ?> />
+																	<input type="checkbox" onchange="document.getElementById ( 'isadmin' ).value = this.checked ? '1' : '0'"<?= $this->user->IsAdmin ? " checked='checked'" : "" ?> />
 																</td>
 															</tr>
 															<tr>
@@ -173,7 +173,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 																<td style="text-align: left; padding-right: 8px">
 																	<select name="Groups[]" size="10" style="width: 230px" multiple="multiple" id="groupsel">
 																		<?if ( $GLOBALS[ 'Session' ]->AdminUser->_dataSource == 'core' ) { ?>
-																		<option value="0"<?= ( !$this->user->InGroups && !$GLOBALS[ 'Session' ]->UsersCurrentGroup ) ? " selected=\"selected\"" : "" ?>>Uten gruppe</option>
+																		<option value="0"<?= ( !$this->user->InGroups && !$GLOBALS[ 'Session' ]->UsersCurrentGroup ) ? " selected='selected'" : "" ?>>Uten gruppe</option>
 																		<option value="0">----------------------------------------------------------------------------</option>
 																		<?}?>
 																		<?= $this->groups ?>
