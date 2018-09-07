@@ -378,7 +378,11 @@ class cDatabase
 		
 		if ( $this->resource = mysqli_connect( $this->hostname, $this->username, $this->password ) )
 		{
-			mysqli_set_charset( $this->resource, 'utf8' );
+			if( !defined( 'DB_CHARSET' ) || defined( 'DB_CHARSET' ) && DB_CHARSET )
+			{
+				mysqli_set_charset( $this->resource, defined( 'DB_CHARSET' ) && DB_CHARSET ? DB_CHARSET : 'utf8' );
+			}
+			
 			if ( $this->db )
 				$this->useDb ( $this->db );
 			return true;
