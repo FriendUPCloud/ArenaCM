@@ -37,7 +37,17 @@ require ( 'lib/classes/dbObjects/dbUser.php' );
 include ( 'lib/classes/session/session.php' );
 include ( 'lib/classes/template/cPTemplate.php' );
 include ( 'friend/include/common.php' );
-include ( 'config.php' );
+
+// New primary location
+if( is_dir( 'config' ) && file_exists( 'config/config.php' ) )
+{
+	include( 'config/config.php' );
+}
+// Old location
+else if( file_exists( 'config.php' ) )
+{
+	include ( 'config.php' );
+}
 
 if ( !defined ( 'LOCALE' ) )
 	define ( 'LOCALE', 'en' );
