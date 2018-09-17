@@ -30,7 +30,7 @@ if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/config
 }
 else
 {
-	include_once( 'config.php"' );
+	include_once( 'config.php' );
 }
 
 $GLOBALS[ 'LoadTime' ] = microtime(true);
