@@ -37,7 +37,7 @@ if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/config
 }
 else
 {
-	include_once( 'config.php"' );
+	include_once( 'config.php' );
 }
 if ( !defined ( 'ADMIN_LANGUAGE' ) ) define ( 'ADMIN_LANGUAGE', 'no' );
 if ( !defined ( 'LOCALE' ) ) define ( 'LOCALE', ADMIN_LANGUAGE );
