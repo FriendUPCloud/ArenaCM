@@ -31,7 +31,14 @@ header ( 'Cache-Control: no-cache, must-revalidate, proxy-revalidate, max-age=0'
 /**
  * Include our config
  */
-require ( 'config.php' );
+if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/config.php' ) )
+{
+	include_once( 'config/config.php' );
+}
+else
+{
+	include_once( 'config.php"' );
+}
 if ( !defined ( 'ADMIN_LANGUAGE' ) ) define ( 'ADMIN_LANGUAGE', 'no' );
 if ( !defined ( 'LOCALE' ) ) define ( 'LOCALE', ADMIN_LANGUAGE );
 define ( 'ARENAMODE', 'admin' );
@@ -60,7 +67,14 @@ i18nAddLocalePath ( 'admin/locale' );
  
 $corebase = new cDatabase ( );
 include_once ( 'lib/lib.php' );
-include_once ( 'lib/core_config.php' );
+if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/core_config.php' ) )
+{
+	include_once( 'config/core_config.php' );
+}
+else
+{
+	include_once ( 'lib/core_config.php' );
+}
 $corebase->Open ( );
 dbObject::globalValueSet ( 'corebase', $corebase );
 

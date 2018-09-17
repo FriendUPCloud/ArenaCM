@@ -24,7 +24,14 @@ Rune Nilssen
 /**
  * Include site config
 **/
-include_once ( 'config.php' );
+if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/config.php' ) )
+{
+	include_once( 'config/config.php' );
+}
+else
+{
+	include_once( 'config.php"' );
+}
 
 $GLOBALS[ 'LoadTime' ] = microtime(true);
 
@@ -73,7 +80,14 @@ include_once ( 'lib/classes/session/session.php' );
 **/
 $corebase = new cDatabase ( );
 include_once ( 'lib/lib.php' );
-include_once ( 'lib/core_config.php' );
+if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/core_config.php' ) )
+{
+	include_once( 'config/core_config.php' );
+}
+else
+{
+	include_once ( 'lib/core_config.php' );
+}
 $corebase->Open ( );
 dbObject::globalValueSet ( 'corebase', $corebase );
 
