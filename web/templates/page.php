@@ -55,7 +55,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 		if ( $GLOBALS[ 'bodyclass' ] )
 			$this->userAgent .= ' ' . $GLOBALS[ 'bodyclass' ];
 	?>
-	<body class="<?= $this->userAgent; ?> <?= $this->LanguageCode . ' ' . $this->page->RouteName ?>">
+	<body class="<?= $this->userAgent; ?> <?= $this->LanguageCode . ' ' . $this->page->RouteName . ' ' . $this->page->SystemName ?>">
 		<? $this->__Content =  executeWebModule ( $this->page, $_REQUEST[ 'ue' ] ? 'extensions' : false ); ?>
 		<?= $this->__TopContent ?>
 		<div id="Empty__"></div>
