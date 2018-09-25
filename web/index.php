@@ -30,7 +30,7 @@ if( file_exists( 'config' ) && is_dir( 'config' ) && file_exists( 'config/config
 }
 else
 {
-	include_once( 'config.php"' );
+	include_once( 'config.php' );
 }
 
 $GLOBALS[ 'LoadTime' ] = microtime(true);
@@ -251,6 +251,13 @@ dbObject::globalValueSet ( 'webuser', $webuser );
 /** 
  * Check mode
 **/
+
+if( strstr( $_SERVER['REQUEST_URI'], '/template-css/' ) )
+{
+	$_REQUEST['mode'] = 'templatecss';
+	$_REQUEST['filename'] = str_replace( '/template-css/', '', $_SERVER['REQUEST_URI'] );
+}
+
 switch ( isset( $_REQUEST[ 'mode' ] ) ? $_REQUEST[ 'mode' ] : null )
 {
 	case 'redirect':
