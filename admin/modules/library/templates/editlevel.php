@@ -43,7 +43,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 				</button>
 			</div>
 			<?= $this->folder->ID ? ( 'Rediger mappe "' .  $this->folder->Name . '"' ) : 
-				( 'Ny mappe' . ( $this->pfolder->Name ? " i '{$this->pfolder->Name}'" : '' ) ) ?>
+				( 'Ny mappe' . ( $this->pfolder->Name ? " i \"{$this->pfolder->Name}\"" : '' ) ) ?>
 		</h1>		
 		<div class="Container">
 	

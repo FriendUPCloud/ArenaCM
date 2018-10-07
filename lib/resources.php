@@ -27,14 +27,7 @@ $root = '..';
 
 // TODO: Permissions?
 // Quick resource gathering
-if( file_exists( "$root/config" ) && is_dir( "$root/config" ) && file_exists( "$root/config/config.php" ) )
-{
-	include_once( "$root/config/config.php" );
-}
-else
-{
-	include_once( "$root/config.php" );
-}
+include_once( "$root/config.php" );
 
 if( $files = explode( ',', $_REQUEST['files'] ) )
 {
