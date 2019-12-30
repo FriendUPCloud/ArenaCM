@@ -241,7 +241,15 @@ dbObject::globalValueSet ( 'webuser', $webuser );
 if( strstr( $_SERVER['REQUEST_URI'], '/template-css/' ) )
 {
 	$_REQUEST['mode'] = 'templatecss';
-	$_REQUEST['filename'] = str_replace( '/template-css/', '', $_SERVER['REQUEST_URI'] );
+	$_pts = explode( '/template-css/', $_SERVER['REQUEST_URI'] );
+	if( isset( $_pts[0] ) && $_pts[0] && $_pts[1] )
+	{
+		$_REQUEST['filename'] = $_pts[1];
+	}
+	else
+	{
+		$_REQUEST['filename'] = str_replace( '/template-css/', '', $_SERVER['REQUEST_URI'] );
+	}
 }
 
 switch ( isset( $_REQUEST[ 'mode' ] ) ? $_REQUEST[ 'mode' ] : null )
@@ -276,7 +284,7 @@ switch ( isset( $_REQUEST[ 'mode' ] ) ? $_REQUEST[ 'mode' ] : null )
 				die( ParseCssFile( false, $_REQUEST['filename'] ) );
 			}
 		}
-		die ( '404' );
+		die ( '404 - ' . print_r( $_REQUEST,1 ) );
 	case 'securefile':
 		session_destroy ();
 		session_name ( 'arenaadmin' );
