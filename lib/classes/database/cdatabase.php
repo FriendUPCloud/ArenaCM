@@ -611,6 +611,16 @@ class cDatabase
 		return false;
 	}
 	
+	function escapeString( $str = '' )
+	{
+		if( $this->resource )
+		{
+			return mysqli_real_escape_string( $this->resource, $str );
+		}
+		
+		return $str;
+	}
+	
 	// Get formatted info about time delay
 	function getDebugInfo()
 	{

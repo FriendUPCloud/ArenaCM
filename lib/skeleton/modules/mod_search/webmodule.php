@@ -42,7 +42,7 @@ if ( $_REQUEST[ 'keywords' ] && !$GLOBALS[ 'search_lock' ] )
 		{
 			if ( $key = trim ( $key ) )
 			{
-				$key = mysql_real_escape_string($key);
+				$key = $db->escapeString($key);
 				$wheres[] = '( Title LIKE "%' . $key . '%" OR Tags LIKE "%' . $key . '%" OR Leadin LIKE "%' . $key . '%" )';
 			}
 		}
@@ -66,11 +66,22 @@ if ( $_REQUEST[ 'keywords' ] && !$GLOBALS[ 'search_lock' ] )
 		else
 		{
 			$subquery[] = 
-				'SELECT ID, Title, MenuTitle AS Tags, ID AS `ContentElementID`, "" AS Leadin, ' .
-				'"ContentElement" AS DataTable, ' .
-				'"<BASE_URL><CONTENTELEMENT_PATH>/index.html" AS `Url`, ' .  
-				'"lib/skeleton/modules/mod_search/templates/web_searched_page.php" AS `Template` ' . 
-				'FROM ContentElement WHERE Language="' . $Session->CurrentLanguage . '" AND MainID = ID AND ( ' . str_replace ( array ( 'Tags LIKE', 'Leadin LIKE' ), 'MenuTitle LIKE', implode ( ' OR ', $wheres ) ) . ' )';
+				'SELECT 
+					ID, 
+					Title, 
+					MenuTitle AS Tags, 
+					ID AS `ContentElementID`, 
+					"" AS Leadin, 
+					"ContentElement" AS DataTable, 
+					"<BASE_URL><CONTENTELEMENT_PATH>/index.html" AS `Url`,   
+					"lib/skeleton/modules/mod_search/templates/web_searched_page.php" AS `Template` 
+				FROM 
+					ContentElement 
+				WHERE 
+						Language = "' . $Session->CurrentLanguage . '" 
+					AND MainID   = ID 
+					AND ( ' . str_replace ( array ( 'Tags LIKE', 'Leadin LIKE' ), 'MenuTitle LIKE', implode ( ' OR ', $wheres ) ) . ' )
+			';
 		}
 	}
 	else 
@@ -90,11 +101,46 @@ if ( $_REQUEST[ 'keywords' ] && !$GLOBALS[ 'search_lock' ] )
 			}
 		}
 		$subquery[] = 
-				'SELECT ID, Title, MenuTitle AS Tags, ID AS `ContentElementID`, "" AS Leadin, ' .
-				'"ContentElement" AS DataTable, ' .
-				'"<BASE_URL><CONTENTELEMENT_PATH>/index.html" AS `Url`, ' .  
-				'"lib/skeleton/modules/mod_search/templates/web_searched_page.php" AS `Template` ' . 
-				'FROM ContentElement WHERE Language="' . $Session->CurrentLanguage . '" AND MainID = ID AND ( ' . str_replace ( array ( 'Tags LIKE', 'Leadin LIKE' ), 'MenuTitle LIKE', implode ( ' OR ', $wheres ) ) . ' )';
+				'SELECT 
+					ID, 
+					Title, 
+					MenuTitle AS Tags, 
+					ID AS `ContentElementID`, 
+					"" AS Leadin, 
+					"ContentElement" AS DataTable, 
+					"<BASE_URL><CONTENTELEMENT_PATH>/index.html" AS `Url`, 
+					"lib/skeleton/modules/mod_search/templates/web_searched_page.php" AS `Template` 
+				FROM 
+					ContentElement 
+				WHERE 
+						Language = "' . $Session->CurrentLanguage . '" 
+					AND MainID   = ID 
+					AND ( ' . str_replace ( array ( 'Tags LIKE', 'Leadin LIKE' ), 'MenuTitle LIKE', implode ( ' OR ', $wheres ) ) . ' ) 
+		';
+	}
+	
+	if( $search_extensions && in_array( 'default', explode( '|', $search_extensions ) ) )
+	{
+		
+		$subquery[] = 
+				'SELECT 
+					e.ID, 
+					e.Title, 
+					e.MenuTitle AS Tags, 
+					e.ID AS `ContentElementID`, "" AS Leadin, 
+					"ContentElement" AS DataTable, 
+					"<BASE_URL><CONTENTELEMENT_PATH>/index.html" AS `Url`, 
+					"lib/skeleton/modules/mod_search/templates/web_searched_page.php" AS `Template` 
+				FROM 
+					ContentElement e, ContentDataBig d 
+				WHERE 
+						e.Language     = "' . $Session->CurrentLanguage . '" 
+					AND e.MainID       = e.ID 
+					AND d.ContentID    = e.ID 
+					AND d.ContentTable = "ContentElement" 
+					AND ( ' . str_replace ( array ( 'Title LIKE', 'Tags LIKE', 'Leadin LIKE' ), 'd.DataText LIKE', implode ( ' OR ', $wheres ) ) . ' ) 
+		';
+		
 	}
 	
 	$count = count ( $subquery );
@@ -104,9 +150,11 @@ if ( $_REQUEST[ 'keywords' ] && !$GLOBALS[ 'search_lock' ] )
 		if ( $a < $count - 1 ) $query .= ' UNION';
 	}
 	$query .= '
-		) z
+		) z 
+		GROUP BY ID 
 		ORDER BY ID DESC
 	';
+	
 	if ( $rows = $db->fetchObjectRows ( $query ) )
 	{
 		$str = '';
@@ -152,32 +200,31 @@ if ( $_REQUEST[ 'keywords' ] && !$GLOBALS[ 'search_lock' ] )
 			if ( $rowcontent )
 			{
 				$rtpl->contentelement =& $rowcontent;
-				if ( $t = $db->fetchObjectRows ( '
+				if ( $t = $db->fetchObjectRows ( $q = '
 					SELECT ID, Name, Leadin FROM 
 					(
 						(
 							SELECT ID, `Name`, `DataMixed` AS `Leadin` FROM ContentDataSmall s 
 							WHERE 
 								ContentID = \'' . $rowcontent->ID . '\' 
-								AND ContentTable = "ContentElement" AND
-								MainID = ID
+								AND ContentTable = "ContentElement"
 						)
 						UNION
 						(
 							SELECT ID, `Name`, `DataText` AS `Leadin` FROM ContentDataBig b 
 							WHERE 
 								ContentID = \'' . $rowcontent->ID . '\' 
-								AND ContentTable = "ContentElement" AND
-								MainID = ID
+								AND ContentTable = "ContentElement"
 						)
 					) z
 				' ) )
 				{
+					// TODO: Move to the keywords in the text for leading result data ...
 					foreach ( $t as $r )
 					{
-						if ( strlen ( $r->Leadin ) > 30 )
+						if ( strlen ( $r->Leadin ) > 5 && strstr( trim( $r->Leadin ), $_REQUEST[ 'keywords' ] ) )
 						{
-							$this->data->Leadin = substr ( strip_tags ( $r->Leadin ), 0, 200 ) . '..';
+							$rtpl->data->Leadin = substr ( strip_tags ( $r->Leadin ), 0, 200 ) . '..';
 							break;
 						}
 					}

@@ -49,11 +49,14 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 								<strong>Søkevalg for ekstensjoner:</strong>
 							</p>
 							<?
-								$str = '';
+								
 								$settings = new dbObject ( 'Setting' );
 								$settings->SettingType = 'ContentModule';
 								$settings->addClause ( 'ORDER BY', '`Key` ASC' );
 								$exts = explode ( '|', $this->search_extensions );
+								
+								$str = '<option style="padding: 3px" value="default"' . ( in_array ( 'default', $exts ) ? ' selected="selected"' : '' ) . '>Standard</option>';
+								
 								if ( $settings = $settings->find ( ) )
 								{
 									foreach ( $settings as $setting )
