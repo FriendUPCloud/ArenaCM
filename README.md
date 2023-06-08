@@ -4,7 +4,7 @@ A versatile Content Management System written in PHP. Allows developers
 to rapidly build interactive websites hosted on web servers like Apache
 and Nginx.
 
-# How to install
+## How to install
 
 Run the installer, which will install ArenaCM into /usr/local/arena2/.
 
