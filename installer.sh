@@ -12,12 +12,13 @@
 # and executes itself as a script either with `sudo` or without depending on the 
 # result of the check.
 
-sudo mkdir /usr/local/arenacm
+sudo mkdir -p /usr/local/arenacm
 sudo rsync -ravl admin /usr/local/arena2/
 sudo rsync -ravl lib /usr/local/arena2/
 sudo rsync -ravl web /usr/local/arena2/
 sudo rsync -ravl extensions /usr/local/arena2/
 sudo rsync -ravl *.php /usr/local/arena2/
+sudo rsync -ravl init.sh /usr/local/arena2/
 
 exit
 
