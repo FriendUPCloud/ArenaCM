@@ -12,6 +12,16 @@
 # and executes itself as a script either with `sudo` or without depending on the 
 # result of the check.
 
+sudo mkdir /usr/local/arenacm
+sudo rsync -ravl admin /usr/local/arena2/
+sudo rsync -ravl lib /usr/local/arena2/
+sudo rsync -ravl web /usr/local/arena2/
+sudo rsync -ravl extensions /usr/local/arena2/
+sudo rsync -ravl *.php /usr/local/arena2/
+
+exit
+
+# Below is an experimental installer
 
 # Check if install mode is enabled
 if [ "$1" = 'installmode' ] && [ "$2" != "" ]; then
