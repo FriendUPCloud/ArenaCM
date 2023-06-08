@@ -4,6 +4,20 @@ A versatile Content Management System written in PHP. Allows developers
 to rapidly build interactive websites hosted on web servers like Apache
 and Nginx.
 
+# How to install
+
+Run the installer, which will install ArenaCM into /usr/local/arena2/.
+
+ * sh install.sh
+
+After this, go into your designated web directory, e.g. /var/www/site/,
+and run the following command:
+
+ * sh /usr/local/arena2/init.sh
+
+This will link the correct files and folders to your site directory. Now
+you need to configure your config.php file, and install your database.
+
 ## History
 
 The ArenaCM project was started in 2004, at Blest Reklamebyrå in Stavanger,
