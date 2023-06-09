@@ -59,7 +59,7 @@ header ( 'Cache-Control: public' );
 /**
  * Prerequisites
 **/
-include_once ( 'lib/functions/compatability.php' ); // Compatability with older PHP
+include_once ( 'lib/functions/compatability.php' ); // Compatability older PHP
 include_once ( 'lib/functions/functions.php' );
 include_once ( 'lib/classes/database/cdatabase.php' );
 include_once ( 'lib/classes/dbObjects/dbObject.php' );

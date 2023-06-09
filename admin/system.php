@@ -31,7 +31,7 @@ define ( 'ClassDir', 'lib/classes/' );
 if ( !defined ( 'ARENAMODE' ) )
 	define ( 'ARENAMODE', 'admin' );
 
-include_once ( 'lib/functions/compatability.php' ); // Compatability with older PHP
+include_once ( 'lib/functions/compatability.php' ); // Compatability older PHP
 include_once ( 'include/funcs_module.php' );
 $moduleDir = 'admin/modules/';
 
