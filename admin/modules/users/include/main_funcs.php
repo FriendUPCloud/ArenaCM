@@ -55,7 +55,7 @@ function renderGroupList ( $parent = 0 )
 	global $Session;
 	global $database;
 	
-	if ( $rows = $database->fetchObjectRows ( 'SELECT * FROM Groups WHERE GroupID=' . $parent . ' ORDER BY `Name` ASC' ) )
+	if ( $rows = $database->fetchObjectRows ( 'SELECT * FROM `Groups` WHERE GroupID=\'' . $parent . '\' ORDER BY `Name` ASC' ) )
 	{
 		$str .= '<ul' . ( $parent ? '' : ' class="Collapsable"' ) . '>';
 		if ( !$parent )
