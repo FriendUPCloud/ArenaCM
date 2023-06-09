@@ -20,6 +20,7 @@ This will link the correct files and folders to your site directory.
 You will need to modify your virtual host in order for ARENA to see your
 .htaccess file:
 
+```xml
 <VirtualHost *:80>
     ServerName yoursite.no
     DocumentRoot /var/www/yoursite/html
@@ -28,6 +29,7 @@ You will need to modify your virtual host in order for ARENA to see your
         AllowOverride ALL
     </Directory>
 </VirtualHost>
+```
 
 
 ## History
