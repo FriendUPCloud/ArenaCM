@@ -34,7 +34,7 @@ $user = new dbUser ( );
 if ( $_REQUEST[ 'uid' ] ) $user->load ( $_REQUEST[ 'uid' ] );
 
 // Update the state of the user in terms of group participation
-$ingroups = $db->fetchObjectRow ( 'SELECT COUNT(*) FROM UsersGroups WHERE UserID = ' . $user->ID ) ? 1 : 0;
+$ingroups = $db->fetchObjectRow ( 'SELECT COUNT(*) FROM `UsersGroups` WHERE UserID = ' . $user->ID ) ? 1 : 0;
 if ( $ingroups != $user->InGroups )
 {
 	$user->InGroups = $ingroups;

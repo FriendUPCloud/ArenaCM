@@ -129,7 +129,7 @@ else
 			if ( $Session->AdminUser->_dataSource == 'core' )
 			{
 				$Session->Set ( 'UsersCurrentGroup', 'orphans' );
-				$select = 'SELECT u.*, ug.GroupID FROM Users u LEFT JOIN UsersGroups ug ON ( ug.UserID = u.ID )';
+				$select = 'SELECT u.*, ug.GroupID FROM `Users` u LEFT JOIN `UsersGroups` ug ON ( ug.UserID = u.ID )';
 				$where[] = 'GroupID IS NULL';
 			}
 			$module->groupChoice = 'uten gruppe';
@@ -150,7 +150,7 @@ else
 					$groups = Array ( );
 					foreach ( $authorizedGroups as $ag ) 
 						$groups[] = '( u.ID = ug.UserID AND ug.GroupID = \'' . $ag->GroupID . '\' )';
-					$select = 'SELECT u.* FROM `Users` u, UsersGroups ug';
+					$select = 'SELECT u.* FROM `Users` u, `UsersGroups` ug';
 					$where[] = '(' . implode ( ' OR ', $groups ) . ')';
 					$where[] = 'u.IsDisabled';
 				}
@@ -304,7 +304,7 @@ if ( $query )
 			
 			$utpl->InGroups = '';
 			if ( $groups = $db->fetchObjectRows ( "
-				SELECT g.ID, g.Name FROM UsersGroups ug, `Groups` g WHERE ug.GroupID = g.ID AND ug.UserID='" . $users[ $a ]->ID . "' ORDER BY g.Name
+				SELECT g.ID, g.Name FROM `UsersGroups` ug, `Groups` g WHERE ug.GroupID = g.ID AND ug.UserID='" . $users[ $a ]->ID . "' ORDER BY g.Name
 			" ) )
 			{
 				$canRead = true;

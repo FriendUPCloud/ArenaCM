@@ -48,7 +48,7 @@ if ( $dir = opendir ( $path ) )
 				$settings = new Dummy ( );
 				$st = new dbObject ( 'Setting' );
 				if ( $st = $st->find ( '
-					SELECT * FROM Setting WHERE SettingType="GroupAccess_' . $group->ID . '" AND `Key` LIKE "' . $file . '_%" ORDER BY `Key` ASC
+					SELECT * FROM `Setting` WHERE SettingType="GroupAccess_' . $group->ID . '" AND `Key` LIKE "' . $file . '_%" ORDER BY `Key` ASC
 				' ) )
 				{
 					foreach ( $st as $s )
