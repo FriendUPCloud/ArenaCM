@@ -38,11 +38,11 @@ if ( !$_SESSION[ 'users_dbcheck' ] )
 		}
 		if ( !$sort )
 		{
-			$database->query ( 'ALTER TABLE Users ADD SortOrder int(11) NOT NULL default \'0\' AFTER ID' );
+			$database->query ( 'ALTER TABLE `Users` ADD SortOrder int(11) NOT NULL default \'0\' AFTER ID' );
 		}
 		if ( !$image )
 		{
-			$database->query ( 'ALTER TABLE Users ADD ImageID bigint(20) NOT NULL default \'0\' AFTER ID' );
+			$database->query ( 'ALTER TABLE `Users` ADD ImageID bigint(20) NOT NULL default \'0\' AFTER ID' );
 		}
 	}
 	$_SESSION[ 'users_dbcheck' ] = true;
@@ -187,7 +187,7 @@ function checkUserPermissions ( $user )
 	
 	
 	if ( $groups = $db->fetchObjectRows ( "
-		SELECT g.ID, g.Name FROM UsersGroups ug, Groups g WHERE ug.GroupID = g.ID AND ug.UserID='" . $user->ID . "' ORDER BY g.Name
+		SELECT g.ID, g.Name FROM UsersGroups ug, `Groups` g WHERE ug.GroupID = g.ID AND ug.UserID='" . $user->ID . "' ORDER BY g.Name
 	" ) )
 	{
 		$canRead = true;
@@ -249,7 +249,7 @@ function getAuthorizedGroups ( $user, $permission = '' )
 	if ( $user->_dataSource == 'core' || $user->isSuperUser ( ) )
 	{
 		return $db->fetchObjectRows ( '
-			SELECT ID as `GroupID` FROM Groups
+			SELECT ID as `GroupID` FROM `Groups`
 		' );
 	}
 	if ( $permission )
