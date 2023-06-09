@@ -19,7 +19,7 @@ sudo rsync -ravl web /usr/local/arena2/
 sudo rsync -ravl extensions /usr/local/arena2/
 sudo rsync -ravl *.php /usr/local/arena2/
 sudo rsync -ravl init.sh /usr/local/arena2/
-
+sudo rsync -ravl /usr/local/arena2/lib/install.php /usr/local/arena2/
 exit
 
 # Below is an experimental installer
