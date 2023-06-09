@@ -1,19 +1,21 @@
 # ArenaCM
 
-A versatile Content Management System written in PHP. Allows developers
-to rapidly build interactive websites hosted on web servers like Apache
-and Nginx.
+Arena Content Management (ArenaCM) is a flexible PHP-based Content Management System that empowers developers to swiftly construct dynamic websites hosted on web servers such as Apache and Nginx. It boasts an extensive array of features, including support for multiple languages, multi-site server configurations, effortless setup and configuration, streamlined deployment, and efficient management of production and live environments, among numerous other capabilities.
 
 ## How to install
 
 Run the installer, which will install ArenaCM into /usr/local/arena2/.
 
- * sh install.sh
+```bash
+sh install.sh
+```
 
 After this, go into your designated web directory, e.g. /var/www/site/,
 and run the following command:
 
- * sh /usr/local/arena2/init.sh
+```bash
+sh /usr/local/arena2/init.sh
+```
 
 This will link the correct files and folders to your site directory.
 
