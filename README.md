@@ -15,8 +15,20 @@ and run the following command:
 
  * sh /usr/local/arena2/init.sh
 
-This will link the correct files and folders to your site directory. Now
-you need to configure your config.php file, and install your database.
+This will link the correct files and folders to your site directory.
+
+You will need to modify your virtual host in order for ARENA to see your
+.htaccess file:
+
+<VirtualHost *:80>
+    ServerName yoursite.no
+    DocumentRoot /var/www/yoursite/html
+    <Directory /var/www/yoursite/html>
+        Options Indexes FollowSymLinks
+        AllowOverride ALL
+    </Directory>
+</VirtualHost>
+
 
 ## History
 
