@@ -115,7 +115,7 @@ $select = '';
 
 if ( $Session->UsersCollectionID )
 {
-	$select = 'SELECT u.* FROM Users u, ObjectConnection o, UserCollection c';
+	$select = 'SELECT u.* FROM `Users` u, ObjectConnection o, UserCollection c';
 	$where[] = '(c.ID = o.ObjectID AND o.ObjectType="UserCollection" AND u.ID = o.ConnectedObjectID AND o.ConnectedObjectType="Users" AND c.ID=' . $Session->UsersCollectionID . ')';
 	$g = new dbObject ( 'UserCollection' );
 	$g->load ( $Session->UsersCollectionID );
@@ -139,7 +139,7 @@ else
 			// Root users se all
 			if ( $Session->AdminUser->_dataSource == 'core' )
 			{
-				$select = 'SELECT u.* FROM Users u ';
+				$select = 'SELECT u.* FROM `Users` u ';
 				$where[] = 'u.IsDisabled';
 			}
 			// Other users sees inactive amoung the ones they have access too
@@ -150,7 +150,7 @@ else
 					$groups = Array ( );
 					foreach ( $authorizedGroups as $ag ) 
 						$groups[] = '( u.ID = ug.UserID AND ug.GroupID = \'' . $ag->GroupID . '\' )';
-					$select = 'SELECT u.* FROM Users u, UsersGroups ug';
+					$select = 'SELECT u.* FROM `Users` u, UsersGroups ug';
 					$where[] = '(' . implode ( ' OR ', $groups ) . ')';
 					$where[] = 'u.IsDisabled';
 				}
@@ -173,7 +173,7 @@ else
 						{
 							$db =& dbObject::globalValue ( 'database' );
 							$gq = Array ( );
-							if ( $rows = $db->fetchObjectRows ( 'SELECT * FROM Groups WHERE GroupID=' . $pid ) )
+							if ( $rows = $db->fetchObjectRows ( 'SELECT * FROM `Groups` WHERE GroupID=' . $pid ) )
 							{
 								foreach ( $rows as $row )
 								{
@@ -199,7 +199,7 @@ else
 			// We want all users and we're a core user
 			else if ( $Session->AdminUser->_dataSource == 'core' )
 			{
-				$select = 'SELECT u.* FROM Users u';
+				$select = 'SELECT u.* FROM `Users` u';
 				$Session->Set ( 'UsersCurrentGroup', 'all' );
 				$module->groupChoice = 'fra hele databasen';
 			}
@@ -211,7 +211,7 @@ else
 					$groups = Array ( );
 					foreach ( $authorizedGroups as $ag ) 
 						$groups[] = '( u.ID = ug.UserID AND ug.GroupID = \'' . $ag->GroupID . '\' )';
-					$select = 'SELECT u.* FROM Users u, UsersGroups ug';
+					$select = 'SELECT u.* FROM `Users` u, UsersGroups ug';
 					$where[] = '(' . implode ( ' OR ', $groups ) . ')';
 				}
 				$Session->Set ( 'UsersCurrentGroup', 'all' );
@@ -304,7 +304,7 @@ if ( $query )
 			
 			$utpl->InGroups = '';
 			if ( $groups = $db->fetchObjectRows ( "
-				SELECT g.ID, g.Name FROM UsersGroups ug, Groups g WHERE ug.GroupID = g.ID AND ug.UserID='" . $users[ $a ]->ID . "' ORDER BY g.Name
+				SELECT g.ID, g.Name FROM UsersGroups ug, `Groups` g WHERE ug.GroupID = g.ID AND ug.UserID='" . $users[ $a ]->ID . "' ORDER BY g.Name
 			" ) )
 			{
 				$canRead = true;
@@ -336,7 +336,7 @@ if ( $query )
 			if ( !$users[ $a ]->DateModified )
 			{
 				$date = date ( 'Y-m-d H:i:s' );
-				$db->query ( 'UPDATE Users SET DateModified = NOW() WHERE ID=' . $users[ $a ]->ID );
+				$db->query ( 'UPDATE `Users` SET DateModified = NOW() WHERE ID=' . $users[ $a ]->ID );
 				$users[ $a ]->DateModified = $date;
 			}
 			$utpl->DateModified = ArenaDate ( DATE_FORMAT, $users[ $a ]->DateModified );
