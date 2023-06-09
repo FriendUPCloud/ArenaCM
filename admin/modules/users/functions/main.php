@@ -184,7 +184,7 @@ else
 								return $gq;
 							}	
 						}
-						$select = 'SELECT u.* FROM Users u, UsersGroups ug';
+						$select = 'SELECT u.* FROM `Users` u, UsersGroups ug';
 						$where[] = 'u.ID = ug.UserID';
 						$gq = Array ( "(ug.GroupID = '" . $Session->UsersCurrentGroup . "')" );
 						if ( $subgroups = fetchSubGroups ( $Session->UsersCurrentGroup ) )

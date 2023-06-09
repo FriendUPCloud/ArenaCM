@@ -45,10 +45,10 @@ if ( $ingroups != $user->InGroups )
 if( intval( $user->ID ) > 0 )
 {
 	if ( !( $rows = $db->fetchObjectRows ( '
-		SELECT * FROM Groups WHERE TemplateID > 0
+		SELECT * FROM `Groups` WHERE TemplateID > 0
 	' ) ) )
 	{
-		if ( $row = $db->fetchObjectRow ( 'SELECT * FROM Users WHERE IsTemplate = 1' ) )
+		if ( $row = $db->fetchObjectRow ( 'SELECT * FROM `Users` WHERE IsTemplate = 1' ) )
 		{
 			$saves = array();
 			$i = 0;
@@ -125,7 +125,7 @@ list ( $module->canRead, $module->canWrite, ) = checkUserPermissions ( $user );
 function listGroups ( &$user, $pid = 0, $r = '' )
 {
 	global $database, $Session;
-	if ( $rows = $database->fetchObjectRows ( 'SELECT * FROM Groups g WHERE g.GroupID=' . $pid ) )
+	if ( $rows = $database->fetchObjectRows ( 'SELECT * FROM `Groups` g WHERE g.GroupID=' . $pid ) )
 	{
 		foreach ( $rows as $row )
 		{
