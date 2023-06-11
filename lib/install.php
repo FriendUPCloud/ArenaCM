@@ -242,7 +242,7 @@ if ( !$errors )
 						$sdb->query ( 'CREATE DATABASE `' . $_POST['siteDatabase'] . '`' );
 						$sdb->query ( 'USE `' . $_POST['siteDatabase'] . '`' );
 						
-						if ( !$sdb->fetchObjectRows( 'SELECT ID FROM Sites ORDER BY ID ASC' ) )
+						if ( !$sdb->fetchObjectRows( 'SELECT ID FROM `Sites` ORDER BY ID ASC' ) )
 						{
 							// Import structure
 							$sql = file_get_contents ( $basedir . '/lib/skeleton/arenasingle.sql' ); 
@@ -255,7 +255,7 @@ if ( !$errors )
 							}
 						}
 						
-						if ( !$sdb->fetchObjectRows( 'SELECT ID FROM Users ORDER BY ID ASC' ) )
+						if ( !$sdb->fetchObjectRows( 'SELECT ID FROM `Users` ORDER BY ID ASC' ) )
 						{
 							// Add root user
 							$sdb->query ( '
@@ -273,7 +273,7 @@ if ( !$errors )
 					
 					$sdb->query ( 'USE `' . $_POST['siteDatabase'] . '`' );
 					
-					if ( !$sdb->fetchObjectRows( $q = 'SELECT ID FROM Sites BaseUrl = \'' . $baseurl . '\' AND BaseDir = \'' . $basedir . '\' ORDER BY ID ASC' ) )
+					if ( !$sdb->fetchObjectRows( $q = 'SELECT ID FROM `Sites` BaseUrl = \'' . $baseurl . '\' AND BaseDir = \'' . $basedir . '\' ORDER BY ID ASC' ) )
 					{
 						// Insert site into db
 						$site = new dbObject ( 'Sites', $sdb );
@@ -288,7 +288,7 @@ if ( !$errors )
 						$site->Save ();
 						
 						// Add user to superadmin group
-						if ( $user = $sdb->fetchObjectRow( 'SELECT ID FROM Users ORDER BY ID ASC' ) )
+						if ( $user = $sdb->fetchObjectRow( 'SELECT ID FROM `Users` ORDER BY ID ASC' ) )
 						{
 							if ( isset( $user->ID ) && $user->ID > 0 )
 							{
@@ -330,7 +330,7 @@ if ( !$errors )
 					// Run default arena setup
 					else
 					{
-						if ( $sdb && !$sdb->fetchObjectRows( 'SELECT ID FROM ContentElement ORDER BY ID ASC' ) )
+						if ( $sdb && !$sdb->fetchObjectRows( 'SELECT ID FROM `ContentElement` ORDER BY ID ASC' ) )
 						{							
 							$language = new dbObject ( 'Languages', $sdb );
 							$language->Name = 'no';
@@ -403,7 +403,7 @@ if ( !$errors )
 						$cdb->query ( 'CREATE DATABASE `' . $_POST['coreDatabase'] . '`' );
 						$cdb->query ( 'USE `' . $_POST['coreDatabase'] . '`' );
 						
-						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM Sites ORDER BY ID ASC' ) )
+						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM `Sites` ORDER BY ID ASC' ) )
 						{
 							// Import structure
 							$sql = file_get_contents ( $basedir . '/lib/skeleton/arenacore.sql' ); 
@@ -416,7 +416,7 @@ if ( !$errors )
 							}
 						}
 						
-						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM Users ORDER BY ID ASC' ) )
+						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM `Users` ORDER BY ID ASC' ) )
 						{
 							// Add root user
 							$cdb->query ( '
@@ -437,7 +437,7 @@ if ( !$errors )
 					$cdb->query ( 'USE `' . $_POST['siteDatabase'] . '`' );
 					if ( $sdb->open () )
 					{
-						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM Sites ORDER BY ID ASC' ) )
+						if ( !$cdb->fetchObjectRows( 'SELECT ID FROM `Sites` ORDER BY ID ASC' ) )
 						{
 							$sql = file_get_contents ( $basedir . '/lib/skeleton/arenadb.sql' ); 
 							$sql = explode ( ';', $sql );
@@ -453,7 +453,7 @@ if ( !$errors )
 					
 					$cdb->query ( 'USE `' . $_POST['coreDatabase'] . '`' );
 					
-					if ( !$cdb->fetchObjectRows( 'SELECT ID FROM Sites WHERE BaseUrl = \'' . $baseurl . '\' AND BaseDir = \'' . $basedir . '\' ORDER BY ID ASC' ) )
+					if ( !$cdb->fetchObjectRows( 'SELECT ID FROM `Sites` WHERE BaseUrl = \'' . $baseurl . '\' AND BaseDir = \'' . $basedir . '\' ORDER BY ID ASC' ) )
 					{
 						// Insert site into core db
 						$site = new dbObject ( 'Sites', $cdb );
@@ -468,7 +468,7 @@ if ( !$errors )
 						$site->Save ();
 						
 						// Add user to superadmin group
-						if ( $user = $cdb->fetchObjectRow( 'SELECT ID FROM Users ORDER BY ID ASC' ) )
+						if ( $user = $cdb->fetchObjectRow( 'SELECT ID FROM `Users` ORDER BY ID ASC' ) )
 						{
 							if ( isset( $user->ID ) && $user->ID > 0 )
 							{
