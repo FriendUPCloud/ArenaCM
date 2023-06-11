@@ -59,10 +59,14 @@ class cDocument extends cPTemplate
 	{
 		global $TopMenuExtension;
 		
-		if ( $depth >= ($levels+1) || ( $parent == 0 && $depth >= $levels ) )
+		// TODO: Figure out what this is for..
+		if( $levels !== 0 && $levels >= 0 )
 		{
-			if ( $parent == 0 ) return '';
-			return array ( 0, '' );
+			if ( $depth >= ($levels+1) || ( $parent == 0 && $depth >= $levels ) )
+			{
+				if ( $parent == 0 ) return '';
+				return array ( 0, '' );
+			}
 		}
 		
 		if ( $parent === 0 || $parent > 0 )
