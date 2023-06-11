@@ -42,8 +42,8 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 					<img src="admin/gfx/icons/cancel.png" />
 				</button>
 			</div>
-			<?= $this->folder->ID ? ( 'Rediger mappe "' .  $this->folder->Name . '"' ) : 
-				( 'Ny mappe' . ( $this->pfolder->Name ? " i \"{$this->pfolder->Name}\"" : '' ) ) ?>
+			<?= isset( $this->folder->ID ) ? ( 'Rediger mappe "' .  $this->folder->Name . '"' ) : 
+				( 'Ny mappe' . ( isset( $this->pfolder->Name ) ? ( ' i "' . $this->pfolder->Name . '"' ) : '' ) ) ?>
 		</h1>		
 		<div class="Container">
 	
@@ -65,7 +65,8 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 									function fhierarchy ( $current, $parent = '0', $r = '' )
 									{
 										$db =& dbObject::globalValue ( 'database' );
-										if ( $rows = $db->fetchObjectRows ( 'SELECT * FROM Folder WHERE Parent=\\'' . (string)$parent . '\\'' ) )
+										$str = '';
+										if ( $rows = $db->fetchObjectRows ( 'SELECT * FROM `Folder` WHERE Parent=\\'' . (string)$parent . '\\'' ) )
 										{
 											foreach ( $rows as $row )
 											{
