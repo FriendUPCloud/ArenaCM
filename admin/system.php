@@ -183,7 +183,7 @@ if ( !isset ( $_REQUEST[ 'bajaxrand' ] ) )
 				{
 					while ( $file = readdir ( $dir ) )
 					{
-						if ( $file{0} == '.' ) continue;
+						if ( $file[0] == '.' ) continue;
 						if ( $Session->AdminUser->extensionPermission ( 'Access', $file ) )
 						{
 							$extensions[] = $file;
