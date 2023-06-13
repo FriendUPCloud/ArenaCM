@@ -1119,14 +1119,14 @@ class dbContent extends dbObject
 		foreach ( $this as $k=>$v )
 		{
 			// Locked fields are ignored
-			if ( key_exists ( "_locked_$k", $this ) && $this->{'_locked_' . $k} ) continue;
+			if ( property_exists ( "_locked_$k", $this ) && $this->{'_locked_' . $k} ) continue;
 			// Place top menu
-			if ( key_exists ( "_extra_$k", $this ) && $this->{'_extra_' . $k} && $this->{'_field_' . $k}->IsVisible )
+			if ( property_exists ( "_extra_$k", $this ) && $this->{'_extra_' . $k} && $this->{'_field_' . $k}->IsVisible )
 			{
 				$fkey = $this->{ '_field_' . $k }->ContentGroup;
 				
 				// Mindful of replacement fields
-				if ( key_exists ( "_replacement_$k", $this ) && $this->{ '_replacement_' . $k } )
+				if ( property_exists ( "_replacement_$k", $this ) && $this->{ '_replacement_' . $k } )
 				{
 					$v = '<div id="' . $k . '">' . getLn ( ) . $this->{ '_replacement_' . $k } . getLn ( ) . '</div>' . getLn ( );
 				}
