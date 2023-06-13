@@ -46,7 +46,7 @@ if ( $grps = explode ( ',', $content->ContentGroups ) )
 	{
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == '.' ) continue;
+			if ( $file[0] == '.' ) continue;
 			if ( $file == 'editor' ) continue;
 			if ( !file_exists ( 'extensions/' . $file . '/info.csv' ) ) continue;
 			list ( $name, ) = explode ( '|', file_get_contents ( 'extensions/' . $file . '/info.csv' ) );

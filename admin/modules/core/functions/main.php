@@ -70,7 +70,7 @@ if ( $GLOBALS[ "user" ]->_dataSource == 'core' )
 			{
 				while ( $file = readdir ( $dir ) )
 				{
-					if ( $file{0} == '.' ) continue;
+					if ( $file[0] == '.' ) continue;
 					$icons[] = $file;
 				}
 				closedir ( $dir );

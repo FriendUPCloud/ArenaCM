@@ -114,7 +114,7 @@ function showFreeModules ()
 		$str = '';
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == '.' )
+			if ( $file[0] == '.' )
 				continue;
 			if ( substr ( $file, 0, 4 ) != 'mod_' )
 				continue;
@@ -179,7 +179,7 @@ function showProModules ()
 		$str = '';
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == '.' )
+			if ( $file[0] == '.' )
 				continue;
 			if ( substr ( $file, 0, 4 ) != 'pro_' )
 				continue;
@@ -471,7 +471,7 @@ function contentButtons ( $contentid, $short = false )
 		{
 			while ( $file = readdir ( $dir ) )
 			{
-				if ( $file{0} == '.' || $file == 'editor' || $file == 'easyeditor' )
+				if ( $file[0] == '.' || $file == 'editor' || $file == 'easyeditor' )
 					continue;
 				if ( file_exists ( "extensions/$file/editor_buttons.php" ) )
 				{

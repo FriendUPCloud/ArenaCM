@@ -149,7 +149,7 @@ class dbFile extends dbObject
 		{
 			while ( $file = readdir ( $d ) )
 			{
-				if ( $file{0} == '.' ) continue;
+				if ( $file[0] == '.' ) continue;
 				if ( safeFilename ( $file ) == $this->Filename )
 				{
 					$this->Filename = $file;

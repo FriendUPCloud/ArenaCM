@@ -122,7 +122,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 							$selected = false;
 							while ( $file = readdir ( $dir ) )
 							{
-								if ( $file{0} == '.' ) continue;
+								if ( $file[0] == '.' ) continue;
 								if ( substr ( $file, 0, 4 ) == 'mod_' )
 								{
 									$info = file_get_contents ( 'lib/skeleton/modules/' . $file . '/info.txt' );

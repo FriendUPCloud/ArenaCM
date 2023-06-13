@@ -146,7 +146,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 							$ostr = '<option value="">' . i18n ( 'Select extension' ) . '</option>';
 							while ( $file = readdir ( $dir ) )
 							{
-								if ( $file{0} == '.' ) continue;
+								if ( $file[0] == '.' ) continue;
 								if ( file_exists ( 'extensions/' . $file . '/webmodule.php' ) )
 								{
 									list ( $name, ) = explode ( '|', file_get_contents ( 'extensions/' . $file . '/info.csv' ) );
@@ -261,11 +261,11 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 										{
 											while ( $file = readdir ( $dir ) )
 											{
-												if ( $file{0} == '.' ) continue;
+												if ( $file[0] == '.' ) continue;
 												if ( strtolower ( substr ( $file, 0, 5 ) ) != 'page_' ) continue;
 												$s = ( $file == $this->content->Template ? ' selected="selected"' : '' );
 												$fname = str_replace ( array ( 'page_', '.php' ), '', $file );
-												$fname = strtoupper ( $fname{0} ) . substr ( $fname, 1, strlen ( $fname ) - 1 );
+												$fname = strtoupper ( $fname[0] ) . substr ( $fname, 1, strlen ( $fname ) - 1 );
 												$fname = str_replace ( '_', ' ', $fname );
 												$str .= '<option value="' . $file . '"' . $s . '>' . $fname . '</option>';
 											}

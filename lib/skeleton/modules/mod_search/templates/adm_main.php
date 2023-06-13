@@ -76,7 +76,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 								{
 									while ( $file = readdir ( $dir ) )
 									{
-										if ( $file{0} == '.' ) continue;
+										if ( $file[0] == '.' ) continue;
 										if ( !file_exists ( 'extensions/' . $file . '/websearch.php' ) ) continue;
 										if ( file_exists ( 'extensions/' . $file . '/info.csv' ) )									
 											$data = explode ( '|', file_get_contents ( 'extensions/' . $file . '/info.csv' ) );

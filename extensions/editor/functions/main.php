@@ -176,7 +176,7 @@ if ( $dir = opendir ( 'extensions' ) )
 {
 	while ( $file = readdir ( $dir ) )
 	{
-		if ( $file{0} == '.' || $file == 'editor' || $file == 'easyeditor' )
+		if ( $file[0] == '.' || $file == 'editor' || $file == 'easyeditor' )
 			continue;
 		if ( file_exists ( "extensions/$file/editor_expansion.php" ) )
 		{

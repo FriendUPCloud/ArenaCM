@@ -31,7 +31,7 @@ if ( $p->load ( $_REQUEST[ 'pageid' ] ) )
 	{
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == '.' ) continue;
+			if ( $file[0] == '.' ) continue;
 			if ( substr ( $file, 0, 4 ) == 'mod_' )
 			{
 				$info = file_get_contents ( 'lib/skeleton/modules/' . $file . '/info.txt' );

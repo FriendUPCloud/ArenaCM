@@ -107,7 +107,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 							{
 								while ( $file = readdir ( $moduleDir ) )
 								{
-									if ( $file{0} == '.' ) continue;
+									if ( $file[0] == '.' ) continue;
 									
 									$name = false;
 									foreach ( $GLOBALS[ 'modules' ] as $k => $v )

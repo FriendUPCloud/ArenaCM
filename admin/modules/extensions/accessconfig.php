@@ -28,7 +28,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 	{
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == '.' ) continue;
+			if ( $file[0] == '.' ) continue;
 			if ( !file_exists ( 'extensions/' . $file . '/info.csv' ) )
 				continue;
 				

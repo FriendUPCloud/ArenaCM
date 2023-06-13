@@ -46,7 +46,7 @@ function activateModule ( $pid, $mod )
 		{
 			while ( $file = readdir ( $dir ) )
 			{
-				if ( $file{0} == '.' ) continue;
+				if ( $file[0] == '.' ) continue;
 				if ( $file == $mod ) continue;
 				if ( substr ( $file, 0, 4 ) == 'mod_' )
 				{

@@ -130,10 +130,10 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 							$opts = '';
 							while ( $f = readdir ( $dir ) )
 							{
-								if ( $f{0} == '.' ) continue;
+								if ( $f[0] == '.' ) continue;
 								if ( file_exists ( 'extensions/' . $f . '/websnippet.php' ) )
 								{
-									$opts .= '<option value="' . $f . '">' . i18n ( strtoupper ( $f{0} ) . substr ( $f, 1, strlen ( $f ) - 1 ) ) . '</option>';
+									$opts .= '<option value="' . $f . '">' . i18n ( strtoupper ( $f[0] ) . substr ( $f, 1, strlen ( $f ) - 1 ) ) . '</option>';
 								}
 							}
 							closedir ( $dir );	

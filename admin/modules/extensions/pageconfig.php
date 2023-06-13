@@ -69,10 +69,10 @@ if ( file_exists ( 'extensions' ) && is_dir ( 'extensions' ) )
 		$oStr = "<option value=\"\"" . ( $extension == '' ? ' selected="selected"' : '' ) . ">Velg ekstensjon:</option>";
 		while ( $file = readdir ( $dir ) )
 		{
-			if ( $file{0} == "." ) continue;
+			if ( $file[0] == "." ) continue;
 			if ( $file == $extension ) $s = " selected=\"selected\"";
 			else $s = "";
-			$oStr .= "<option value=\"{$file}\"$s>" . ( strtoupper ( $file{0} ) . substr ( $file, 1, strlen ( $file ) - 1 ) ) . "</option>";
+			$oStr .= "<option value=\"{$file}\"$s>" . ( strtoupper ( $file[0] ) . substr ( $file, 1, strlen ( $file ) - 1 ) ) . "</option>";
 		}
 		if ( !$oStr ) $oStr = "<option value=\"\">Ingen er installert.</option>";
 		$extemplate->Extensions = $oStr;

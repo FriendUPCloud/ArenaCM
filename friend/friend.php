@@ -311,7 +311,7 @@ switch( $_REQUEST['action'] )
 						{
 							while ( $file = readdir ( $dir ) )
 							{
-								if ( $file{0} == '.' ) continue;
+								if ( $file[0] == '.' ) continue;
 								$mod = false;
 								switch ( $file )
 								{
@@ -333,7 +333,7 @@ switch( $_REQUEST['action'] )
 						{
 							while ( $file = readdir ( $dir ) )
 							{
-								if ( $file{0} == '.' ) continue;
+								if ( $file[0] == '.' ) continue;
 								$mod = false;
 								if ( file_exists ( 'extensions/' . $file . '/info.csv' ) )
 								{
