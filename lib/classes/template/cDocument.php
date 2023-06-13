@@ -490,7 +490,7 @@ class cDocument extends cPTemplate
 		
 		foreach ( $this->page as $k=>$v )
 		{
-			if ( $k{0} == '_' ) continue;
+			if ( $k[0] == '_' ) continue;
 			if ( $module && ( $k == 'Intro' || $k == 'Body' ) )
 			{
 				if ( $k == 'Intro' )
