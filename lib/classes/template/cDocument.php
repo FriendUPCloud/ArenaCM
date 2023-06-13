@@ -321,7 +321,7 @@ class cDocument extends cPTemplate
 		
 		foreach ( $content as $cont )
 		{
-			$b = $letters{$a};
+			$b = $letters[$a];
 			switch ( $cont )
 			{
 				case "News":
