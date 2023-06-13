@@ -49,14 +49,14 @@ function safeFieldName ( $string )
 		$found = false;
 		for ( $b = 0; $b < strlen ( $allowed ); $b++ )
 		{
-			if ( $string{$a} == $allowed{$b} )
+			if ( $string[$a] == $allowed[$b] )
 			{
 				$found = true;
 				break;
 			}
 		}
 		if ( $found )
-			$out .= $string{$a};
+			$out .= $string[$a];
 		else $out .= '_';
 	}
 	return $out;
