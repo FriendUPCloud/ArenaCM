@@ -544,8 +544,8 @@ function textPad ( $text, $length, $fill, $pad = STR_PAD_LEFT )
 		{
 			$b = $a % $fillen;
 			if ( $a < $len )
-				$out .= $text{$a};
-			else $out .= $fill{$b};
+				$out .= $text[$a];
+			else $out .= $fill[$b];
 		}
 	}
 	else if ( $pad == STR_PAD_LEFT )
@@ -555,9 +555,9 @@ function textPad ( $text, $length, $fill, $pad = STR_PAD_LEFT )
 			$b = $a % $fillen;					// rotate in fill
 			$c = $len - $a;
 			if ( $a > $len )
-				$out .= $fill{$b};
+				$out .= $fill[$b];
 			else
-				$out .= $text{$c};
+				$out .= $text[$c];
 		}
 	}
 	
@@ -1059,12 +1059,12 @@ function ArenaDate ( $dateformat, $time )
 	$ostr = '';
 	for ( $a = 0; $a < strlen ( $dateformat ); $a++ )
 	{
-		if ( $dateformat{$a} == "\\" ){ $ostr .= $dateformat{$a} . $dateformat{$a+1}; $a++; continue; }
-		if ( in_array ( $dateformat{$a}, $letters ) )
+		if ( $dateformat[$a] == "\\" ){ $ostr .= $dateformat[$a] . $dateformat[$a+1]; $a++; continue; }
+		if ( in_array ( $dateformat[$a], $letters ) )
 		{
-			$ostr .= i18n ( date ( $dateformat{$a}, $time ) );
+			$ostr .= i18n ( date ( $dateformat[$a], $time ) );
 		}
-		else $ostr .= $dateformat{$a};
+		else $ostr .= $dateformat[$a];
 	}
 	return stripslashes ( $ostr );
 }
@@ -1349,7 +1349,7 @@ function string2hex ( $hex )
 	{	
 		$mul = $mul * 16;
 		$z = 5 - $a;
-		$num = $hnums[ $hex{$z} ];
+		$num = $hnums[ $hex[$z] ];
 		$number += $num * $mul;
 	}
 	return $number >> 8;
