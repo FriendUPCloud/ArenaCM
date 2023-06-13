@@ -155,7 +155,7 @@ class cTemplate
 	function evaluatePHP ( $code )
 	{		
 		/* Allow <?="Hello!"?> */
-		if ( $code{0} == "=" ) $code = "return " . trim ( substr ( $code, 1, strlen ( $code ) - 1 ) ) . ";";
+		if ( $code[0] == "=" ) $code = "return " . trim ( substr ( $code, 1, strlen ( $code ) - 1 ) ) . ";";
 		
 		// Fix doublequotes
         if ( strpos ( $code, '\"' ) )
