@@ -51,7 +51,7 @@ class cPTemplate
 	*/
 	function __construct ( $file = false )
 	{
-		if( !defined( LOCALE ) )
+		if( !defined( 'LOCALE' ) )
 			define( 'LOCALE', 'en' );
 	
 		if ( $file ) $this->load ( $file );
