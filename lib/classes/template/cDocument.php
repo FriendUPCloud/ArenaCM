@@ -515,7 +515,7 @@ class cDocument extends cPTemplate
 				{
 					$v = preg_replace_callback ( 
 						"/(&[a-zA-Z0-9]*;)/", 
-						function( $matches ){ return utf8_encode ( html_entity_decode ( $matches[0] ) ) },
+						function( $matches ){ return utf8_encode ( html_entity_decode ( $matches[0] ) ); },
 						// DEPRECATED create_function ( '$matches', 'return utf8_encode ( html_entity_decode ( $matches[0] ) );' ), 
 						$v 
 					);
