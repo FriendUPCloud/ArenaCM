@@ -58,17 +58,17 @@ foreach ( $versions as $version )
 		switch ( $version )
 		{
 			case '1.99.1':
-				$db->query ( 'ALTER TABLE Groups ADD SuperAdmin tinyint(4) NOT NULL DEFAULT 0 AFTER ID' );
+				$db->query ( 'ALTER TABLE `Groups` ADD `SuperAdmin` tinyint(4) NOT NULL DEFAULT 0 AFTER ID' );
 				$obj->Information .= " * La til SuperAdmin felt på Groups\n";
 				break;
 			case '1.99.4':
-				$db->query ( 'ALTER TABLE ContentDataSmall ADD AdminVisibility tinyint(4) NOT NULL default 1 AFTER IsVisible' );
-				$db->query ( 'ALTER TABLE ContentDataBig ADD AdminVisibility tinyint(4) NOT NULL default 1 AFTER IsVisible' );
+				$db->query ( 'ALTER TABLE `ContentDataSmall` ADD `AdminVisibility` tinyint(4) NOT NULL default 1 AFTER `IsVisible`' );
+				$db->query ( 'ALTER TABLE `ContentDataBig` ADD `AdminVisibility` tinyint(4) NOT NULL default 1 AFTER `IsVisible`' );
 				$obj->Information .= " * La til admin visibilitet for ContentDataSmall og Big\n";
 				break;
 			case '1.99.5':
-				$db->query ( 'ALTER TABLE ContentElement ADD SeenTimes bigint(20) NOT NULL default 0 AFTER IsDefault' );
-				$db->query ( 'ALTER TABLE ContentElement ADD SeenTimesUnique bigint(20) NOT NULL default 0 AFTER IsDefault' );
+				$db->query ( 'ALTER TABLE `ContentElement` ADD `SeenTimes` bigint(20) NOT NULL default 0 AFTER `IsDefault`' );
+				$db->query ( 'ALTER TABLE `ContentElement` ADD `SeenTimesUnique` bigint(20) NOT NULL default 0 AFTER `IsDefault`' );
 				$obj->Information .= " * La til statistikk rad på contentelement";
 				break;
 			case '1.99.6':
@@ -90,7 +90,7 @@ foreach ( $versions as $version )
 				break;
 			case '1.99.7':
 				$db->query ( '
-					ALTER TABLE ContentElement ADD ContentTemplateID int(11) NOT NULL default 0
+					ALTER TABLE `ContentElement` ADD `ContentTemplateID` int(11) NOT NULL default 0
 				' );
 				break;
 			case '1.99.8':
@@ -148,29 +148,29 @@ foreach ( $versions as $version )
 				break;
 			case '2.0.12':
 				$db->query ( '
-					ALTER TABLE `ContentElement` CHANGE LinkText LinkData text
+					ALTER TABLE `ContentElement` CHANGE `LinkText` `LinkData` text
 				' );
 				break;
 			case '2.0.13':
 				$db->query ( '
-					ALTER TABLE `Image` ADD BackupFilename varchar(255) NOT NULL default ""
+					ALTER TABLE `Image` ADD `BackupFilename` varchar(255) NOT NULL default ""
 				' );
 				$db->query ( '
-					ALTER TABLE `File` ADD BackupFilename varchar(255) NOT NULL default ""
+					ALTER TABLE `File` ADD `BackupFilename` varchar(255) NOT NULL default ""
 				' );
 				break;
 			case '2.0.14':
 				$db->query ( '
-					ALTER TABLE `Image` ADD DateFrom datetime NOT NULL
+					ALTER TABLE `Image` ADD `DateFrom` datetime NOT NULL
 				' );
 				$db->query ( '
-					ALTER TABLE `File` ADD DateFrom datetime NOT NULL 
+					ALTER TABLE `File` ADD `DateFrom` datetime NOT NULL 
 				' );
 				$db->query ( '
-					ALTER TABLE `Image` ADD DateTo datetime NOT NULL
+					ALTER TABLE `Image` ADD `DateTo` datetime NOT NULL
 				' );
 				$db->query ( '
-					ALTER TABLE `File` ADD DateTo datetime NOT NULL 
+					ALTER TABLE `File` ADD `DateTo` datetime NOT NULL 
 				' );
 				break;
 			case '2.0.15':
@@ -185,12 +185,12 @@ foreach ( $versions as $version )
 				if ( !$found )
 				{
 					$db->query ( '
-						ALTER TABLE ObjectConnectionGroup
-						DROP ID
+						ALTER TABLE `ObjectConnectionGroup`
+						DROP `ID`
 					' );
 					$db->query ( '
-						ALTER TABLE ObjectConnectionGroup
-						ADD ID bigint(20) PRIMARY KEY auto_increment
+						ALTER TABLE `ObjectConnectionGroup`
+						ADD `ID` bigint(20) PRIMARY KEY auto_increment
 					' );
 				}
 				// Double check
@@ -255,7 +255,7 @@ foreach ( $versions as $version )
 					if ( !$hasSO )
 					{
 						$db->query ( '
-							ALTER TABLE Folder
+							ALTER TABLE `Folder`
 							ADD `SortOrder` int(11) NOT NULL default \'0\' 
 							AFTER `Diskpath`
 						' );
@@ -263,7 +263,7 @@ foreach ( $versions as $version )
 					if ( !$hasNO )
 					{
 						$db->query ( '
-							ALTER TABLE Folder
+							ALTER TABLE `Folder`
 							ADD `Notes` text NOT NULL default ""
 							AFTER `SortOrder`
 						' );
