@@ -436,6 +436,9 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `Password` text default NULL,
   `Name` text default NULL,
   `Email` text default NULL,
+  `DateCreated` datetime default NULL,
+  `DateModified` datetime default NULL,
+  `InGroups` tinyint(4) default '0',
   PRIMARY KEY  (`ID`)
 ) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=9 ;
 
