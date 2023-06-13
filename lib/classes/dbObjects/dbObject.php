@@ -1182,6 +1182,7 @@ class dbObject
 		if ( method_exists ( $this, 'onFind' ) ) $this->onFind ();
 		
 		$query = $customQuery ? $customQuery : false;
+		$queryWhere = [];
 		
 		if ( !$query )
 		{
@@ -1202,7 +1203,7 @@ class dbObject
 			if ( $this->hasClause ( 'WHERE' ) )
 				$queryWhere[] = $this->_clauses['WHERE'];
 			
-			if ( count( $queryWhere ) > 0 )
+			if ( $queryWhere && count( $queryWhere ) > 0 )
 				$query .= ' WHERE ' . implode( ' AND ', $queryWhere ) . ' ';
 			
 			$query .= $this->hasClause ( 'GROUP BY' ) ? 
