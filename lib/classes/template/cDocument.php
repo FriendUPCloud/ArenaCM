@@ -834,7 +834,7 @@ class cDocument extends cPTemplate
 					'/\<\/title\>([\w|\W]*?)\<\/head\>/i', 
 					function( $matches )
 					{
-						return "</title>\n\t\t{$GLOBALS[\'tmpheaders\']}\n\t</head>";
+						return "</title>\n\t\t{$GLOBALS['tmpheaders']}\n\t</head>";
 					},
 					/*DEPRECTATED: create_function (
 						'$matches',
