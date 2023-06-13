@@ -906,6 +906,9 @@ class dbObject
 			}
 			$whereClause = implode( ' AND ', $whereClause );
 			
+			if( !$queryValues || !trim( $queryValues ) )
+				return false;
+			
 			$query = "UPDATE `{$this->_tableName}` 
 					  SET {$queryValues} 
 					  WHERE {$whereClause}"; 
@@ -948,7 +951,7 @@ class dbObject
 			}
 			catch( Exception $e )
 			{
-				die( 'Error executing query: ' . $e->getMessage() . ' (' . $query . ')' );
+				die( 'Error executing query: ' . $e->getMessage() );
 			}
 			$this->_lastQuery = $query;
 			$this->{$this->_primaryKey} = ( $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
