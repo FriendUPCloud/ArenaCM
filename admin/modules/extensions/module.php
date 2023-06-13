@@ -41,7 +41,7 @@ else if ( !$Session->currentExtension && !$_GET[ 'extension' ])
 	{
 		while ( $f = readdir ( $d ) )
 		{
-			if ( $f{0} == '.' )
+			if ( $f[0] == '.' )
 				continue;
 			$Session->Set ( 'currentExtension', $f );
 			break;
@@ -68,7 +68,7 @@ if ( file_exists ( 'extensions' ) && is_dir ( 'extensions' ) )
 		while ( $file = readdir ( $dp ) )
 		{
 			if ( 
-				$file{0} != '.' &&
+				$file[0] != '.' &&
 				file_exists ( "extensions/$file/info.csv" )	
 			)
 			{
