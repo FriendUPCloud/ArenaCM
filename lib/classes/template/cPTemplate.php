@@ -406,7 +406,7 @@ class cPTemplate
 			$ar = $nm;
 		}
 		
-		$nm = implode ( '/', $ar ); $nm = BASE_DIR . '/extensions/locales/' . LOCALE . '/' . $nm;
+		$nm = implode ( '/', $ar ); $nm = BASE_DIR . '/extensions/locales/' . defined( LOCALE ) ? LOCALE : 'en' . '/' . $nm;
 		if ( file_exists ( $nm ) && !is_dir ( $nm ) )
 			$output = i18n::translate_with_file ( $output, $nm );
 		
