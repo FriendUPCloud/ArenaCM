@@ -1372,7 +1372,7 @@ class dbImage extends dbObject
 			$time = time();
 			while ( $file = readdir ( $dir ) )
 			{
-				if ( $file{0} == '.' ) continue;
+				if ( $file[0] == '.' ) continue;
 				if ( !strstr ( $file, 'captcha' ) ) continue;
 				$stat = stat ( $this->CachePath . '/' . $file );
 				if ( ( ( $time - $stat[9] ) / 60 ) > 3 )
@@ -1479,7 +1479,7 @@ class dbImage extends dbObject
 			$yesterday = $now - ( 60 * 60 * 24 );
 			while ( $file = readdir ( $udir ) )
 			{
-				if ( $file{0} == '.' ) continue;
+				if ( $file[0] == '.' ) continue;
 				if ( !strstr ( $file, 'captcha' ) ) continue;
 				list ( , $time, ) = explode ( '_', $file );
 				if ( $time < $yesterday )
