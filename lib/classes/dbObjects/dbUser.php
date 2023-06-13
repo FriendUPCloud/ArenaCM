@@ -843,7 +843,7 @@ class dbUser extends dbObject
 	function extensionPermission ( $permission, $extension )
 	{
 		$db =& $this->getDatabase ();
-		$permission = strtoupper($permission{0}).substr($permission,1,strlen($permission)-1);
+		$permission = strtoupper($permission[0]).substr($permission,1,strlen($permission)-1);
 		
 		// Admin user always has access
 		if ( $this->_dataSource == 'core' )
