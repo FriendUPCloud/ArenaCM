@@ -515,7 +515,8 @@ class cDocument extends cPTemplate
 				{
 					$v = preg_replace_callback ( 
 						"/(&[a-zA-Z0-9]*;)/", 
-						create_function ( '$matches', 'return utf8_encode ( html_entity_decode ( $matches[0] ) );' ), 
+						function( $matches ){ return utf8_encode ( html_entity_decode ( $matches[0] ) ) },
+						// DEPRECATED create_function ( '$matches', 'return utf8_encode ( html_entity_decode ( $matches[0] ) );' ), 
 						$v 
 					);
 				}
@@ -831,10 +832,14 @@ class cDocument extends cPTemplate
 				$GLOBALS[ 'tmpheaders' ] = implode ( "\n\t\t", array_merge ( $outBase, $outCss, $outOther, $outScript ) );
 				$output = preg_replace_callback ( 
 					'/\<\/title\>([\w|\W]*?)\<\/head\>/i', 
-					create_function (
+					function( $matches )
+					{
+						return "</title>\n\t\t{$GLOBALS[\'tmpheaders\']}\n\t</head>";
+					},
+					/*DEPRECTATED: create_function (
 						'$matches',
 						'return "</title>\n\t\t{$GLOBALS[\'tmpheaders\']}\n\t</head>";'
-					),
+					),*/
 					$output
 				);
 				unset ( $GLOBALS[ 'tmpheaders' ] );
