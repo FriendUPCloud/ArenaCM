@@ -73,8 +73,8 @@ class dbFileFolder extends dbFolder
 		if ( !$this->_isLoaded ) return false;
 		
 		$objs = new dbFile ( );
-		$objs->addClause ( "ORDER BY", "DateModified DESC, DateCreated DESC" );
-		$objs->addClause ( "WHERE", "FileFolder='{$this->ID}'" );
+		$objs->addClause ( "ORDER BY", "`DateModified` DESC, `DateCreated` DESC" );
+		$objs->addClause ( "WHERE", "`FileFolder`='{$this->ID}'" );
 		if ( $objs = $objs->find ( ) )
 		{
 			$this->_files = $objs;

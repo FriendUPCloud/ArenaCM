@@ -95,8 +95,8 @@ class dbImageFolder extends dbFolder
 		if ( !$this->_isLoaded ) return false;
 
 		$objs = new dbImage ( );
-		$objs->addClause ( "ORDER BY", "DateModified DESC, DateCreated DESC" );
-		$objs->addClause ( "WHERE", "ImageFolder='{$this->ID}'" );
+		$objs->addClause ( "ORDER BY", "`DateModified` DESC, `DateCreated` DESC" );
+		$objs->addClause ( "WHERE", "`ImageFolder`='{$this->ID}'" );
 		$_GLOBALS[ 'debug' ] = 1;
 		if ( $objs = $objs->find ( ) )
 		{	
