@@ -2008,7 +2008,7 @@ class dbObject
 					$db =& $this->getDatabase ( );
 					$gproto = new dbObject ( 'Groups' );
 					if ( $groups = $gproto->find ( '
-						SELECT g.* FROM UsersGroups ug, Groups g WHERE ug.UserID = \'' . $this->ID . '\' AND ug.GroupID = g.ID
+						SELECT g.* FROM `UsersGroups` ug, `Groups` g WHERE ug.UserID = \'' . $this->ID . '\' AND ug.GroupID = g.ID
 					' ) )
 					{	
 						foreach ( $groups as $group )
