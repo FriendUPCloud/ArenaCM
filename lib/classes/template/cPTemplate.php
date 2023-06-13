@@ -110,7 +110,7 @@ class cPTemplate
 		{
 			while ( $file = readdir ( $dir ) )
 			{
-				if ( is_dir ( $path . '/' . $file ) && $file{0} != '.' ) 
+				if ( is_dir ( $path . '/' . $file ) && $file[0] != '.' ) 
 				{
 					if ( $result = cPTemplate::findFile ( $filename, $path . '/' . $file ) )
 					{
@@ -136,7 +136,7 @@ class cPTemplate
 		{
 			while ( $file = readdir ( $dir ) )
 			{
-				if ( is_dir ( $path . '/' . $file ) && $file{0} != '.' )
+				if ( is_dir ( $path . '/' . $file ) && $file[0] != '.' )
 				{
 					if ( $result = cPTemplate::findFile ( $filename, $path . '/' . $file ) )
 					{
@@ -209,12 +209,12 @@ class cPTemplate
 				{
 					while ( $file = readdir ( $dir ) )
 					{
-						if ( $b == 0 && $file{0} != '.' && !is_dir ( $file ) )
+						if ( $b == 0 && $file[0] != '.' && !is_dir ( $file ) )
 						{
 							if ( $file == $filename )
 								return $dirs[ $a ] . $file;
 						}
-						else if ( $b == 1 && $file{0} != '.' && is_dir ( $file ) )
+						else if ( $b == 1 && $file[0] != '.' && is_dir ( $file ) )
 						{
 							if ( $result = $this->findTemplate ( $filename, $dirs[ 0 ] . $file ) )
 								return $result;
