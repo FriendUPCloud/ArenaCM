@@ -942,7 +942,14 @@ class dbObject
 		// Do the query
 		if ( $fieldsTouched > 0 )
 		{
-			$database->query ( $query );
+			try
+			{
+				$database->query ( $query );
+			}
+			catch( Exception $e )
+			{
+				die( 'Error executing query: ' . $e->getMessage() );
+			}
 			$this->_lastQuery = $query;
 			$this->{$this->_primaryKey} = ( $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
 			$this->unslash();
