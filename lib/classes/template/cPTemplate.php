@@ -51,6 +51,9 @@ class cPTemplate
 	*/
 	function __construct ( $file = false )
 	{
+		if( !defined( LOCALE ) )
+			define( 'LOCALE', 'en' );
+	
 		if ( $file ) $this->load ( $file );
 		$this->_replaceStart = '!';
 		$this->_replaceEnd   = '!';
@@ -406,7 +409,7 @@ class cPTemplate
 			$ar = $nm;
 		}
 		
-		$nm = implode ( '/', $ar ); $nm = BASE_DIR . '/extensions/locales/' . defined( LOCALE ) ? LOCALE : 'en' . '/' . $nm;
+		$nm = implode ( '/', $ar ); $nm = BASE_DIR . '/extensions/locales/' . LOCALE . '/' . $nm;
 		if ( file_exists ( $nm ) && !is_dir ( $nm ) )
 			$output = i18n::translate_with_file ( $output, $nm );
 		
