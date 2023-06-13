@@ -1978,7 +1978,7 @@ class dbObject
 		
 		// Make permission 1st char uppercase 
 		if ( $permission != 'Read' ) 
-			$permission = strtoupper ( $permission{0} ) . substr ( $permission, 1, strlen ( $permission ) - 1 );
+			$permission = strtoupper ( $permission[0] ) . substr ( $permission, 1, strlen ( $permission ) - 1 );
 			
 		// Safety margin
 		if ( !$targetObj || !is_object ( $targetObj ) || !$targetObj->_isLoaded || !$targetObj->ID )
