@@ -550,7 +550,7 @@ class dbUser extends dbObject
 		if ( !$this->groups ) 
 		{
 			$groups = new dbObject ( 'Groups' );
-			$groups = $groups->find ( 'SELECT g.* FROM Groups g, UsersGroups ug WHERE ug.GroupID = g.ID AND ug.UserID = ' . $this->ID );
+			$groups = $groups->find ( 'SELECT g.* FROM `Groups` g, `UsersGroups` ug WHERE ug.GroupID = g.ID AND ug.UserID = ' . $this->ID );
 			if ( is_array ( $groups ) )
 			{
 				$this->groups = $groups;
@@ -725,7 +725,7 @@ class dbUser extends dbObject
 		{
 			$groups = new dbObject ( 'Groups' );
 			if ( $groups = $groups->find ( '
-				SELECT g.* FROM Groups g, UsersGroups ug WHERE ug.UserID=' . $Session->AdminUser->ID . ' AND g.ID = ug.GroupID
+				SELECT g.* FROM `Groups` g, `UsersGroups` ug WHERE ug.UserID=' . $Session->AdminUser->ID . ' AND g.ID = ug.GroupID
 			' ) )
 			{
 				$Session->AdminUser->Groups = $groups;
@@ -853,7 +853,7 @@ class dbUser extends dbObject
 		if ( !$this->_groups )
 		{	
 			if ( $rows = $db->fetchObjectRows ( '
-				SELECT * FROM Groups g, UsersGroups ug WHERE ug.UserID=' . $this->ID . ' AND g.ID = ug.GroupID
+				SELECT * FROM `Groups` g, `UsersGroups` ug WHERE ug.UserID=' . $this->ID . ' AND g.ID = ug.GroupID
 			' ) )
 			{
 				$this->_groups = $rows;
