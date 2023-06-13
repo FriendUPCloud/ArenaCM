@@ -690,7 +690,7 @@ function i18n ( $word, $lang = false, $path = false, $admin = false )
 		{
 			if ( !strlen ( $v ) )
 				continue;
-			if ( $v{0} != "#" && $v{0} != "\n" && $v{0} != "" )
+			if ( $v[0] != "#" && $v[0] != "\n" && $v[0] != "" )
 			{
 				list ( $wrd, $translation ) = explode ( ":", $v );
 				$wrd = trim ( $wrd );
@@ -742,7 +742,7 @@ function getCountries ( $letter = false )
 		$l = strtolower ( $letter );
 		foreach ( $countries as $c )
 		{
-			if ( strtolower ( $c{0} ) == $l )
+			if ( strtolower ( $c[0] ) == $l )
 				$out[] = $c;
 		}
 		return $out;
@@ -1130,7 +1130,7 @@ function enableTextEditor ( $options = false )
 			{
 				// Skip empty lines
 				if ( !trim ( $cn ) ) continue;
-				if ( $cn{0} == '.' )
+				if ( $cn[0] == '.' )
 				{
 					list ( $name, ) = explode ( ':', $cn );
 					$name = str_replace ( '.', '', $name );
