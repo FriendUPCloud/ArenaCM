@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body
+{
+	padding: 0;
+	margin: 0;
+	background: #202020;
+	font-family: Lato;
+	font-weight: 300;
+	position: relative;
+	min-height: 100vh;
+	transition: opacity 0.5s;
+	/*opacity: 0;
+	pointer-events: none;*/
+}
+
+body.Loaded
+{
+	pointer-events: all;
+	opacity: 1;
+}
+
+#UnderContent
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#Logo
+{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	padding: 100px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+#Logo > img
+{
+	height: 100px;
+	width: auto;
+}
+
+#CenterBox
+{
+	position: absolute;
+	top: 360px;
+	left: calc(50% - 250px);
+	width: 500px;
+	background: #505050;
+	border-radius: 20px;
+	padding: 40px;
+	box-sizing: border-box;
+	color: white;
+	text-align: center;
+}
+
+.Flexed
+{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	margin: 0 0 10px 0;
+}
+
+.Flexed > div
+{
+	flex: 1;
+}
+
+.Flexed label
+{
+	font-weight: bold;
+}
+
+.Flexed input
+{
+	width: 100%;
+	outline: none;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 0;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+hr
+{
+	border: 0;
+	height: 1px;
+	margin: 20px 0 19px 0;
+	padding: 0;
+	border-top: 1px solid #c0c0c0;
+}
+
+button
+{
+	background-color: #c0c0c0;
+	color: #001100;
+	border-radius: 15px;
+	padding: 5px 10px;
+	border: 0;
+	height: 25px;
+	min-width: 90px;
+}
+
