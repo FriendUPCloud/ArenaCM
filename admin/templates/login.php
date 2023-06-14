@@ -25,11 +25,10 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>
-			ARENA Enterprise - Logg inn
+			ARENA CM - Login
 		</title>
 		<meta http-equiv="content-type: text/html; charset=utf-8"/>
-		<link rel="stylesheet" href="admin/css/login_enterprise.css"/>
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="admin/css/login_cm.css"/>
 		<?if(defined('ARENACM_ADMIN_CSS')){?>
 		<link rel="stylesheet" href="<?= ARENACM_ADMIN_CSS ?>"/>
 		<?}?>
@@ -45,50 +44,48 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 		<script src="<?= ARENACM_ADMIN_JAVASCRIPT ?>"></script>
 		<?}?>
 	</head>
-	<body>
+	<body style="" onload="initLogin()">
 		<div id="UnderContent">
-			ARENA Enterprise v<?= ARENA_VERSION ?> &copy; 2011-2013 Idéverket AS.
+			ARENA CM v<?= ARENA_VERSION ?> &copy; 2011-2023 Idéverket AS.
 		</div>
 		<div id="Logo">
-			<img src="admin/gfx/logo_arena_enterprise.png" alt="logo"/>
+			<img src="admin/gfx/logo-neg.svg" alt="logo"/>
 		</div>
 		<div id="CenterBox">
 			<div id="Content">
 				<div class="Content">
 					<form method="post" action="admin.php" name="loginform">
 						<h2>
-							<?= SITE_ID ?> admin: Logg inn
+							<?= SITE_ID ?> admin: Login
 						</h2>
 						<p>
-							Logg deg inn med ditt brukernavn og passord.
+							Please log in with your username and password.
 						</p>
 						<hr/>
-						<table>
-							<tr>
-								<td>
-									Brukernavn:
-								</td>
-								<td>
-									<input type="text" size="11" value="" name="loginUsername"/>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Passord:
-								</td>
-								<td>
-									<input type="password" size="11" value="" name="loginPassword"/>
-								</td>
-							</tr>
-						</table>
+						<div class="Flexed">
+							<div>
+								<label for="loginUsername">Username:</label>
+							</div>
+							<div>
+								<input type="text" size="11" value="" placeholder="your@name.com" name="loginUsername"/>
+							</div>
+						</div>
+						<div class="Flexed">
+							<div>
+								<label for="loginPassword">Password:</label>
+							</div>
+							<div>
+								<input type="password" size="11" value="" name="loginPassword"/>
+							</div>
+						</div>
 						<div style="text-align: center">
 							<hr/>
 							<button type="button" id="loginButton">
-								<img src="admin/gfx/icons/key_go.png"/> Logg inn
+								Log in
 							</button>
 						</div>
 					</form>
-					<script type="text/javascript" src="admin/javascript/login_enterprise.js"></script>
+					<script type="text/javascript" src="admin/javascript/login_cm.js"></script>
 				</div>
 			</div>
 		</div>

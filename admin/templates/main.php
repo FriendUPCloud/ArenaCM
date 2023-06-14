@@ -6,8 +6,8 @@
 		<title>
 			<?= 
 				$this->Title ? 
-				preg_replace ( '/(ARENACM v[0-9]*)/i', 'ARENA Enterprise v' . ARENA_VERSION, $this->Title ) : 
-				'ARENA Enterprise ' . ARENA_VERSION 
+				preg_replace ( '/(ARENACM v[0-9]*)/i', 'ARENA Content Management v' . ARENA_VERSION, $this->Title ) : 
+				'ARENA Content Management ' . ARENA_VERSION 
 			?>
 		</title>
 		<meta http-equiv="imagetoolbar" content="no" />
