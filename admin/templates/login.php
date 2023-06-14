@@ -44,7 +44,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 		<script src="<?= ARENACM_ADMIN_JAVASCRIPT ?>"></script>
 		<?}?>
 	</head>
-	<body style="" onload="initLogin()">
+	<body style="opacity: 0" onload="initLogin()">
 		<div id="UnderContent">
 			ARENA CM v<?= ARENA_VERSION ?> &copy; 2011-2023 Idéverket AS.
 		</div>

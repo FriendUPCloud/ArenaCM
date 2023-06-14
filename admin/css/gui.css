@@ -478,17 +478,16 @@ form
 	clear: both;
 }
 
-.SpacerSmallColored
+.SpacerSmallColored,
+.SpacerSmallColored.Bottom
 {
-	height: 1px;
+	height: 3px;
+	border: 0;
 	display: block;
 	clear: both;
-	border: 1px solid #AB1218;
-	background: #CD151D;
+	background: #729FCF;
 	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	margin: 2px 0 2px 0;
+	margin: 5px 0 5px 0;
 }
 
 button.Small, div.ButtonSmall

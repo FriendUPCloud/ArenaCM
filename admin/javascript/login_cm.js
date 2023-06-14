@@ -81,4 +81,5 @@ function initLogin()
 	}
 	
 	document.body.classList.add( 'Loaded' );
+	document.body.style.opacity = '';
 }

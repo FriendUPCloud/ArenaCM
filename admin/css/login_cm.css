@@ -10,8 +10,8 @@ body
 	position: relative;
 	min-height: 100vh;
 	transition: opacity 0.5s;
-	/*opacity: 0;
-	pointer-events: none;*/
+	opacity: 0;
+	pointer-events: none;
 }
 
 body.Loaded

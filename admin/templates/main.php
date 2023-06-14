@@ -36,7 +36,7 @@
 <?= implode ( "\\n", $this->sHeadData ) ?>
 	</head>
 	<body class="<?= getCurrentModule ( ) ?>">
-		<div id="TopLogo"><a href="<?= BASE_URL ?>admin.php"><img src="admin/gfx/arenalogo2.<?= strstr ( $_SERVER[ 'HTTP_USER_AGENT' ], 'MSIE 6' ) ? 'gif' : 'png' ?>" border="0"/></a></div>
+		<div id="TopLogo"><a href="<?= BASE_URL ?>admin.php"><img src="admin/gfx/logo-neg.svg" border="0"/></a></div>
 		<div id="TopLevelContainer">
 		</div>	
 		<div id="MetaButtons">

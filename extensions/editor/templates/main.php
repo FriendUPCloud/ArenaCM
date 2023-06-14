@@ -193,7 +193,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 				<input type="hidden" id="PageID" value="<?= $this->page->ID ?>">
 				<input type="hidden" id="PageUrl" value="<?= $this->page->getUrl ( ) ?>">
 				<input type="hidden" id="Title" value="<?= trim ( $this->page->Title ) ? $this->page->Title : $this->page->MenuTitle ?>"/>
-				<div class="Container" id="ContentForm" style="padding-top: <?= MarginSize ?>px">
+				<div class="Container" id="ContentForm">
 					<div id="ContentFields">
 						<?= $this->ContentForm ?>
 					</div>
