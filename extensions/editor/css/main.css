@@ -34,8 +34,8 @@ table.LayoutColumns td.Column td input
 #StructureButtonsTop > div
 {
 	position: absolute;
-	top: 10px;
-	right: 5px;
+	top: 20px;
+	right: 17px;
 	z-index: 5;
 }
 #StructureButtonsTop > div a
@@ -150,9 +150,9 @@ table.LayoutColumns td.Column td input
 	color: #6C090C;
 }
 
-#StructureContainer, #StructureButtons { padding: 2px; }
+#StructureContainer, #StructureButtons { padding: 10px; }
 #StructureButtons button { margin-bottom: 0; }
-#StructureButtons { margin-bottom: 2px; }
+#StructureButtons { margin-bottom: 10px; }
 #EditHeadline
 {
 	position: relative;

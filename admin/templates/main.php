@@ -95,7 +95,7 @@
 			<?= $this->moduleOutput ?>
 			<br style="clear: both">
 			<div id="Footer">
-				Basert på ARENA CM v<?= ARENA_VERSION ?> | <?= i18n ( 'ARENA CM is available under the' ) ?> <a href="http://www.mozilla.org/MPL/MPL-1.1.html" target="_blank"><?= i18n ( 'MPL License' ) ?></a> | <a href="admin.php?module=settings&function=about">Om ARENA Enterprise</a>
+				Using ARENA CM v<?= ARENA_VERSION ?> | <?= i18n ( 'ARENA CM is available under the' ) ?> <a href="http://www.mozilla.org/MPL/MPL-1.1.html" target="_blank"><?= i18n ( 'MPL License' ) ?></a> | <a href="admin.php?module=settings&function=about">About ARENA CM</a>
 			</div>
 		</div>
 		<script> initToggleBoxes (document.body); </script>
