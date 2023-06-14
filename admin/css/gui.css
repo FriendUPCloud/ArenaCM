@@ -12,7 +12,6 @@
 	html #MetaButtons a, html #MetaButtons > div
     {
     	font-size: 16px;
-    	font-family: "SourceSans";
     	font-weight: normal;
     }
    html .tabs .tab, 
@@ -45,14 +44,12 @@
     	padding: 10px 13px 10px 8px;
     	font-weight: bold;
     	vertical-align: middle;
-    	font-family: "SourceSans";
     	box-shadow: none;
     }
     html h1 td
     {
     	font-size: 16px;
     	vertical-align: middle;
-    	font-family: "SourceSans";
     }
     html button, html button:hover
     {
