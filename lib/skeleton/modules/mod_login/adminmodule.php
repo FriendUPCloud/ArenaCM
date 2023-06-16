@@ -22,6 +22,21 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
                 Rune Nilssen
 *******************************************************************************/
 
-	$tpl = new cPTemplate( 'templates/fieldconfig.php' );
-	$module = $tpl->render(); 
+	$ttpl = new cPTemplate( 'lib/skeleton/modules/mod_login/templates/fieldconfig.php' );
+	$ttpl->field =& $field;
+	if( $field->Data )
+	{
+		$data = json_decode( $field->Data );
+	}
+	else
+	{
+		$data = new stdClass();
+		$data->register = false;
+	}
+	
+	foreach( $data as $k=>$v )
+	{
+		$ttpl->{$k} = $v;
+	}
+	$module = $ttpl->render(); 
 ?>

@@ -24,4 +24,17 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 
 
 ?>
-<div class="Container"></div><div class="Spacer"></div>
+	<div class="Container">
+		<div>
+			<label for="register_<?= $this->field->ID ?>">Display add account button:</label> <input id="register_<?= $this->field->ID ?>" type="checkbox"<?= $this->register ? ' checked="checked"' : '' ?>/>
+		</div>
+	</div>
+	<div class="Spacer"></div>
+	<script type="text/javascript">
+		AddSaveFunction ( function ( ) {
+			let j = new bajax ( );
+			j.openUrl ( 'admin.php?module=extensions&extension=<?= $_REQUEST[ 'extension' ] ?>&modaction=savesettings', 'post', true );			
+			j.addVar ( 'fieldid',  <?= $this->field->ID ?> );
+			j.send ();
+		} );
+	</script>
