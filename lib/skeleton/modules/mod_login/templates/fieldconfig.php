@@ -12,7 +12,7 @@ License for the specific language governing rights and limitations
 under the License.
 
 The Original Code is (C) 2004-2010 Blest AS.
-New code is (C) 2011 Idéverket AS, 2015 Friend Studios AS
+New code is (C) 2011 Idéverket AS, 2015 Friend Studios AS, (C) 2023 Idéverket AS
 
 The Initial Developer of the Original Code is Blest AS.
 Portions created by Blest AS are Copyright (C) 2004-2010
@@ -22,6 +22,6 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
                 Rune Nilssen
 *******************************************************************************/
 
-	$tpl = new cPTemplate( 'templates/fieldconfig.php' );
-	$module = $tpl->render(); 
+
 ?>
+<div class="Container"></div><div class="Spacer"></div>
