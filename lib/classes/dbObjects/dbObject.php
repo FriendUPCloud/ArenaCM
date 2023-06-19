@@ -726,9 +726,12 @@ class dbObject
 
 	function &getDatabase ( )
 	{
-		if ( $this->_dbOverride ) return $this->_dbOverride;
-		else if ( $this->_table && $this->_table->database )
-			return $this->_table->database;
+		if( isset( $this ) )
+		{
+			if ( $this->_dbOverride ) return $this->_dbOverride;
+			else if ( $this->_table && $this->_table->database )
+				return $this->_table->database;
+		}
 		return dbObject::globalValue ( 'database' );
 	}
 	
