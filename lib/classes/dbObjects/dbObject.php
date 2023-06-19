@@ -959,7 +959,7 @@ class dbObject
 			$this->_lastQuery = $query;
 			if( isset( $this->_primaryKey ) )
 			{
-				$val = isset( $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
+				$val = ( isset( $this->{$this->_primaryKey} ) && $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
 				if( $val )
 				{
 					$this->{$this->_primaryKey} = $val;
