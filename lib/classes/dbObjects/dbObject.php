@@ -957,8 +957,16 @@ class dbObject
 				die( 'Error executing query: ' . $e->getMessage() );
 			}
 			$this->_lastQuery = $query;
-			$this->{$this->_primaryKey} = ( $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
+			if( isset( $this->_primaryKey ) )
+			{
+				$val = isset( $this->{$this->_primaryKey} ) ? $this->{$this->_primaryKey} : $database->getId ();
+				if( $val )
+				{
+					$this->{$this->_primaryKey} = $val;
+				}
+			}
 			$this->unslash();
+			
 			if ( method_exists ( $this, 'onSaved' ) ) $this->onSaved ();
 			$this->_isLoaded = true;
 		}
@@ -2464,6 +2472,8 @@ class dbObject
 	{
 		if ( method_exists ( $this, 'onLoadExtraFields' ) )
 			$this->onLoadExtraFields ( );
+		if( !isset( $this->_primaryKey ) || !isset( $this->{$this->_primaryKey} ) || !$this->{$this->_primaryKey} )
+			return false;
 		if ( $this->_dataSource == 'core' )
 			return false;
 		if ( $r == 0 && $this->_loadingExtrafields )
@@ -2507,7 +2517,7 @@ class dbObject
 				}
 			}
 		}
-	
+		
 		$exb = $exc = '';
 		// Only load from these exclusive content groups
 		if ( $this->_contentGroups )
@@ -2539,11 +2549,11 @@ class dbObject
 						b.ContentID, b.Type, b.DataText, '' AS `DataInt`, \"\" AS `DataString`, '' AS `DataDouble`, 'Big' AS `DataTable`, 
 						\"\" AS `DataMixed`, b.SortOrder, b.ID, b.Name, b.ContentGroup, b.IsVisible, b.AdminVisibility, b.IsGlobal
 					FROM 
-					`ContentDataBig` b{$contentoptions1a} $extra1a
+						`ContentDataBig` b{$contentoptions1a} $extra1a
 					WHERE 
-					( b.ContentID='{$this->ID}' || ( (b.IsGlobal='1'||(b.IsGlobal='2' AND b.ContentID IN ({$this->ID}{$pex}))){$contentoptions2a} ) )
+						( b.ContentID='{$this->ID}' || ( (b.IsGlobal='1'||(b.IsGlobal='2' AND b.ContentID IN ({$this->ID}{$pex}))){$contentoptions2a} ) )
 					AND
-					b.ContentTable=\"{$this->_tableName}\" $exb 
+						b.ContentTable=\"{$this->_tableName}\" $exb 
 					$extra1b
 				)
 				UNION
@@ -2552,11 +2562,11 @@ class dbObject
 						c.ContentID, c.Type, \"\" AS `DataText`, c.DataInt, c.DataString, c.DataDouble, 'Small' AS `DataTable`, 
 						c.DataMixed, c.SortOrder, c.ID, c.Name, c.ContentGroup, c.IsVisible, c.AdminVisibility, c.IsGlobal
 					FROM 
-					`ContentDataSmall` c{$contentoptions1b} $extra2a
+						`ContentDataSmall` c{$contentoptions1b} $extra2a
 					WHERE 
-					( c.ContentID='{$this->ID}' || ( (c.IsGlobal='1'||(c.IsGlobal='2' AND c.ContentID IN ({$this->ID}{$pex}))){$contentoptions2b} ) )
+						( c.ContentID='{$this->ID}' || ( (c.IsGlobal='1'||(c.IsGlobal='2' AND c.ContentID IN ({$this->ID}{$pex}))){$contentoptions2b} ) )
 					AND
-					c.ContentTable=\"{$this->_tableName}\" $exc
+						c.ContentTable=\"{$this->_tableName}\" $exc
 					$extra2b
 				)
 			) AS z
@@ -2579,10 +2589,11 @@ class dbObject
 					// Globals for subpages
 					if ( $row->IsGlobal == '2' && ( $row->ContentID != $this->Parent && $row->ContentID != $this->ID ) )
 						continue;
-						
+					
 					$key = '_extra_' . $row->Name;
 					$fieldkey = '_field_' . $row->Name;
 					$this->$fieldkey = $row;
+					
 					if ( !$this->extraFieldCache ( $row ) )
 					{
 						$o = new stdclass ();
