@@ -300,38 +300,42 @@ switch ( $_REQUEST[ 'modaction' ] )
 		die ( $img->getImageHTML ( 64, 64, 'framed' ) );
 		
 	case 'savesettings':
-		$fld = new dbObject ( 'ContentDataSmall' );
-		$fld->load ( $fieldObject->ID );
-		$fld->DataInt = $_POST[ 'limit' ];
-		$fld->DataMixed = 	
-							$_POST[ 'comments' ] . "\t" . 
-							$_POST[ 'showauthor' ] . "\t" . 
-							$_POST[ 'tagbox' ] . "\t" . 
-							$_POST[ 'tagbox_placement' ] . "\t" . 
-							$_POST[ 'searchbox' ] . "\t" . 
-							$_POST[ 'detailpage' ] . "\t" .
-							$_POST[ 'sourcepage' ] . "\t" .
-							$_POST[ 'leadinlength' ] . "\t" .
-							$_POST[ 'titlelength' ] . "\t" .
-							$_POST[ 'sizex' ] . "\t" .
-							$_POST[ 'sizey' ] . "\t" . 
-							$_POST[ 'headertext' ] . "\t" . 
-							$_POST[ 'hidedetails' ] . "\t" .
-							$_POST[ 'facebooklike' ] . "\t" .
-							$_POST[ 'facebooklikedimensions' ] . "\t" . 
-							$_POST[ 'listmethod' ] . "\t" .
-							$_POST[ 'lsizex' ] . "\t" . 
-							$_POST[ 'lsizey' ] . "\t" . 
-							$_POST[ 'imageaspect' ] . "\t" .
-							$_POST[ 'imgcolor' ] . "\t" .
-							$_POST[ 'gallerymode' ] . "\t" .
-							$_POST[ 'fbcomments' ] . "\t" . 
-							$_POST[ 'tagfilter' ] . "\t" . 
-							$_POST[ 'imageaspectdtl' ] . "\t" .
-							$_POST[ 'imgcolordtl' ] . "\t" .
-							$_POST[ 'pagination' ];
-		$fld->save ( );
-		die ( 'ok' );
+		if( isset( $_POST[ 'tagbox_placement' ] ) )
+		{
+			$fld = new dbObject ( 'ContentDataSmall' );
+			$fld->load ( $fieldObject->ID );
+			$fld->DataInt = $_POST[ 'limit' ];
+			$fld->DataMixed = 	
+								$_POST[ 'comments' ] . "\t" . 
+								$_POST[ 'showauthor' ] . "\t" . 
+								$_POST[ 'tagbox' ] . "\t" . 
+								$_POST[ 'tagbox_placement' ] . "\t" . 
+								$_POST[ 'searchbox' ] . "\t" . 
+								$_POST[ 'detailpage' ] . "\t" .
+								$_POST[ 'sourcepage' ] . "\t" .
+								$_POST[ 'leadinlength' ] . "\t" .
+								$_POST[ 'titlelength' ] . "\t" .
+								$_POST[ 'sizex' ] . "\t" .
+								$_POST[ 'sizey' ] . "\t" . 
+								$_POST[ 'headertext' ] . "\t" . 
+								$_POST[ 'hidedetails' ] . "\t" .
+								$_POST[ 'facebooklike' ] . "\t" .
+								$_POST[ 'facebooklikedimensions' ] . "\t" . 
+								$_POST[ 'listmethod' ] . "\t" .
+								$_POST[ 'lsizex' ] . "\t" . 
+								$_POST[ 'lsizey' ] . "\t" . 
+								$_POST[ 'imageaspect' ] . "\t" .
+								$_POST[ 'imgcolor' ] . "\t" .
+								$_POST[ 'gallerymode' ] . "\t" .
+								$_POST[ 'fbcomments' ] . "\t" . 
+								$_POST[ 'tagfilter' ] . "\t" . 
+								$_POST[ 'imageaspectdtl' ] . "\t" .
+								$_POST[ 'imgcolordtl' ] . "\t" .
+								$_POST[ 'pagination' ];
+			$fld->save ( );
+			die ( 'ok' );
+		}
+		die( 'fail' );
 		
 	case 'delete':
 		$blog = new dbObject ( 'BlogItem' );
