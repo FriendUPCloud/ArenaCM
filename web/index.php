@@ -147,6 +147,7 @@ if ( isset( $_REQUEST[ 'setlang' ] ) && is_numeric ( $_REQUEST[ 'setlang' ] ) )
 }
 else if ( !$Session->HasUrlActivator && !defined( 'LANGUAGES_ONE_PAGE_STRUCTURE' ) && isset( $_GET[ 'route' ] ) )
 {
+	die( 'foipa' );
 	list ( $langcode, ) = explode ( '/', $_GET[ 'route' ] );
 	if ( $langcode )
 	{
@@ -171,6 +172,21 @@ else if ( $Session->HasUrlActivator )
 		$Session->LanguageCode = $lang->Name;
 		if ( $lang->BaseUrl )
 			$Session->BaseUrl = $lang->BaseUrl;
+	}
+	// Support finding language by activator component (e.g. [no/]index.html)
+	else
+	{
+		$component = explode( '/', $_REQUEST[ 'route' ] );
+		$component = $component[ 0 ];
+		$lang = new dbObject ( 'Languages' );
+		$lang->addClause ( 'WHERE', 'UrlActivator = "' . $component . '"' );
+		if ( $lang = $lang->findSingle ( ) )
+		{
+			$Session->CurrentLanguage = $lang->ID;
+			$Session->LanguageCode = $lang->Name;
+			if ( $lang->BaseUrl )
+				$Session->BaseUrl = $lang->BaseUrl;
+		}
 	}
 }
 if ( !$Session->CurrentLanguage || !$Session->LanguageCode )

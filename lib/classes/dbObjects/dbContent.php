@@ -300,7 +300,7 @@ class dbContent extends dbObject
 		global $Session;
 		
 		if ( isset( $_REQUEST[ 'editmode' ] ) && $_REQUEST[ 'editmode' ] ) $this->_editmode = 1;
-					
+		
 		// Remove the language code from the route if we have an url activator
 		if ( $Session->HasUrlActivator || ( substr ( $route, 0, 3 ) == $Session->LanguageCode . '/' ) )
 		{
