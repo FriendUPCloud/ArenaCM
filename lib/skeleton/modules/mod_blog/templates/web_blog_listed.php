@@ -61,7 +61,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 				</a>
 			</p>
 			<?}?>
-			<?if ( $this->ReadMore || $this->cfgComments ) { ?>
+			<?if !trim ( $this->blog->ExternalLink ) && ( $this->ReadMore || $this->cfgComments ) { ?>
 			<p class="Block ReadMore">
 				<?
 					if ( $this->ReadMore )
