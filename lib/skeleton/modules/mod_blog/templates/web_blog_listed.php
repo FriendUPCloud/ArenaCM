@@ -22,20 +22,25 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
                 Rune Nilssen
 *******************************************************************************/
 
+$this->link = trim( $this->blog->ExternalLink ) ? $this->blog->ExternalLink : false;
+if( !$this->link )
+{
+	$this->link = ( $this->detailpage ? $this->detailpage->getRoute ( ) : $this->content->getRoute ( ) ) . '/blogitem/' . $this->blog->ID . '_' . texttourl ( $this->blog->Title ) .'.html';
+}
+$this->target = trim( $this->blog->ExternalLink ) && substr( $this->blog->ExternalLink, 0, 4 ) == 'http' ? '_blank' : '';
 
 ?>
 		<div class="Block Newsitem<?= $this->extraClass ?>">
 			<h2>
-				<?if ( $this->ReadMore ) { ?><a href="<?= ( $this->detailpage ? $this->detailpage->getRoute ( ) : $this->content->getRoute ( ) ) . '/blogitem/' . $this->blog->ID . '_' . texttourl ( $this->blog->Title ) ?>"><?}?><?= ( $this->titleLength > 0 && strlen ( strip_tags ( $this->blog->Title ) ) > $this->titleLength ) ? ( substr ( strip_tags ( $this->blog->Title ), 0, $this->titleLength - 3 ) . '...' ) : $this->blog->Title ?><?if ( $this->ReadMore ) { ?></a><?}?>
+				<?if ( $this->ReadMore ) { ?><a href="<?= $this->link ?>" target="<?= $this->target ?>"><?}?><?= ( $this->titleLength > 0 && strlen ( strip_tags ( $this->blog->Title ) ) > $this->titleLength ) ? ( substr ( strip_tags ( $this->blog->Title ), 0, $this->titleLength - 3 ) . '...' ) : $this->blog->Title ?><?if ( $this->ReadMore ) { ?></a><?}?>
 			</h2>
 			<?if ( $this->image ) { ?>
 			<div class="Image" style="<? if ( $this->ReadMore ) { return 'cursor: hand; cursor: pointer; '; } ?>background-image: url(<?= $this->image->getImageUrl ( $this->sizeX, $this->sizeY, $this->ImageAspect ) ?>)"<?
 				if ( $this->ReadMore || $this->cfgComments )
 				{
 					$q = '"';
-					return " onclick={$q}document.location='" . 
-						( $this->detailpage ? $this->detailpage->getRoute ( ) : $this->content->getRoute ( ) ) . 
-						'/blogitem/' . $this->blog->ID . '_' . texttourl ( $this->blog->Title ) . ".html';$q";
+					return " onclick={$q}document.location.href='" . 
+						$this->link . "';$q";
 				}
 			?>></div>
 			<?}?>
@@ -56,7 +61,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 			</div>
 			<?if ( trim ( $this->blog->ExternalLink ) ) { ?>
 			<p class="Block ReadMore">
-				<a class="FloatLeft" href="<?= $this->blog->ExternalLink ?>" target="_blank">
+				<a class="FloatLeft" href="<?= $this->link ?>" target="<?= $this->target ?>">
 					<span><?= i18n ( 'Read more' ) ?></span>
 				</a>
 			</p>
@@ -67,7 +72,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 					if ( $this->ReadMore )
 					{
 						return '
-				<a class="FloatLeft Small" href="'. ( $this->detailpage ? $this->detailpage->getRoute ( ) : $this->content->getRoute ( ) ) . '/blogitem/' . $this->blog->ID . '_' . texttourl ( $this->blog->Title ) .'.html">
+				<a class="FloatLeft Small" href="'. $this->link . '" target="' . $this->target . '">
 					<span>'. i18n ( 'Read more' ) .'</span>
 				</a>
 						';
@@ -79,7 +84,6 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 						if ( $this->commentcount )
 							$commentString = $this->commentcount . ' ' . ( $this->commentcount == 1 ? i18n ( 'comment' ) : i18n ( 'comments' ) );
 						else $commentString = i18n ( 'no comments' );
-						$link = ( $this->detailpage ? $this->detailpage->getRoute ( ) : $this->content->getRoute ( ) ) . '/blogitem/' . $this->blog->ID . '_' . texttourl ( $this->blog->Title );
 						
 						$ztr = '';
 						if ( $this->ReadMore )
@@ -93,7 +97,7 @@ Contributor(s): Hogne Titlestad, Thomas Wollburg, Inge Jørgensen, Ola Jensen,
 						if ( $this->canComment )
 						{
 							$ztr .= '
-				<a class="FloatLeft Small" href="'. $link .'.html#comment">
+				<a class="FloatLeft Small" href="'. $this->link .'.html#comment">
 				<span>'. 
 					i18n ( 'Add comment' ) .' ('. $commentString .')
 				</span></a>
