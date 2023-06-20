@@ -437,6 +437,10 @@ class dbUser extends dbObject
 						$o->load ( $v->ID );
 						unset ( $o->ID );
 						$o->ContentID = $this->ID;
+						if( !isset( $o->ContentID ) || !isset( $o->ContentTable ) )
+						{
+							continue;
+						}
 						$o->save ( );
 						$saved++;
 					}

@@ -872,6 +872,14 @@ class dbObject
 		$database =& $this->getDatabase ( );
 		$this->loadTable ();
 		if ( !$this->_table ) return false;
+		else
+		{
+			// Special case
+			if( $this->_table == 'ContentDataSmall' && ( !$this->ContentTable || !$this->ContentID ) )
+				return false;
+			if( $this->_table == 'ContentDataBig' && ( !$this->ContentTable || !$this->ContentID ) )
+				return false;
+		}
 	
 		if ( method_exists ( $this, 'onSave' ) )  $this->onSave (); // Call the onSave hook
 	
@@ -2582,7 +2590,7 @@ class dbObject
 			{
 				foreach ( $rows as $row )
 				{
-					if ( $this->{'_locked_' . $row->Name} ) 
+					if ( isset( $this->{'_locked_' . $row->Name} ) )
 						continue;
 					if ( !trim ( $row->Name ) ) continue;
 					
@@ -2636,7 +2644,7 @@ class dbObject
 			{
 				foreach ( $rows as $row )
 				{
-					if ( $this->{'_locked_' . $row->Name} ) 
+					if ( isset( $this->{'_locked_' . $row->Name} ) )
 						continue;
 					$n = $row->Name;
 					$m = '_extra_' . $n;
